@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# Reescribe todas las solicitudes a la carpeta dist/
+RewriteCond %{REQUEST_URI} !^/dist/
+RewriteRule ^(.*)$ dist/$1 [L]
+
+# Redirige a index.html si no se encuentra un archivo o carpeta
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^dist/(.*)$ dist/index.html [L]
