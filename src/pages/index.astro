@@ -11,6 +11,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import About from './about.astro';
 
 const metadata = {
   title: '',
@@ -59,7 +60,7 @@ const metadata = {
   <!-- Features Widget *************** -->
 
   <Features
-    id="features"
+    id="services"
     tagline="Services"
     title=""
     subtitle="we don’t just create software; we craft tailor-made solutions that resonate with your unique business need"
@@ -367,14 +368,15 @@ const metadata = {
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
+  <!-- <Stats
     stats={[
       { title: 'Satisfied Clients', amount: '+100' },
       { title: 'Completed Projects', amount: '+100' },
       // { title: 'Average Savings for Customers', amount: '+100K' },
       { title: 'Cups of Coffee Consumed', amount: '+10k' },
     ]}
-  />
+  /> -->
+  <About />
 
   <!-- CallToAction Widget *********** -->
 
