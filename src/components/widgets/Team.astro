@@ -21,9 +21,9 @@ const Team = Astro.props;
             // ...((classes?.headline as {}) ?? {}),
           }}
       />
-      <div class="flex items-center justify-center w-full flex-wrap p-4 gap-3 relative">
-        {Team.teamMembers.map(member => (
-          <div class="flex flex-col justify-center rounded-md items-center hover:shadow-lg p-2">
+      <div class="grid grid-cols-2 md:grid-cols-5 items-center justify-center w-full max-w-5xl p-4 gap-3 relative">
+        {Team?.teamMembers?.map(member => (
+          <div class="col-span-1  flex flex-col justify-center rounded-md items-center hover:shadow-lg p-2">
             <img class="object-cover object-center w-24 h-24 rounded-full"  src={member.imageUrl} alt={member.name} />
             <h3 class="text-sm font-medium tracking-tighter">{member.name}</h3>
             <p class="text-xs">{member.description}</p>
