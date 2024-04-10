@@ -89,8 +89,7 @@ const getSite = () => {
     site: undefined,
     base: '/',
     trailingSlash: false,
-
-    googleSiteVerificationId: '',
+    googleSiteVerificationId: 'Kjq1D1bEBjP2oZW8aDjPVVD4qXp94HuMgYnl-ZcPDjE',
   };
 
   return merge({}, _default, config?.site ?? {}) as SiteConfig;
