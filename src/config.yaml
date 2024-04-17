@@ -11,7 +11,7 @@ metadata:
   title:
     default: Nogadev
     template: '%s — Nogadev'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "Discover NogaDev, your strategic partner in innovative software solutions. We offer cutting-edge web development, expert business consulting, effective digital marketing and SEO, robust cybersecurity, and customized e-commerce platforms. Elevate your business with our technology and creativity"
   robots:
     index: true
     follow: true
