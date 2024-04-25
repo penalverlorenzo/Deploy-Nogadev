@@ -6,10 +6,12 @@ import FullButton from "../Buttons/FullButton";
 import HeaderImage from "../../assets/img/header-img.png";
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+import ChatBotContain from "../chatBot/chatBotContain";
 
 export default function Header() {
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
+      <ChatBotContain/>
       <LeftSide className="flexCenter">
         <div>
           <h1 className="font-bold font-heading leading-tighter tracking-tighter mb-4 md:text-6xl text-5xl">Welcome to <span className="highlight bg-clip-text bg-gradient-to-r dark:bg-clip-text dark:from-blue-500 dark:to-blue-500 dark:via-blue-300 from-blue-500 pr-0.5 text-transparent to-blue-500 via-blue-900"> NOGADEV Software Solutions </span></h1>
