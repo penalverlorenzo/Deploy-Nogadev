@@ -11,6 +11,8 @@ import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
+import Ads from '~/components/common/Ads.astro';
+
 // Uncomment line below to activate View Transitions
 // import { ViewTransitions } from 'astro:transitions';
 
@@ -34,6 +36,8 @@ const { language, textDirection } = I18N;
     <Metadata {...metadata} />
     <SiteVerification />
     <Analytics />
+    <Ads id={'AW-16535322825'} />
+
     <!-- Uncomment line below to activate View Transitions -->
     <!-- <ViewTransitions fallback="swap" /> -->
   </head>
