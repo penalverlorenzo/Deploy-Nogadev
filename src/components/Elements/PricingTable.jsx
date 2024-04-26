@@ -1,7 +1,8 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import styled from "styled-components";
 // Components
-import FullButton from "../Buttons/FullButton";
+import {FullButton} from "../Buttons/FullButton";
 // Assets
 import RollerIcon from "../../assets/svg/Services/RollerIcon";
 import MonitorIcon from "../../assets/svg/Services/MonitorIcon";
@@ -9,7 +10,7 @@ import BrowserIcon from "../../assets/svg/Services/BrowserIcon";
 import PrinterIcon from "../../assets/svg/Services/PrinterIcon";
 import CheckMark from "../../assets/svg/Checkmark";
 
-export default function PricingTable({ icon, price, title, text,  offers, action }) {
+export const PricingTable = ({ icon, price, title, text,  offers, action }) =>{
   let getIcon;
 
   switch (icon) {

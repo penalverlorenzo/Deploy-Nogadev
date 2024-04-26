@@ -1,9 +1,10 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import styled from "styled-components";
 // Assets
 import QuoteIcon from "../../assets/svg/Quotes";
 
-export default function TestimonialBox({ text, author }) {
+export const TestimonialBox=({ text, author }) =>{
   return (
     <Wrapper className="darkBg radius8 flexNullCenter flexColumn">
       <QuoteWrapper>

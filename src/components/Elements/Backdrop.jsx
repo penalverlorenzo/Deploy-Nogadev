@@ -1,7 +1,8 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+
 import styled from "styled-components";
 
-export default function Backdrop({ toggleSidebar }) {
+export const Backdrop = ({ toggleSidebar }) =>{
   return <Wrapper className="darkBg" onClick={() => toggleSidebar(false)}></Wrapper>;
 }
 

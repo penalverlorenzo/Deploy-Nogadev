@@ -1,5 +1,3 @@
-import * as React from "react";
-
 function SvgComponent(props) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={42.282} height={34.626} viewBox="0 0 42.282 34.626" {...props}>

@@ -1,11 +1,10 @@
-import React from "react";
 import styled from "styled-components";
 // Components
-import BlogBox from "../Elements/BlogBox";
-import FullButton from "../Buttons/FullButton";
-import TestimonialSlider from "../Elements/TestimonialSlider";
+import {BlogBox} from "../Elements/BlogBox";
+import {FullButton} from "../Buttons/FullButton";
+import {TestimonialSlider} from "../Elements/TestimonialSlider";
 
-export default function Blog() {
+export const Blog= ()=> {
   return (
     <Wrapper id="blog">
       <div className="whiteBg">

@@ -1,13 +1,9 @@
-import React from "react";
 import styled from "styled-components";
-// Components
-import FullButton from "../Buttons/FullButton";
-// Assets
-import HeaderImage from "../../assets/img/header-img.png";
+
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
 
-export default function Header() {
+export const Header = () => {
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <LeftSide className="flexCenter">
@@ -82,23 +78,23 @@ const HeaderP = styled.div`
     max-width: 100%;
   }
 `;
-const BtnWrapper = styled.div`
-  max-width: 190px;
-  @media (max-width: 960px) {
-    margin: 0 auto;
-  }
-`;
-const GreyDiv = styled.div`
-  width: 30%;
-  height: 700px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  @media (max-width: 960px) {
-    display: none;
-  }
-`;
+// const BtnWrapper = styled.div`
+//   max-width: 190px;
+//   @media (max-width: 960px) {
+//     margin: 0 auto;
+//   }
+// `;
+// const GreyDiv = styled.div`
+//   width: 30%;
+//   height: 700px;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   z-index: 0;
+//   @media (max-width: 960px) {
+//     display: none;
+//   }
+// `;
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
