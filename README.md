@@ -181,7 +181,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true # If the blog will be enabled
+    isEnabled: false # If the blog will be enabled
     postsPerPage: 6 # Number of posts per page
 
     post:
