@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
-import { Link } from "react-scroll";
+import { Link  } from "react-router-dom";
 // Assets
 import CloseIcon from "../../assets/svg/CloseIcon";
 // import LogoIcon from "../../assets/svg/Logo";
@@ -10,7 +10,7 @@ import LightLogo from "../../assets/svg/LightLogo";
 export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
   // console.log({sidebaropen});
   return (
-    <Wrapper className="animate darkBg" sidebaropen={sidebaropen}>
+    <Wrapper className="animate darkBg" style={{right: (sidebaropen ?  "0px" : "-400px" )}}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <LightLogo />
@@ -27,12 +27,9 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
         <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebaropen)}
-            activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="home"
-            spy={true}
-            smooth={true}
+            to="/"
             offset={-60}
           >
             Home
@@ -41,68 +38,33 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
         <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebaropen)}
-            activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="services"
-            spy={true}
-            smooth={true}
+            to="/"
             offset={-60}
           >
             Services
           </Link>
         </li>
-        {/* <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebaropen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="projects"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Projects
-          </Link>
-        </li> */}
         <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebaropen)}
-            activeClass="active"
+            activeclass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="blog"
-            spy={true}
-            smooth={true}
+            to="/blogs"
+            spy="true"
             offset={-60}
           >
             Blog
           </Link>
         </li>
-        {/* <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebaropen)}
-            activeClass="active"
-            className="whiteColor"
-            style={{ padding: "10px 15px" }}
-            to="pricing"
-            spy={true}
-            smooth={true}
-            offset={-60}
-          >
-            Pricing
-          </Link>
-        </li> */}
         <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebaropen)}
-            activeClass="active"
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="contact"
-            spy={true}
-            smooth={true}
+            to="/"
             offset={-60}
           >
             Contact
@@ -111,19 +73,20 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
       </UlStyle>
       <UlStyle className="flexSpaceCenter">
         <li className="semiBold font15 pointer">
-          <a href="/" style={{ padding: "10px 30px 10px 0" }} className="whiteColor">
+          <Link to="/" style={{ padding: "10px 30px 10px 0" }} className="whiteColor">
             Log in
-          </a>
+          </Link>
         </li>
         <li className="semiBold font15 pointer flexCenter">
-          <a href="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
+          <Link to="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
             Get Started
-          </a>
+          </Link>
         </li>
       </UlStyle>
     </Wrapper>
   );
 }
+// right: ${(props) => (props.sidebaropen ? "0px" : "-400px")};
 
 const Wrapper = styled.nav`
   width: 400px;
@@ -131,19 +94,11 @@ const Wrapper = styled.nav`
   position: fixed;
   top: 0;
   padding: 0 30px;
-  right: ${(props) => (props.sidebaropen ? "0px" : "-400px")};
   z-index: 9999;
   @media (max-width: 400px) {
     width: 100%;
   }
 `;
-// const Wrapper = (props)=>{
-//   return(
-//     <div className="w-full sm:w-[400px]" style={{width: '400', height: '100vh', position:'fixed', top: '0', padding: '0 30px', right: (props.sidebaropen ? '0px': '-400px'), zIndex: '9999'}}>
-//       {props.children}
-//     </div>
-//   )
-// }
 const SidebarHeader = styled.div`
   padding: 20px 0;
 `;

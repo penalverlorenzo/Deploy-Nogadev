@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
-// Components
-import {Sidebar} from "../Nav/Sidebar";
-import {Backdrop} from "../Elements/Backdrop";
-// Assets
+import { Link } from "react-router-dom";
+
+import { Sidebar } from "../Nav/Sidebar";
+import { Backdrop } from "../Elements/Backdrop";
+
 import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 
@@ -19,14 +19,13 @@ export const TopNavbar = () => {
     };
   }, [y]);
 
-
   return (
     <>
       <Sidebar sidebaropen={sidebaropen} toggleSidebar={toggleSidebar} />
       {sidebaropen ? <Backdrop toggleSidebar={toggleSidebar} /> : ''}
-      <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}>
+      <Wrapper className="flexCenter animate whiteBg" style={{ height: "80px" }}>
         <NavInner className="container flexSpaceCenter">
-          <Link className="pointer flexNullCenter" to="home" smooth={true}>
+          <Link className="pointer flexNullCenter" to="/">
             <LogoIcon />
             <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
               Software Solutions
@@ -37,32 +36,23 @@ export const TopNavbar = () => {
           </BurderWrapper>
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="home" spy={true} smooth={true} offset={-80}>
+              <Link style={{ padding: "10px 15px" }} to="/" offset={-80}>
                 Home
               </Link>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="services" spy={true} smooth={true} offset={-80}>
+              <a style={{ padding: "10px 15px" }} href="/" offset={-80}>
                 Services
-              </Link>
+              </a>
             </li>
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
-                Projects
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
+              <Link style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>
                 Blog
               </Link>
             </li>
+        
             <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="pricing" spy={true} smooth={true} offset={-80}>
-                Pricing
-              </Link>
-            </li>
-            <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
+              <Link style={{ padding: "10px 15px" }} to="/" offset={-80}>
                 Contact
               </Link>
             </li>
