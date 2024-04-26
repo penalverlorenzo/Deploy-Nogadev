@@ -1,14 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react"
+// import { useEffect, useState } from "react"
 
-
-export const GeneratedPromptAnswer = ({ prompt }) => {
-    const [result, setResult] = useState('');
-
-    useEffect(() => {
-        async function fetchData(prompt) {
+export const GeneratedPromptAnswer = async ({ prompt }) => {
+    let result;
             try {
                 const response = await fetch('http://localhost:3000/api/v1/info', {
                     method: 'POST',
@@ -19,25 +15,12 @@ export const GeneratedPromptAnswer = ({ prompt }) => {
                 });
                 const data = await response.json();
                 console.log({data});
-                setResult(data);
+                result = data;
             } catch (error) {
-                console.log(result);
-                setResult({response: `EN: There's something wrong, try sending your message again. ESP: Se ha producido un error, intenta enviar tu mensaje de vuelta`})
+                result = {response: `EN: There's something wrong, try sending your message again. ESP: Se ha producido un error, intenta enviar tu mensaje de vuelta`};
             }
+            return result.response ? result.response: result.error;
         }
-        fetchData(prompt);
-    }, []);
-    return (<section style={{ display: 'flex' }}>
-        <div className="react-chatbot-kit-chat-bot-avatar">
-            <div className="react-chatbot-kit-chat-bot-avatar-container">
-                <p className="react-chatbot-kit-chat-bot-avatar-letter">B</p>
-            </div>
-        </div>
-        <div className="react-chatbot-kit-chat-bot-message">
-            <span>{result.response ?result.response: result.error }</span>
-            <div className="react-chatbot-kit-chat-bot-message-arrow"></div>
-        </div>
-    </section>
-    )
-        ;
-}
+
+
+

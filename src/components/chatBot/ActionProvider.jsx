@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from "react";
+import { GeneratedPromptAnswer } from "./GeneratedPromptAnswer";
 
 
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
@@ -13,8 +14,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   }
 
-  const generatedPrompt = ()=>{
-    const botMessage = createChatBotMessage("Response:", {widget: 'generatePromptAnswer', load: true});
+  const generatedPrompt = async(message)=>{
+    const res = await GeneratedPromptAnswer(message)
+    console.log({res});
+    const botMessage = createChatBotMessage(res);
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],
