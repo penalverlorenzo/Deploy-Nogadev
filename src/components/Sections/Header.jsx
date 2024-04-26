@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+import nogaRocket from "../../assets/svg/nogadevRocket.webp"
 
 export const Header = () => {
   return (
@@ -16,7 +17,7 @@ export const Header = () => {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8 " src="https://nogadev.com/_astro/hero-start.dfHSwEEd_ZQ13MW.webp" alt="office" style={{zIndex: 9}} />
+          <Img className="radius8 " src={nogaRocket} alt="office" style={{zIndex: 9}} />
           <DotsWrapper>
             <Dots />
           </DotsWrapper>

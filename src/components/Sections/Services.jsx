@@ -6,14 +6,14 @@ import { ServiceBox } from "../Elements/ServiceBox";
 
 export const Services = () => {
   return (
-    <Wrapper id="services" className="bg-red-800">
+    <Wrapper id="services" >
       <div className="lightBg" style={{ padding: "50px 0" }}>
         <div className="container">
       <div className="whiteBg" style={{ padding: "60px 0" }}>
         <div className="container">
           <HeaderInfo>
             <h1 className="font40 extraBold text-blue-800">Services</h1>
-            <p className="text-xl text-muted mt-4 w-2/4">
+            <p className="text-xl text-muted mt-4 w-2/4 flex mx-auto lg:mx-0">
               we don’t just create software; we craft tailor-made solutions that resonate with your unique business need
             </p>
           </HeaderInfo>
