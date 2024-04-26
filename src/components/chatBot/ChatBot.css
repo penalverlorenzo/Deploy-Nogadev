@@ -1,62 +1,101 @@
+
 .react-chatbot-kit-chat-container {
+  height: 417px;
+  background: none;
+  backdrop-filter: blur(10px);
+  background: linear-gradient(to bottom, #0b104fbe, #03a8f4aa);
+  border-radius: 20px 20px 20px 0;
+
 }
 
 .react-chatbot-kit-chat-inner-container {
+  border-radius: 20px 20px 20px 0;
+  height: 100%;
+  background: none;
 }
 
 .react-chatbot-kit-chat-header {
+  border-radius: 20px 20px 0 0;
+  background: linear-gradient(to bottom,#282a2ae3, #4a5988);
+  color:  white;
+}
+
+.react-chatbot-kit-user-chat-message-arrow {
+  top:  4px;
+}
+
+.react-chatbot-kit-user-chat-message:hover{
+  box-shadow: 3px 3px 13px -4px rgb(0 0 0 / 77%);
 }
 
 .react-chatbot-kit-chat-input-container {
+  background: linear-gradient(to bottom, #03a8f4aa, #fafafabe);
+  border-radius: 0 0 30px 0px;
+  opacity: 1;
 }
 
 .react-chatbot-kit-chat-message-container {
+  height: 90%;
 }
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar {
+  width: 7px;
+}
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #000000, #07eaff);
+  border-radius: 5px; /* Cambia la forma del scroll */
+}
+
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar-track {
+  background: none
+}
+
+
 
 .react-chatbot-kit-chat-input {
+  border-top: 1px solid #03a8f4aa;
+  border-radius: 0 0 0 10px;
+  background: none;
 }
-
-.react-chatbot-kit-chat-input-form {
-}
-
-.react-chatbot-kit-chat-input::placeholder {
+.react-chatbot-kit-chat-input:focus {
+  background: linear-gradient(to bottom, #0279b0aa, #fafafabe);
+  outline: none;
 }
 
 .react-chatbot-kit-chat-btn-send {
-}
-
-.react-chatbot-kit-chat-btn-send-icon {
-}
-
-.react-chatbot-kit-chat-bot-message-container {
+  border-radius: 0 0 20px 0px;
+  background: rgba(0, 0, 0, 0.701);
 }
 
 .react-chatbot-kit-chat-bot-avatar-container {
-}
-
-.react-chatbot-kit-chat-bot-avatar-icon {
-}
-
-.react-chatbot-kit-chat-bot-avatar-letter {
+  background-image: url("https://c8.alamy.com/compes/2k0ry6w/simbolo-de-logotipo-gn-ng-letras-entrelazadas-nft-g-n-2k0ry6w.jpg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .react-chatbot-kit-chat-bot-message {
+  background: rgba(0, 0, 0, 0.701);
+  border-radius: 7px 10px 10px 10px ;
+  transition: all 0.2s;
+}
+.react-chatbot-kit-chat-bot-message:hover {
+  box-shadow: 5px 5px 13px -2px rgb(255 255 255 / 34%);
 }
 
 .react-chatbot-kit-chat-bot-message-arrow {
+  top:  4px;
+  border-right: 9px solid rgba(0, 0, 0, 0.701);
 }
 
-.react-chatbot-kit-chat-bot-loading-icon-container {
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); 
+  }
 }
 
-.chatbot-loader-container {
-}
-
-#chatbot-loader #chatbot-loader-dot1 {
-}
-
-#chatbot-loader #chatbot-loader-dot2 {
-}
-
-#chatbot-loader #chatbot-loader-dot3 {
+.animationIcon {
+  animation: moveUpDown 2s ease-in-out infinite; 
 }
