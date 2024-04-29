@@ -10,6 +10,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
       messages: [...prev.messages, botMessage],
     }));
   }
+  
   const generatedPrompt = async(message)=>{
     const res = await GeneratedPromptAnswer(message)
     const splite = res.replaceAll('*', ' ')
@@ -33,7 +34,8 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         return React.cloneElement(child, {
           actions: {
             handleHello,
-            generatedPrompt
+            generatedPrompt,
+            
           },
         });
       })}

@@ -19,6 +19,7 @@ function ChatBotContain() {
             config={config}
             messageParser={MessageParser}
             actionProvider={ActionProvider}
+            
           />
       </div>
       <div className={`${animation ? "animationIcon" : ""}  w-[54px] relative`} onClick={() => toggle ? (setToggle(false), setAnimation(false)) : (setToggle(true), setAnimation(true))}>
