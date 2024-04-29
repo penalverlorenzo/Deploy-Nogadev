@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://nogadev.com/sitemap-index.xml
