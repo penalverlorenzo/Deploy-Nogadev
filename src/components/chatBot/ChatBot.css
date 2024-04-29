@@ -36,13 +36,14 @@
 }
 
 .react-chatbot-kit-chat-message-container {
+  padding-bottom: 30px;
   height: 90%;
 }
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar {
   width: 7px;
 }
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #000000, #07eaff);
+  background: linear-gradient(to bottom, #0000008a, #07eaff86);
   border-radius: 5px;
 }
 
@@ -53,12 +54,12 @@
 
 
 .react-chatbot-kit-chat-input {
-  background: linear-gradient(to bottom, #03a8f4fa, #fafafa);
+  background: linear-gradient(to bottom, #70cbf5fa, #fafafa);
   border-top: 1px solid #03a8f4aa;
   border-radius:0;
 }
 .react-chatbot-kit-chat-input:focus {
-  background: linear-gradient(to bottom, #0279b0, #fafafa);
+  background: linear-gradient(to bottom, #4bc6ff, #fafafa);
   outline: none;
 }
 
@@ -101,14 +102,24 @@
   animation: moveUpDown 2s ease-in-out infinite; 
 }
 
-.animationIcon:hover .AnimationP {
+.animationIcon:hover .AnimationP  {
   scale: 1;
-  transform: translate(50px , -35px);
+  transform: translate(50px , -100px);
+}
+
+.animationIcon:hover .AnimationPHelp  {
+  scale: 1;
+  transform: translate(50px , -57px);
 }
 
 .AnimationP {
   scale: 0;
   transition: all 0.3s ease;
+}
+.AnimationPHelp {
+  scale: 0;
+  transition: all 0.3s ease;
+
 }
 
 
