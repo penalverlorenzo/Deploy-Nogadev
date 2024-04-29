@@ -9,10 +9,17 @@ const MessageParser = ({ children, actions }) => {
     return patronesSaludo.test(mensaje);
 }
 
+function detectOption(mensaje) {
+  const patronesOpciones = /^(options|option|opciones|opsiones|opsion|opcion)\b/i;
+  return patronesOpciones.test(mensaje);
+}
+
   const parse = (message) => {
     if (detectarSaludo(message)) {
       actions.handleHello();
-    } else {
+    } else if (detectOption(message)) {
+      actions.handleOption(message);
+    }else {
       actions.generatedPrompt(message);
     }
   };
