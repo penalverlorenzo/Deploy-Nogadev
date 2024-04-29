@@ -50,8 +50,6 @@ export const AdminView = () => {
       default:
         break;
     }
-
-    console.log({ formData });
   };
 
   useEffect(() => {
