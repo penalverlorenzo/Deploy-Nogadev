@@ -1,9 +1,9 @@
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 
-import config from './config'
-import MessageParser from './MessageParser';
-import ActionProvider from './ActionProvider'
+import config from './configChat/config'
+import MessageParser from './configChat/MessageParser'
+import ActionProvider from './configChat/ActionProvider'
 import { useState } from 'react'
 import './ChatBot.css'
 
@@ -23,7 +23,8 @@ function ChatBotContain() {
           />
       </div>
       <div className={`${animation ? "animationIcon" : ""}  w-[54px] relative`} onClick={() => toggle ? (setToggle(false), setAnimation(false)) : (setToggle(true), setAnimation(true))}>
-        <p className={`${animation ? "" : "hidden"} absolute AnimationP p-2 bg-black text-white cursor-pointer w-20 rounded-xl rounded-bl-none `}>Hello!👋</p>
+        <p className={`${animation ? "" : "hidden"} absolute AnimationP p-2 bg-black text-white cursor-pointer w-20 rounded-xl`}>Hello!👋</p>
+        <p className={`${animation ? "" : "hidden"} absolute AnimationPHelp p-2 bg-black text-white cursor-pointer w-40 rounded-xl rounded-bl-none translate-x-40`}>How can we help you?</p>
         <svg  xmlns="http://www.w3.org/2000/svg" className={`icon icon-tabler icon-tabler-affiliate-filled cursor-pointer`}  width="54" height="54" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
           <path d="M18.5 3a2.5 2.5 0 1 1 -.912 4.828l-4.556 4.555a5.475 5.475 0 0 1 .936 3.714l2.624 .787a2.5 2.5 0 1 1 -.575 1.916l-2.623 -.788a5.5 5.5 0 0 1 -10.39 -2.29l-.004 -.222l.004 -.221a5.5 5.5 0 0 1 2.984 -4.673l-.788 -2.624a2.498 2.498 0 0 1 -2.194 -2.304l-.006 -.178l.005 -.164a2.5 2.5 0 1 1 4.111 2.071l.787 2.625a5.475 5.475 0 0 1 3.714 .936l4.555 -4.556a2.487 2.487 0 0 1 -.167 -.748l-.005 -.164l.005 -.164a2.5 2.5 0 0 1 2.495 -2.336z" stroke-width="0" fill="currentColor" />
