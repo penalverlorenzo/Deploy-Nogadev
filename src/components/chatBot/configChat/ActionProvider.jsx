@@ -35,6 +35,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   }
 
   const generatedPrompt = async(message)=>{
+    
     const res = await GeneratedPromptAnswer(message)
     const splite = res.replaceAll('*', ' ')
 
