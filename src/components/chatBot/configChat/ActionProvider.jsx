@@ -37,16 +37,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const generatedPrompt = async(message)=>{
     
     const res = await GeneratedPromptAnswer(message)
+    
     const splite = res.replaceAll('*', ' ')
 
-    const regex = /Respuesta(?:\sKike)?:\s*(.*)/g
-
-    const parsedMsg = splite.match(regex);
-    console.log({parsedMsg});
-
-    console.log({splite}); 
-    const respuesta = parsedMsg || splite;
-    const botMessage = createChatBotMessage(respuesta);
+    const botMessage = createChatBotMessage(splite);
     setState((prev) => ({
       ...prev,
       messages: [...prev.messages, botMessage],

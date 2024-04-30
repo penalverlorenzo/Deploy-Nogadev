@@ -20,7 +20,6 @@ export const GeneratedPromptAnswer = async (prompt) => {
             result = data;
             localStorage.setItem(`${lowerCasePrompt}`, JSON.stringify(data.response))
         } else {
-            console.log("Si Data");
             result = localData
         }
         return result.response ? result.response : result;
