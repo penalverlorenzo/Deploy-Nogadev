@@ -19,8 +19,9 @@ export const GeneratedPromptAnswer = async (prompt) => {
             const data = await response.json();
             result = data;
             localStorage.setItem(`${lowerCasePrompt}`, JSON.stringify(data.response))
-        } else {
-            result = localData
+        } 
+        else {
+            result = JSON.parse(localData)
         }
         return result.response ? result.response : result;
     } catch (error) {
