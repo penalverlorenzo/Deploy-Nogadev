@@ -112,14 +112,17 @@
   transform: translate(50px , -57px);
 }
 
-.AnimationP {
+.AnimationNone {
   scale: 0;
   transition: all 0.3s ease;
 }
-.AnimationPHelp {
-  scale: 0;
-  transition: all 0.3s ease;
 
+
+.AnimationPInition{
+  scale: 1;
+  transform: translate(50px , -100px);
 }
-
-
+.AnimationHelpInition {
+  scale: 1;
+  transform: translate(50px , -57px);
+}
