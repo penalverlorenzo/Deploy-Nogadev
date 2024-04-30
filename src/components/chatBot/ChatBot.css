@@ -3,13 +3,14 @@
   height: 417px;
   background: none;
   backdrop-filter: blur(10px);
-  background: linear-gradient(to bottom, #0b104fbe, #03a8f4aa);
-  border-radius: 20px 20px 20px 0;
+  background: linear-gradient(to bottom, #000c41c7, #1b8eda96);
+  border-radius: 20px;
+  overflow: hidden;
 
 }
 
 .react-chatbot-kit-chat-inner-container {
-  border-radius: 20px 20px 20px 0;
+  border-radius: 20px;
   height: 100%;
   overflow-wrap: break-word;
   background: none;
@@ -17,7 +18,9 @@
 
 .react-chatbot-kit-chat-header {
   border-radius: 20px 20px 0 0;
-  background: linear-gradient(to bottom,#282a2ae3, #4a5988);
+  border-bottom: #0f248bbd solid 1px;
+  box-shadow: 2px 7px 11px 0px #0f248bbd;
+  background: #020c3dbd;
   color:  white;
 }
 
@@ -30,21 +33,24 @@
 }
 
 .react-chatbot-kit-chat-input-container {
-  background: linear-gradient(to bottom, #03a8f4aa, #fafafabe);
+  background: #020c3dbd;
   border-radius: 0 0 30px 0px;
   opacity: 1;
+  border-radius: 0 0 20px 20px;
 }
 
 .react-chatbot-kit-chat-message-container {
   padding-bottom: 30px;
   height: 90%;
+  
 }
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar {
   width: 7px;
 }
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #0000008a, #07eaff86);
+  background: linear-gradient(to bottom, #000c41, #1b8eda96);
   border-radius: 5px;
+  
 }
 
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar-track {
@@ -54,18 +60,24 @@
 
 
 .react-chatbot-kit-chat-input {
-  background: linear-gradient(to bottom, #70cbf5fa, #fafafa);
-  border-top: 1px solid #03a8f4aa;
-  border-radius:0;
+  background: linear-gradient(to top,  #000c41,#1b8eda);
+
+  color: white;
+  border-top: 1px solid #1B8FDa;
+  border-radius: 0 0 0 20px;
 }
+.react-chatbot-kit-chat-input::placeholder{
+  color: white;
+}
+
 .react-chatbot-kit-chat-input:focus {
-  background: linear-gradient(to bottom, #4bc6ff, #fafafa);
+
   outline: none;
 }
 
 .react-chatbot-kit-chat-btn-send {
   border-radius: 0 0 20px 0px;
-  background: rgba(0, 0, 0, 0.701);
+  background: rgb(0, 0, 0);
 }
 
 .react-chatbot-kit-chat-bot-avatar-container {
