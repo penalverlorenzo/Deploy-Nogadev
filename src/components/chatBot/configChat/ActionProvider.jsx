@@ -3,7 +3,7 @@
 import React from "react";
 import { GeneratedPromptAnswer } from "../componentsChat/GeneratedPromptAnswer";
 const ActionProvider = ({ createChatBotMessage, setState, children }) => {
-  const handleHello = ()=>{
+  const handleHello = () => {
     const botMessage = createChatBotMessage(`Hello. I'm kike Nice to Meet you`)
     setState((prev) => ({
       ...prev,
@@ -12,7 +12,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   }
 
   const handleOption = (message) => {
-  const langOptionsES = /^(opciones|opsiones|opsion|opcion)\b/i;
+    const langOptionsES = /^(opciones|opsiones|opsion|opcion)\b/i;
 
     if (langOptionsES.test(message)) {
       const botMessage = createChatBotMessage("Aqui estan las Opciones:", {
@@ -31,25 +31,39 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         messages: [...prev.messages, botMessage],
       }));
     }
-    
+
   }
 
-  const generatedPrompt = async(message)=>{
-    const res = await GeneratedPromptAnswer(message)
-    const splite = res.replaceAll('*', ' ')
+  const generatedPrompt = async (message) => {
+    try {
+      const res = await GeneratedPromptAnswer(message)
 
-    const regex = /Respuesta(?:\sKike)?:\s*(.*)/g
+      if (res.response.length === 0) {
+        console.log(res.response);
+        const res2 = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ message)
+        let re;
+        if (res2.includes('*')) {
+          re = res2.replaceAll('*', ' ')
+        }
+        else{
+          re = res2
+        }
+        // console.log(re);
+        const botMessage = createChatBotMessage(re);
+        setState((prev) => ({
+          ...prev,
+          messages: [...prev.messages, botMessage],
+        }));  
+      }else{
+        const botMessage = createChatBotMessage(res);
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, botMessage],
+      }));}
+    } catch (error) {
+      console.log(error);
+    }
 
-    const parsedMsg = splite.match(regex);
-    console.log({parsedMsg});
-
-    console.log({splite}); 
-    const respuesta = parsedMsg || splite;
-    const botMessage = createChatBotMessage(respuesta);
-    setState((prev) => ({
-      ...prev,
-      messages: [...prev.messages, botMessage],
-    }));
   }
 
   return (

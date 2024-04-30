@@ -7,7 +7,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
     try {
         const lowerCasePrompt = prompt.toLowerCase()
         const localData = localStorage.getItem(`${lowerCasePrompt}`)
-
+       
         if (!localData) {
             const response = await fetch('http://localhost:3000/api/v1/info', {
                 method: 'POST',
@@ -19,9 +19,9 @@ export const GeneratedPromptAnswer = async (prompt) => {
             const data = await response.json();
             result = data;
             localStorage.setItem(`${lowerCasePrompt}`, JSON.stringify(data.response))
-        } else {
-            console.log("Si Data");
-            result = localData
+        } 
+        else {
+            result = JSON.parse(localData)
         }
         return result.response ? result.response : result;
     } catch (error) {
