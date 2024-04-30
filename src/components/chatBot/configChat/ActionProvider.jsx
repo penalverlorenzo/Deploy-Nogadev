@@ -37,9 +37,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const generatedPrompt = async (message) => {
     try {
       const res = await GeneratedPromptAnswer(message)
-
-      if (res.response.length === 0) {
-        console.log(res.response);
+      if (res === "" || res.response === "" || res === null || res === undefined) {
         const res2 = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ message)
         let re;
         if (res2.includes('*')) {
@@ -48,24 +46,24 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         else{
           re = res2
         }
-        // console.log(re);
         const botMessage = createChatBotMessage(re);
         setState((prev) => ({
           ...prev,
           messages: [...prev.messages, botMessage],
         }));  
-      }else{
-        const botMessage = createChatBotMessage(res);
-      setState((prev) => ({
-        ...prev,
-        messages: [...prev.messages, botMessage],
-      }));}
+    }
+      else {
+        console.log('Deberia entrar');
+        const botMessage = createChatBotMessage(res? res: res.response);
+        setState((prev) => ({
+          ...prev,
+          messages: [...prev.messages, botMessage],
+        }));
+      }
     } catch (error) {
       console.log(error);
     }
-
   }
-
   return (
     <div>
       {React.Children.map(children, (child) => {

@@ -6,8 +6,9 @@ export const GeneratedPromptAnswer = async (prompt) => {
     let result;
     try {
         const lowerCasePrompt = prompt.toLowerCase()
-        const localData = localStorage.getItem(`${lowerCasePrompt}`)
-       
+        const noQuestionMark = lowerCasePrompt.replaceAll('?',"")
+        const noQuestionMark2 = noQuestionMark.replaceAll('¿',"")
+        const localData = localStorage.getItem(`${noQuestionMark2}`)
         if (!localData) {
             const response = await fetch('http://localhost:3000/api/v1/info', {
                 method: 'POST',
@@ -18,11 +19,12 @@ export const GeneratedPromptAnswer = async (prompt) => {
             });
             const data = await response.json();
             result = data;
-            localStorage.setItem(`${lowerCasePrompt}`, JSON.stringify(data.response))
+            localStorage.setItem(`${noQuestionMark2}`, JSON.stringify(data.response))
         } 
         else {
             result = JSON.parse(localData)
         }
+        
         return result.response ? result.response : result;
     } catch (error) {
         return `EN: There's something wrong, try sending your message again. ESP: Se ha producido un error, intenta enviar tu mensaje de vuelta`;
