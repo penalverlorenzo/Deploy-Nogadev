@@ -41,7 +41,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
         generatedPrompt('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ message)
     }
       else {
-        console.log('Deberia entrar');
         let res2 = res
         if (res2.includes('*')) {
           res2 = res2.replaceAll('*', ' ')

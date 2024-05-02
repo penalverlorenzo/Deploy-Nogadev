@@ -15,7 +15,7 @@ const parseMessage = (message) => {
 export const GeneratedPromptAnswer = async (prompt) => {
     let result;
     const parsedData = parseMessage(prompt)
-    console.log({parsedData});
+
     const localData = localStorage.getItem(`${parsedData}`)
     try {
 
@@ -29,6 +29,9 @@ export const GeneratedPromptAnswer = async (prompt) => {
             });
             const data = await response.json();
             result = data;
+            if (data.response === "") {
+                localStorage.removeItem(`${parseMessage}`)
+            }
             localStorage.setItem(`${parsedData}`, JSON.stringify(data.response))
         } 
         else {
