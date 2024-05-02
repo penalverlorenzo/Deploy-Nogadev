@@ -1,14 +1,14 @@
-import React from "react";
 import styled from "styled-components";
-// Components
-import FullButton from "../Buttons/FullButton";
-// Assets
-import HeaderImage from "../../assets/img/header-img.png";
+
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
+<<<<<<< HEAD
 import ChatBotContain from "../chatBot/chatBotContain";
+=======
+import nogaRocket from "../../assets/svg/nogadevRocket.webp"
+>>>>>>> 1c084f141f3fed47795397b5fa5d00d80a22de23
 
-export default function Header() {
+export const Header = () => {
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
       <ChatBotContain/>
@@ -22,7 +22,7 @@ export default function Header() {
       </LeftSide>
       <RightSide>
         <ImageWrapper>
-          <Img className="radius8 " src="https://nogadev.com/_astro/hero-start.dfHSwEEd_ZQ13MW.webp" alt="office" style={{zIndex: 9}} />
+          <Img className="radius8 " src={nogaRocket} alt="office" style={{zIndex: 9}} />
           <DotsWrapper>
             <Dots />
           </DotsWrapper>
@@ -84,23 +84,23 @@ const HeaderP = styled.div`
     max-width: 100%;
   }
 `;
-const BtnWrapper = styled.div`
-  max-width: 190px;
-  @media (max-width: 960px) {
-    margin: 0 auto;
-  }
-`;
-const GreyDiv = styled.div`
-  width: 30%;
-  height: 700px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0;
-  @media (max-width: 960px) {
-    display: none;
-  }
-`;
+// const BtnWrapper = styled.div`
+//   max-width: 190px;
+//   @media (max-width: 960px) {
+//     margin: 0 auto;
+//   }
+// `;
+// const GreyDiv = styled.div`
+//   width: 30%;
+//   height: 700px;
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   z-index: 0;
+//   @media (max-width: 960px) {
+//     display: none;
+//   }
+// `;
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: flex-end;

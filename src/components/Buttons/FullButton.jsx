@@ -1,7 +1,7 @@
-import React from "react";
+/* eslint-disable react/prop-types */
 import styled from "styled-components";
 
-export default function FullButton({ title, action, border }) {
+export const FullButton = ({ title, action, border }) => {
   return (
     <Wrapper
       className="animate pointer radius8"

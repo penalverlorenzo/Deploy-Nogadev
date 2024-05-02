@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Chatbot from 'react-chatbot-kit';
 import 'react-chatbot-kit/build/main.css';
 import config from './configChat/config';
@@ -12,6 +12,7 @@ function ChatBotContain() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
+
     const draggableElement = document.getElementById('draggableElement');
     let offsetX, offsetY, isDragging = false;
     const handleMouseDown = (e) => {

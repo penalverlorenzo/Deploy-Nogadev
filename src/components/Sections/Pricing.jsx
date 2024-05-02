@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 // Components
-import PricingTable from "../Elements/PricingTable";
+import {PricingTable} from "../Elements/PricingTable";
 
-export default function Pricing() {
+export const Pricing = ()=> {
   return (
     <Wrapper id="pricing">
       <div className="whiteBg">

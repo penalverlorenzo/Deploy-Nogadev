@@ -1,10 +1,8 @@
-import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 // Components
-import TestimonialBox from "../Elements/TestimonialBox";
-
-export default function TestimonialSlider() {
+import {TestimonialBox} from "../Elements/TestimonialBox";
+export const TestimonialSlider=()=> {
   const settings = {
     infinite: true,
     speed: 500,

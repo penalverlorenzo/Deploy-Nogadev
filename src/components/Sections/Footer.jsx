@@ -1,10 +1,9 @@
-import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 // Assets
-import LogoImg from "../../assets/svg/Logo";
+import LightLogo from "../../assets/svg/LightLogo";
 
-export default function Contact() {
+export const Footer=() =>{
 
   const getCurrentYear = () => {
     return new Date().getFullYear();
@@ -16,10 +15,10 @@ export default function Contact() {
         <div className="container">
           <InnerWrapper className="flexSpaceCenter" style={{ padding: "30px 0" }}>
             <Link className="flexCenter animate pointer" to="home" smooth={true} offset={-80}>
-              <LogoImg />
-              <h1 className="font15 extraBold whiteColor" style={{ marginLeft: "15px" }}>
+              <LightLogo />
+              {/* <h1 className="font15 extraBold whiteColor" style={{ marginLeft: "15px" }}>
                 Fanatic
-              </h1>
+              </h1> */}
             </Link>
             <StyleP className="whiteColor font13">
               © {getCurrentYear()} - <span className="purpleColor font13">Fanatic</span> All Right Reserved
