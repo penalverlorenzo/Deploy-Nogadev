@@ -7,6 +7,7 @@ import { Backdrop } from "../Elements/Backdrop";
 
 import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
+import { AnimatedLink } from "../viewTransition/AnimatedLink";
 
 export const TopNavbar = () => {
   const [y, setY] = useState(window.scrollY);
@@ -31,14 +32,14 @@ export const TopNavbar = () => {
               Software Solutions
             </h1>
           </Link>
-          <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebaropen)}>
+          <BurderWrapper className="pointer" title="Burger menu" onClick={() => toggleSidebar(!sidebaropen)}>
             <BurgerIcon />
           </BurderWrapper>
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <Link style={{ padding: "10px 15px" }} to="/" offset={-80}>
+              <AnimatedLink style={{ padding: "10px 15px" }} to="/" offset={-80}>
                 Home
-              </Link>
+              </AnimatedLink>
             </li>
             <li className="semiBold font15 pointer">
               <a style={{ padding: "10px 15px" }} href="/" offset={-80}>
@@ -46,15 +47,15 @@ export const TopNavbar = () => {
               </a>
             </li>
             <li className="semiBold font15 pointer">
-              <Link style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>
+              <AnimatedLink style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>
                 Blog
-              </Link>
+              </AnimatedLink>
             </li>
         
-            <li className="semiBold font15 pointer">
-              <Link style={{ padding: "10px 15px" }} to="/" offset={-80}>
+            <li className="semiBold font15 pointer ml-2">
+              <AnimatedLink style={{ padding: "10px 15px" }} to="/contact" offset={-80}>
                 Contact
-              </Link>
+              </AnimatedLink>
             </li>
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
