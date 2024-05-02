@@ -2,16 +2,12 @@ import styled from "styled-components";
 
 import QuotesIcon from "../../assets/svg/Quotes";
 import Dots from "../../assets/svg/Dots";
-<<<<<<< HEAD
-import ChatBotContain from "../chatBot/chatBotContain";
-=======
 import nogaRocket from "../../assets/svg/nogadevRocket.webp"
->>>>>>> 1c084f141f3fed47795397b5fa5d00d80a22de23
 
 export const Header = () => {
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
-      <ChatBotContain/>
+      
       <LeftSide className="flexCenter">
         <div>
           <h1 className="font-bold font-heading leading-tighter tracking-tighter mb-4 md:text-6xl text-5xl">Welcome to <span className="highlight bg-clip-text bg-gradient-to-r dark:bg-clip-text dark:from-blue-500 dark:to-blue-500 dark:via-blue-300 from-blue-500 pr-0.5 text-transparent to-blue-500 via-blue-900"> NOGADEV Software Solutions </span></h1>
