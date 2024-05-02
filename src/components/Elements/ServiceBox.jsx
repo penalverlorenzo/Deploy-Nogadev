@@ -38,8 +38,8 @@ export const ServiceBox=({icon, title, subtitle}) =>{
   return (
     <Wrapper className="flex flexColumn">
       <IconStyle>{getIcon}</IconStyle>
-      <TitleStyle className="font20 extraBold">{title}</TitleStyle>
-      <SubtitleStyle className="font15">{subtitle}</SubtitleStyle>
+      <TitleStyle className="font-bold text-xl md:text-[1.3rem]">{title}</TitleStyle>
+      <p className="text-lg font-semibold text-muted">{subtitle}</p>
     </Wrapper>
   );
 }
@@ -61,8 +61,8 @@ const TitleStyle = styled.h2`
     padding: 20px 0;
   }
 `;
-const SubtitleStyle = styled.p`
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
-`;
+// const SubtitleStyle = styled.p`
+//   width: 100%;
+//   max-width: 300px;
+//   margin: 0 auto;
+// `;
