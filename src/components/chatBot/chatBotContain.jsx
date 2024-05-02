@@ -13,15 +13,39 @@ function ChatBotContain() {
   const [animation, setAnimation] = useState(true)
   const [show, setShow] = useState(false)
 
-  
-  
+  useEffect(()=>{
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const draggableElement = document.getElementById('draggableElement');
+      let offsetX, offsetY, isDragging = false;
+    
+      draggableElement.addEventListener('mousedown', function (e) {
+        isDragging = true;
+        offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
+        offsetY = e.clientY - draggableElement.getBoundingClientRect().top;
+        draggableElement.style.cursor = 'grabbing';
+      });
+      
+      document.addEventListener('mousemove', function (e) {
+        if (!isDragging) return;
+        const x = Math.min(window.innerWidth - draggableElement.offsetWidth, Math.max(0, e.clientX - offsetX));
+        const y = Math.min(window.innerHeight - draggableElement.offsetHeight, Math.max(0, e.clientY - offsetY));
+
+        draggableElement.style.left = x + 'px';
+        draggableElement.style.top = y + 'px';
+      });
+    
+      document.addEventListener('mouseup', function () {
+        isDragging = false;
+        draggableElement.style.cursor = 'grab';
+      });
+    });
+  },[])
+
   useEffect(() =>{
     setTimeout(() => {
       setShow(true)
     }, 1500);
-  },[])
-
-  useEffect(() =>{
     setTimeout(() => {
       setShow(false)
     }, 5000);
@@ -29,7 +53,7 @@ function ChatBotContain() {
 
   return (
     <>
-    <div className={`fixed bottom-8 left-5 `}>
+    <div id='draggableElement' className={`fixed bottom-8 left-5`}>
         <div className={`transition ${toggle ? "scale-0 translate-y-52 -translate-x-32" : "scale-100 translate-y-0 translate-x-0"}`}>
           <Chatbot
             config={config}
