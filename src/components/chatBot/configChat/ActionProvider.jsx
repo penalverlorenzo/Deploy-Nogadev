@@ -38,23 +38,16 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     try {
       const res = await GeneratedPromptAnswer(message)
       if (res === "" || res.response === "" || res === null || res === undefined) {
-        const res2 = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ message)
-        let re;
-        if (res2.includes('*')) {
-          re = res2.replaceAll('*', ' ')
-        }
-        else{
-          re = res2
-        }
-        const botMessage = createChatBotMessage(re);
-        setState((prev) => ({
-          ...prev,
-          messages: [...prev.messages, botMessage],
-        }));  
+        generatedPrompt('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ message)
     }
       else {
         console.log('Deberia entrar');
-        const botMessage = createChatBotMessage(res? res: res.response);
+        let res2 = res
+        if (res2.includes('*')) {
+          res2 = res2.replaceAll('*', ' ')
+          res2 = res2.split('Respuesta: ')[1]
+          }
+        const botMessage = createChatBotMessage(res2? res2: res2.response);
         setState((prev) => ({
           ...prev,
           messages: [...prev.messages, botMessage],
