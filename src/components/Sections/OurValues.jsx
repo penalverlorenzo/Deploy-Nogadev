@@ -1,4 +1,3 @@
-import styled from "styled-components";
 const items = [
   {
     title: 'Customer-Centric Approach',
@@ -15,16 +14,18 @@ const items = [
     description:
       'We uphold the highest standards of integrity in all our business dealings. We are transparent in our communications, we honor our commitments, and we treat everyone with fairness and respect. We believe that ethical practices are essential to our success.',
   },
-]
+];
+import OurValuesImg from "../../assets/img/OurValues.png";
 export const OurValues = () => {
   return (
     <div className="container flex  flex-col md:flex-row mb-24">
-      <Advertising className="flex flex-col items-center ">
+      <div className="flex flex-col items-center mb-6">
         <h2 className="text-4xl extraBold mx-auto">Our Values</h2>
         <p className="text-2xl font-medium mx-auto text-center">
         At Nogadev, we believe in creating software solutions that truly make a difference. Here are the values that guide our work:
         </p>
-      </Advertising>
+        <img src={OurValuesImg} className="hidden md:flex w-full object-cover my-auto" alt="Representative image of our values" />
+      </div>
       <ul className="space-y-10 md:ml-7">
         {
           items && items.length
@@ -47,16 +48,3 @@ export const OurValues = () => {
     </div>
   );
 };
-const Advertising = styled.div`
-  margin: 80px 0;
-  padding: 100px 0;
-  position: relative;
-  @media (max-width: 1160px) {
-    padding: 100px 0 40px 0;
-  }
-  @media (max-width: 860px) {
-    flex-direction: column;
-    padding: 0 0 30px 0;
-    margin: 80px 0 0px 0;
-  }
-`;
