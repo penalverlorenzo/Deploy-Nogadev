@@ -4,11 +4,6 @@ import { Link } from "react-scroll";
 import LightLogo from "../../assets/svg/LightLogo";
 
 export const Footer=() =>{
-
-  const getCurrentYear = () => {
-    return new Date().getFullYear();
-  }
-
   return (
     <Wrapper>
       <div className="darkBg">
@@ -16,13 +11,8 @@ export const Footer=() =>{
           <InnerWrapper className="flexSpaceCenter" style={{ padding: "30px 0" }}>
             <Link className="flexCenter animate pointer" to="home" smooth={true} offset={-80}>
               <LightLogo />
-              {/* <h1 className="font15 extraBold whiteColor" style={{ marginLeft: "15px" }}>
-                Fanatic
-              </h1> */}
             </Link>
-            <StyleP className="whiteColor font13">
-              © {getCurrentYear()} - <span className="purpleColor font13">Fanatic</span> All Right Reserved
-            </StyleP>
+          
 
             <Link className="whiteColor animate pointer font13" to="home" smooth={true} offset={-80}>
               Back to top
@@ -40,10 +30,5 @@ const Wrapper = styled.div`
 const InnerWrapper = styled.div`
   @media (max-width: 550px) {
     flex-direction: column;
-  }
-`;
-const StyleP = styled.p`
-  @media (max-width: 550px) {
-    margin: 20px 0;
   }
 `;
