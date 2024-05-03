@@ -3,7 +3,7 @@
 /* eslint-disable react/prop-types */
 // import { useEffect, useState } from "react"
 
-import { generateToken } from "./GenerateToken"
+import { generateToken } from "./AccessToken"
 
 const parseMessage = (message) => {
     const lowerCasePrompt = message.toLowerCase()
@@ -17,7 +17,7 @@ const parseMessage = (message) => {
 export const GeneratedPromptAnswer = async (prompt) => {
     let result;
     const parsedData = parseMessage(prompt)
-
+    const localStorageToken = localStorage.getItem('token')
     const localData = localStorage.getItem(`${parsedData}`)
     generateToken()
     try {
@@ -26,7 +26,8 @@ export const GeneratedPromptAnswer = async (prompt) => {
             const response = await fetch('http://localhost:3000/api/v1/info', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorageToken}`
                 },
                 body: JSON.stringify({ message: prompt })
             });
@@ -40,8 +41,8 @@ export const GeneratedPromptAnswer = async (prompt) => {
         else {
             result = JSON.parse(localData)
         }
-        
-        return result.response ? result.response : result;
+        const finalRes = result.response ? result.response : result;
+        return finalRes
     } catch (error) {
         return `EN: There's something wrong, try sending your message again. ESP: Se ha producido un error, intenta enviar tu mensaje de vuelta`;
     }

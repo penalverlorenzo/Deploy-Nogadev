@@ -6,7 +6,7 @@ import config from './configChat/config';
 import MessageParser from './configChat/MessageParser';
 import ActionProvider from './configChat/ActionProvider';
 import './ChatBot.css';
-import { generateToken } from './generateToken';
+import { generateToken, refreshToken } from './componentsChat/AccessToken';
 
 function ChatBotContain() {
   const [toggle, setToggle] = useState(true);
@@ -53,6 +53,8 @@ function ChatBotContain() {
 
   useEffect(() => {
     const showTimeout = setTimeout(() => {
+      generateToken()
+      refreshToken()
       setShow(true);
     }, 1500);
     const hideTimeout = setTimeout(() => {
