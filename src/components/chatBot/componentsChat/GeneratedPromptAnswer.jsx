@@ -3,6 +3,8 @@
 /* eslint-disable react/prop-types */
 // import { useEffect, useState } from "react"
 
+import { generateToken } from "./GenerateToken"
+
 const parseMessage = (message) => {
     const lowerCasePrompt = message.toLowerCase()
     const noQuestionMark = lowerCasePrompt.replaceAll('?',"")
@@ -17,6 +19,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
     const parsedData = parseMessage(prompt)
 
     const localData = localStorage.getItem(`${parsedData}`)
+    generateToken()
     try {
         if (!localData) {
             
