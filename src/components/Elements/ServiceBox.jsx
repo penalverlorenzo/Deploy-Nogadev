@@ -38,7 +38,7 @@ export const ServiceBox=({icon, title, subtitle}) =>{
     <div className="flex flex-row w-full">
       <div className="flex justify-center">{getIcon}</div>
       <div className="mt-0.5">
-        <h3 className="font-bold text-xl md:text-[1.3rem]">{title}</h3>
+        <h2 className="font-bold text-xl md:text-[1.3rem]">{title}</h2>
         <p className="text-lg  text-muted">{subtitle}</p>
       </div>
     </div>
