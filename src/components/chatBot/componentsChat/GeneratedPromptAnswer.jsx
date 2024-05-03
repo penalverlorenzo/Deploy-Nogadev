@@ -19,6 +19,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
     const localData = localStorage.getItem(`${parsedData}`)
     try {
         if (!localData) {
+            
             const response = await fetch('http://localhost:3000/api/v1/info', {
                 method: 'POST',
                 headers: {

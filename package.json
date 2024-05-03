@@ -4,17 +4,17 @@
   "version": "0.0.0",
   "type": "module",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "crypto-js": "^4.2.0",
     "gsap": "^3.12.5",
-    "react-chatbot-kit": "^2.2.2",
-    "slick-carousel": "^1.8.1",
-    "web-vitals": "^1.1.2",
     "react": "^18.2.0",
+    "react-chatbot-kit": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.0",
     "react-scroll": "^1.9.0",
     "react-slick": "^0.30.2",
-    "styled-components": "^6.1.8"
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.8",
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
     "dev": "vite",
@@ -34,6 +34,5 @@
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.3",
     "vite": "^5.2.0"
-    
   }
 }
