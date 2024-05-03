@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-import QuotesIcon from "../../assets/svg/Quotes";
-import Dots from "../../assets/svg/Dots";
-import nogaRocket from "../../assets/svg/nogadevRocket.webp"
+import nogaRocket from "../../assets/img/nogadevRocket.avif"
 
 export const Header = () => {
   return (
@@ -15,23 +13,9 @@ export const Header = () => {
           </HeaderP>
         </div>
       </LeftSide>
-      <RightSide>
+      <RightSide className="hidden md:flex">
         <ImageWrapper>
-          <Img className="radius8 " src={nogaRocket} alt="office" style={{zIndex: 9}} />
-          <DotsWrapper>
-            <Dots />
-          </DotsWrapper>
-          <QuoteWrapper className="flexCenter darkBg radius8 ">
-            <QuotesWrapper>
-              <QuotesIcon />
-            </QuotesWrapper>
-            <div>
-              <p className="font15 whiteColor">
-                <em><span className="font-semibold">Philosophy: </span> We are committed to providing the best possible service to our clients. We believe in the power of technology to transform businesses and lives.</em>
-              </p>
-              <p className="font13 orangeColor textRight" style={{marginTop: '10px'}}>Nogadev</p>
-            </div>
-          </QuoteWrapper>
+          <Img decoding="async" className="radius8 lg:w-full lg:h-full hidden md:block min-h-[722px] min-w-[722px]" src={nogaRocket} alt="office" />
         </ImageWrapper>
       </RightSide>
     </Wrapper>
@@ -40,9 +24,7 @@ export const Header = () => {
 
 
 const Wrapper = styled.section`
-  padding-top: 80px;
   width: 100%;
-  min-height: 840px;
   @media (max-width: 960px) {
     flex-direction: column;
   }
@@ -112,36 +94,3 @@ const Img = styled.img`
     height: auto;
   }
 `;
-const QuoteWrapper = styled.div`
-  position: absolute;
-  left: 0;
-  bottom: -40px;
-  max-width: 330px;
-  padding: 30px;
-  z-index: 99;
-  @media (max-width: 960px) {
-    left: 20px;
-  }
-  @media (max-width: 560px) {
-    bottom: -50px;
-  }
-`;
-const QuotesWrapper = styled.div`
-  position: absolute;
-  left: -20px;
-  top: -10px;
-`;
-const DotsWrapper = styled.div`
-  position: absolute;
-  right: -100px;
-  bottom: 100px;
-  z-index: 2;
-  @media (max-width: 960px) {
-    right: 100px;
-  }
-  @media (max-width: 560px) {
-    display: none;
-  }
-`;
-
-

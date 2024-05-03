@@ -5,6 +5,7 @@ import { Link  } from "react-router-dom";
 import CloseIcon from "../../assets/svg/CloseIcon";
 // import LogoIcon from "../../assets/svg/Logo";
 import LightLogo from "../../assets/svg/LightLogo";
+import { AnimatedLink } from "../viewTransition/AnimatedLink";
 
 // eslint-disable-next-line react/prop-types
 export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
@@ -18,14 +19,14 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             fanatic
           </h1> */}
         </div>
-        <CloseBtn onClick={() => toggleSidebar(!sidebaropen)} className="animate pointer">
+        <CloseBtn onClick={() => toggleSidebar(!sidebaropen)} title="close sidebar menu" className="animate pointer">
           <CloseIcon />
         </CloseBtn>
       </SidebarHeader>
 
       <UlStyle className="flexNullCenter flexColumn">
         <li className="semiBold font15 pointer">
-          <Link
+          <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             className="whiteColor"
             style={{ padding: "10px 15px" }}
@@ -33,7 +34,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             offset={-60}
           >
             Home
-          </Link>
+          </AnimatedLink>
         </li>
         <li className="semiBold font15 pointer">
           <Link
@@ -47,7 +48,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link
+          <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             activeclass="active"
             className="whiteColor"
@@ -57,18 +58,18 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             offset={-60}
           >
             Blog
-          </Link>
+          </AnimatedLink>
         </li>
         <li className="semiBold font15 pointer">
-          <Link
+          <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="/"
+            to="/contact"
             offset={-60}
           >
             Contact
-          </Link>
+          </AnimatedLink>
         </li>
       </UlStyle>
       <UlStyle className="flexSpaceCenter">
