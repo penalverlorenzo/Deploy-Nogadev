@@ -22,6 +22,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
     generateToken()
     try {
         if (!localData) {
+            
             const response = await fetch('http://localhost:3000/api/v1/info', {
                 method: 'POST',
                 headers: {
@@ -41,6 +42,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
             result = JSON.parse(localData)
         }
         const finalRes = result.response ? result.response : result;
+        console.log({finalRes, result});
         return finalRes
     } catch (error) {
         return `EN: There's something wrong, try sending your message again. ESP: Se ha producido un error, intenta enviar tu mensaje de vuelta`;

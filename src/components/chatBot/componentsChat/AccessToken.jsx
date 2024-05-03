@@ -25,7 +25,8 @@ export const generateToken = async () =>{
             body: JSON.stringify({ token: doesTokenExist })
         })
         const {refreshedToken} = await createToken.json();
-        localStorage.setItem("token",refreshedToken)
+        localStorage.removeItem("token");
+        localStorage.setItem("token", refreshedToken);
     }
 }
 
@@ -41,6 +42,7 @@ export const refreshToken = () => {
             body: JSON.stringify({ token: doesTokenExist })
         })
         const {refreshedToken} = await createToken.json();
-        localStorage.setItem("token",refreshedToken)
+        localStorage.removeItem("token");
+        localStorage.setItem("token",refreshedToken);
     }, 840000)
 }
