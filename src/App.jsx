@@ -1,6 +1,5 @@
 import {Route, Routes, BrowserRouter  } from "react-router-dom";
 
-import './App.css'
 import { Home } from './routes/Home'
 import { BlogsView } from "./routes/BlogsView";
 import { BlogView } from "./routes/BlogView";
