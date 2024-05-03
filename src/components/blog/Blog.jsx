@@ -16,7 +16,7 @@ export const Blog = ({ post }) => {
                 alt={post.title}
                 loading="lazy"
                 decoding="async"
-                style={{ viewTransitionName: `image-${post.id}` }}
+                // style={{ viewTransitionName: `image-${post.id}` }}
               />
             </div>
           </AnimatedLink>
