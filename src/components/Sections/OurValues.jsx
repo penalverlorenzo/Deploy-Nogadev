@@ -37,8 +37,8 @@ export const OurValues = () => {
                   </span>
                 </div>
                 <div className="pl-4 rtl:pl-0 rtl:pr-4">
-                  <h3 className="mb-4 text-xl font-semibold font-heading">{title2}</h3>
-                  <p className="text-muted dark:text-gray-400" >{description}</p>
+                  <h3 className="mb-4 text-xl font-bold font-heading">{title2}</h3>
+                  <p className=" " >{description}</p>
                 </div>
               </li>
             ))
