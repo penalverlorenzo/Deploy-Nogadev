@@ -13,11 +13,11 @@ const config = {
   widgets: [
     {
       widgetName: 'optionInitialEN',
-      widgetFunc: (props) => <OptionInitial lang={"EN"}  {...props} />
+      widgetFunc: (props) => <OptionInitial lang={"EN"}  props={props} {...props} />
     },
     {
       widgetName: 'optionInitialES',
-      widgetFunc: (props) => <OptionInitial lang={"ES"} {...props} />
+      widgetFunc: (props) => <OptionInitial lang={"ES"} props={props} {...props} />
     }
   ],
 customComponents: {

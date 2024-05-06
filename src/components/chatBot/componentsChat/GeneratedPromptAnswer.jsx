@@ -2,10 +2,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-// import { useEffect, useState } from "react"
 
 import { dbURL } from "../../../config";
-import { generateToken } from "./AccessToken"
 
 const parseMessage = (message) => {
     // Expresiones Regulares para cada posible caso de vocales con caracteres especiales
@@ -54,8 +52,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
             result = JSON.parse(localData)
         }
         let finalRes = result.response ? result.response : result;
-      
-        // console.log({ finalRes, result });
+
         return finalRes
     } catch (error) {
         return `EN: There's something wrong, try sending your message again. ESP: Se ha producido un error, intenta enviar tu mensaje de vuelta`;
