@@ -37,12 +37,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
   const generatedPrompt = async (message) => {
     try {
       const res = await GeneratedPromptAnswer(message)
-      if (res === "" || res.response === "" || res === null || res === undefined) {
-        generatedPrompt('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ message)
-    }
-      else {
         let res2 = res
-        console.log({res2});
         if (res2.includes('*') && !res2.response) {
           res2 = res2.replaceAll('*', ' ')
           res2 = res2.includes('Respuesta: ') ? res2.split('Respuesta: ')[1] : res2;
@@ -52,7 +47,6 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           ...prev,
           messages: [...prev.messages, botMessage],
         }));
-      }
     } catch (error) {
       console.log(error);
     }

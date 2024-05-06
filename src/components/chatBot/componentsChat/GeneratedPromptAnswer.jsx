@@ -53,8 +53,11 @@ export const GeneratedPromptAnswer = async (prompt) => {
         else {
             result = JSON.parse(localData)
         }
-        const finalRes = result.response ? result.response : result;
-        console.log({ finalRes, result });
+        let finalRes = result.response ? result.response : result;
+        if (finalRes === '' || finalRes.response === '') {
+            finalRes = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ prompt)
+        }
+        // console.log({ finalRes, result });
         return finalRes
     } catch (error) {
         return `EN: There's something wrong, try sending your message again. ESP: Se ha producido un error, intenta enviar tu mensaje de vuelta`;
