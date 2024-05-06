@@ -3,7 +3,6 @@ import { baseUrl } from "../../config/index"
 // import { Link } from "react-router-dom";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
 export const Blog = ({ post }) => {
-  console.log({ post });
   return (
     <article className={`max-w-md mx-auto md:max-w-none grid gap-6 md:gap-8 ${post.image ? 'md:grid-cols-2' : ''}`}>
       {

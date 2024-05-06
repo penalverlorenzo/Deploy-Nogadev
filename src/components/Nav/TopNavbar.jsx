@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -8,17 +8,10 @@ import { Backdrop } from "../Elements/Backdrop";
 import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
+import { ScrollButton } from "../Elements/ScrollButton";
 
 export const TopNavbar = () => {
-  const [y, setY] = useState(window.scrollY);
   const [sidebaropen, toggleSidebar] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => setY(window.scrollY));
-    return () => {
-      window.removeEventListener("scroll", () => setY(window.scrollY));
-    };
-  }, [y]);
 
   return (
     <>
@@ -35,16 +28,16 @@ export const TopNavbar = () => {
           <BurderWrapper className="pointer" title="Burger menu" onClick={() => toggleSidebar(!sidebaropen)}>
             <BurgerIcon />
           </BurderWrapper>
-          <UlWrapper className="flexNullCenter">
+          <UlWrapper className="flexNullCenter gap-4">
             <li className="semiBold font15 pointer">
               <AnimatedLink style={{ padding: "10px 15px" }} to="/" offset={-80}>
                 Home
               </AnimatedLink>
             </li>
             <li className="semiBold font15 pointer">
-              <a style={{ padding: "10px 15px" }} href="/" offset={-80}>
+              <ScrollButton style={{ padding: "10px 15px" }} targetId="services" offset={-80}>
                 Services
-              </a>
+              </ScrollButton>
             </li>
             <li className="semiBold font15 pointer">
               <AnimatedLink style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>

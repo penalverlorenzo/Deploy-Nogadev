@@ -1,16 +1,17 @@
 import styled from "styled-components";
 // Assets
 import LightLogo from "../../assets/svg/LightLogo";
+import { ScrollButton } from "../Elements/ScrollButton";
 
 export const Footer=() =>{
   return (
-    <Wrapper>
+    <Wrapper id="footer">
       <div className="darkBg">
         <div className="container">
           <InnerWrapper className="flexSpaceCenter" style={{ padding: "30px 0" }}>
-            <a className="flexCenter animate pointer" href="#top" >
+            <ScrollButton className="flexCenter animate pointer" targetId="top" >
               <LightLogo />
-            </a>
+            </ScrollButton>
             <a className="hidden md:flex whiteColor animate pointer font13" href="#top" >
               Back to top
             </a>
