@@ -38,7 +38,7 @@ export const BlogView = () => {
             src={`${baseUrl}${blog.image}`}
             className="mx-auto bg-gray-400 dark:bg-slate-700 lg:max-w-[900px] max-w-full mb-6 sm:rounded-md"
             alt={blog.title}
-            style={{viewTransitionName: `image-${id}`}}
+            // style={{viewTransitionName: `image-${id}`}}
           />
           <div
             className="mx-auto sm:px-6 max-w-3xl px-6 mt-8 dark:prose-a:text-blue-400 dark:prose-headings:text-slate-300 dark:prose-invert lg:prose-xl prose prose-a:text-primary prose-headings:font-bold prose-headings:font-heading prose-headings:leading-tighter prose-headings:scroll-mt-[80px] prose-headings:tracking-tighter prose-img:rounded-md prose-img:shadow-lg prose-lg prose-md"

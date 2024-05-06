@@ -40,7 +40,6 @@ export const AdminForm = ({ onChange, cancelForm, formData, baseUrl, setBlogs })
     formData.title && dataForm.append('title', formData.title);
     formData.description && dataForm.append('description', formData.description);
     formData.image && dataForm.append('image', formData.image);
-    console.log({dataForm, formData});
     if (formData.id) {
       await updateBlog(dataForm);
     }else{

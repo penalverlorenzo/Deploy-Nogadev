@@ -2,7 +2,7 @@ export const AboutUs = () => {
   return (
     <div className="mx-auto px-4 relative max-w-7xl sm:px-6">
 
-    <div className="flex items-center md:py-20 py-12">
+    <div className="flex items-center  mb-20">
       <div className="mx-auto max-w-5xl md:pb-16 pb-10 text-start">
         <p className="font-bold text-base text-[#1e3a8a] tracking-wide uppercase">About us</p>
         <h1 className="font-bold font-heading leading-tighter tracking-tighter mb-4 text-black md:text-6xl text-5xl">
