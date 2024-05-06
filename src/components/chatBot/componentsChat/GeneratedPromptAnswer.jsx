@@ -4,6 +4,7 @@
 /* eslint-disable react/prop-types */
 // import { useEffect, useState } from "react"
 
+import { dbURL } from "../../../config";
 import { generateToken } from "./AccessToken"
 
 const parseMessage = (message) => {
@@ -30,12 +31,11 @@ export const GeneratedPromptAnswer = async (prompt) => {
     let result;
     const parsedData = parseMessage(prompt)
     const localStorageToken = localStorage.getItem('token')
-    const localData = localStorage.getItem(`${parsedData}`)
-    generateToken()
+    const localData = localStorage.getItem(`${parsedData}`) 
     try {
         if (!localData) {
-
-            const response = await fetch('http://localhost:3000/api/v1/info', {
+            
+            const response = await fetch(dbURL+'/info', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -48,7 +48,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
             if (result === '' || result.response === '') {
                 result = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ prompt)
             }
-            localStorage.setItem(`${parsedData}`, JSON.stringify(data.response))
+            localStorage.setItem(`${parsedData}`, JSON.stringify(result.response? result.response : result))
         }
         else {
             result = JSON.parse(localData)
