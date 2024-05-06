@@ -1,4 +1,4 @@
-export const OptionInitial = (props, {lang}) => {
+export const OptionInitial = ({props, lang}) => {
 
   const generatedPrompt = (message) => {
     props.actions.generatedPrompt(message);

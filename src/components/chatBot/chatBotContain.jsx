@@ -22,7 +22,6 @@ function ChatBotContain() {
       
       offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
       offsetY = e.clientY - draggableElement.getBoundingClientRect().top;
-      draggableElement.style.cursor = 'grabbing';
     };
 
     const handleMouseMove = (e) => {
@@ -37,8 +36,6 @@ function ChatBotContain() {
 
     const handleMouseUp = () => {
       isDragging = false;
-      draggableElement.style.cursor = 'grab';
-  
     };
 
     draggableElement.addEventListener('mousedown', handleMouseDown);
