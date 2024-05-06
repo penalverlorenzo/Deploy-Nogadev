@@ -101,14 +101,7 @@
   border-right: 9px solid rgba(0, 0, 0, 0.927);
 }
 
-@keyframes moveUpDown {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px); 
-  }
-}
+
 
 .animationIcon {
   animation: moveUpDown 2s ease-in-out infinite; 
@@ -128,8 +121,6 @@
   scale: 0;
   transition: all 0.3s ease;
 }
-
-
 .AnimationPInition{
   scale: 1;
   transform: translate(50px , -100px);
@@ -138,3 +129,30 @@
   scale: 1;
   transform: translate(50px , -57px);
 }
+
+.rocket {
+  animation: rocketAnimation 1.5s ease-in-out forwards; 
+}
+
+@keyframes rocketAnimation {
+  0% {
+    transform: translateX(-10vw) translateY(10vh) rotate(120deg); 
+  }
+  50% {
+    transform: translateX(2vw) translateY(-5vh) rotate(-45deg); 
+  }
+  100% {
+    transform: rotate(-45deg); 
+  }
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); 
+  }
+}
+
+
