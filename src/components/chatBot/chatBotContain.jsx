@@ -11,7 +11,7 @@ import { generateToken, refreshToken } from './componentsChat/AccessToken';
 function ChatBotContain() {
   const [toggle, setToggle] = useState(true);
   const [animation, setAnimation] = useState(true);
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
 
@@ -80,8 +80,8 @@ function ChatBotContain() {
       </div>
 
       <div className={`${animation ? "animationIcon" : ""} w-[35px] relative transition-all`} onClick={() => toggle ? (setToggle(false), setAnimation(false)) : (setToggle(true), setAnimation(true))}>
-        <p className={`${animation ? "" : "hidden"} ${show ? "AnimationPInition" : ""} absolute scale-0  AnimationP p-2 bg-black text-white cursor-pointer w-20 rounded-xl transition`}>Hello!👋</p>
-        <p className={`${animation ? "" : "hidden"} ${show ? "AnimationHelpInition" : ""} absolute scale-0  AnimationPHelp p-2 bg-black text-white cursor-pointer w-40 rounded-xl rounded-bl-none transition`}>How can we help you?</p>
+        <p className={`${animation ? "" : "hidden"} ${show ? "AnimationPInition" : "scale-0"} absolute AnimationP p-2 bg-black text-white cursor-pointer w-20 rounded-xl transition`}>Hello!👋</p>
+        <p className={`${animation ? "" : "hidden"} ${show ? "AnimationHelpInition" : "scale-0"} absolute AnimationPHelp p-2 bg-black text-white cursor-pointer w-40 rounded-xl rounded-bl-none transition`}>How can we help you?</p>
         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-rocket cursor-pointer rocket" width="44" height="44" viewBox="0 0 24 24" strokeWidth="2" stroke="#4d566d" fill="none" strokeLinecap="round" strokeLinejoin="round">
           <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
           <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
