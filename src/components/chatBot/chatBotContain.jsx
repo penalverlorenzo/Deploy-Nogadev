@@ -65,7 +65,7 @@ function ChatBotContain() {
   }, []);
 
   return (
-    <div id='draggableElement' className={`fixed bottom-8 left-5 h-8 `}>
+    <div id='draggableElement' className={`fixed bottom-8 left-5 h-8 z-20 `}>
       <div className={`transition relative ${toggle ? "scale-0 translate-y-40 -translate-x-10" : "scale-100 translate-y-0 translate-x-0"}`}>
         <div className='absolute bottom-1'>
           <Chatbot

@@ -27,7 +27,6 @@ export const AdminView = () => {
   }
   const deleteBlog = async (id) => {
     const res = await fetch(`${baseUrl}/blogs/${id}`, { method: 'DELETE' });
-    console.log({ res });
     if (res.ok) {
       alert('eliminado correctamente')
     } else {

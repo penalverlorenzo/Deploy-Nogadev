@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export const OptionInitial = ({props, lang}) => {
 
   const generatedPrompt = (message) => {

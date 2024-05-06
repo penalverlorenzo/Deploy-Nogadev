@@ -1,14 +1,11 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
 import { Link  } from "react-router-dom";
-// Assets
 import CloseIcon from "../../assets/svg/CloseIcon";
-// import LogoIcon from "../../assets/svg/Logo";
 import LightLogo from "../../assets/svg/LightLogo";
+import { AnimatedLink } from "../viewTransition/AnimatedLink";
 
-// eslint-disable-next-line react/prop-types
 export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
-  // console.log({sidebaropen});
   return (
     <Wrapper className="animate darkBg" style={{right: (sidebaropen ?  "0px" : "-400px" )}}>
       <SidebarHeader className="flexSpaceCenter">
@@ -18,14 +15,14 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             fanatic
           </h1> */}
         </div>
-        <CloseBtn onClick={() => toggleSidebar(!sidebaropen)} className="animate pointer">
+        <CloseBtn onClick={() => toggleSidebar(!sidebaropen)} title="close sidebar menu" className="animate pointer">
           <CloseIcon />
         </CloseBtn>
       </SidebarHeader>
 
       <UlStyle className="flexNullCenter flexColumn">
         <li className="semiBold font15 pointer">
-          <Link
+          <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             className="whiteColor"
             style={{ padding: "10px 15px" }}
@@ -33,7 +30,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             offset={-60}
           >
             Home
-          </Link>
+          </AnimatedLink>
         </li>
         <li className="semiBold font15 pointer">
           <Link
@@ -47,7 +44,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
           </Link>
         </li>
         <li className="semiBold font15 pointer">
-          <Link
+          <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             activeclass="active"
             className="whiteColor"
@@ -57,36 +54,23 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             offset={-60}
           >
             Blog
-          </Link>
+          </AnimatedLink>
         </li>
         <li className="semiBold font15 pointer">
-          <Link
+          <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             className="whiteColor"
             style={{ padding: "10px 15px" }}
-            to="/"
+            to="/contact"
             offset={-60}
           >
             Contact
-          </Link>
-        </li>
-      </UlStyle>
-      <UlStyle className="flexSpaceCenter">
-        <li className="semiBold font15 pointer">
-          <Link to="/" style={{ padding: "10px 30px 10px 0" }} className="whiteColor">
-            Log in
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer flexCenter">
-          <Link to="/" className="radius8 lightBg" style={{ padding: "10px 15px" }}>
-            Get Started
-          </Link>
+          </AnimatedLink>
         </li>
       </UlStyle>
     </Wrapper>
   );
 }
-// right: ${(props) => (props.sidebaropen ? "0px" : "-400px")};
 
 const Wrapper = styled.nav`
   width: 400px;
