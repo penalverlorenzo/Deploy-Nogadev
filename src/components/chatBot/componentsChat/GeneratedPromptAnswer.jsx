@@ -45,8 +45,8 @@ export const GeneratedPromptAnswer = async (prompt) => {
             });
             const data = await response.json();
             result = data;
-            if (data.response === "") {
-                localStorage.removeItem(`${parseMessage}`)
+            if (result === '' || result.response === '') {
+                result = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ prompt)
             }
             localStorage.setItem(`${parsedData}`, JSON.stringify(data.response))
         }
@@ -54,9 +54,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
             result = JSON.parse(localData)
         }
         let finalRes = result.response ? result.response : result;
-        if (finalRes === '' || finalRes.response === '') {
-            finalRes = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ prompt)
-        }
+      
         // console.log({ finalRes, result });
         return finalRes
     } catch (error) {
