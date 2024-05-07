@@ -5,7 +5,6 @@ import { OurValues } from "../components/Sections/OurValues";
 import { UsePageMetadata } from "../hooks/UsePageMetadata";
 import { AboutUs } from "../components/Sections/AboutUs";
 import { Philosophy } from "../components/Elements/Philosophy";
-import ChatBotContain from "../components/chatBot/chatBotContain";
 const titlePage = 'Nogadev';
 const descriptionPage = 'Discover NogaDev, your strategic partner in innovative software solutions.';
 export const Home = () => {
@@ -14,7 +13,7 @@ export const Home = () => {
     <Layout>
       <Header />
       <Philosophy />
-      <ChatBotContain/>
+
       <Services />
       <AboutUs />
       <OurValues />

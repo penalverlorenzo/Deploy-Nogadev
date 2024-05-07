@@ -1,5 +1,3 @@
-import LazyImageLoader from "../LazyLoading/LazyLoadingContainer";
-
 export const AboutUs = () => {
   return (
     <div className="mx-auto px-4 relative max-w-7xl sm:px-6">
@@ -19,7 +17,6 @@ export const AboutUs = () => {
       </div>
       <div>
         <div className="relative hidden m-auto max-w-2xl md:block">
-          <LazyImageLoader>
           <img
             alt="Company Image"
             src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80"
@@ -31,8 +28,7 @@ export const AboutUs = () => {
             srcSet="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=400&amp;q=80&amp;h=400 400w, https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=768&amp;q=80&amp;h=768 768w, https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1024&amp;q=80&amp;h=1024 1024w, https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2040&amp;q=80&amp;h=2040 2040w, https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2048&amp;q=80&amp;h=2048 2048w"
             style={{ objectFit: 'cover', objectPosition: 'center', maxWidth: '1024px', maxHeight: '1024px', aspectRatio: '1', width: '100%' }}
             width="1024"
-            />
-            </LazyImageLoader>
+          />
         </div>
       </div>
     </div>
