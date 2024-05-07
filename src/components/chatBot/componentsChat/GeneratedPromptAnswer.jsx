@@ -4,6 +4,7 @@
 /* eslint-disable react/prop-types */
 
 import { dbURL } from "../../../config";
+import { refreshToken } from "./AccessToken";
 
 const parseMessage = (message) => {
     // Expresiones Regulares para cada posible caso de vocales con caracteres especiales
@@ -24,29 +25,33 @@ const parseMessage = (message) => {
     return cleanedMessage
 }
 
-
 export const GeneratedPromptAnswer = async (prompt) => {
     let result;
+    let data;
     const parsedData = parseMessage(prompt)
     const localStorageToken = localStorage.getItem('token')
     const localData = localStorage.getItem(`${parsedData}`) 
     try {
         if (!localData) {
+                    const response = await fetch(dbURL+'/info', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${localStorageToken}`
+                        },
+                        body: JSON.stringify({ message: prompt })
+                    });
+                    data = await response.json(); 
+                    result = data;
+                        if (response.status === 401) {
+                            refreshToken();
+                            result = await GeneratedPromptAnswer(prompt);
+                        }
+                if (result === '' || result.response === '') {
+                    result = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ prompt)
+                }
+                localStorage.setItem(`${parsedData}`, JSON.stringify(result.response? result.response : result))
             
-            const response = await fetch(dbURL+'/info', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${localStorageToken}`
-                },
-                body: JSON.stringify({ message: prompt })
-            });
-            const data = await response.json();
-            result = data;
-            if (result === '' || result.response === '') {
-                result = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ prompt)
-            }
-            localStorage.setItem(`${parsedData}`, JSON.stringify(result.response? result.response : result))
         }
         else {
             result = JSON.parse(localData)
