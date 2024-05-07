@@ -5,7 +5,6 @@ import { BlogsView } from "./routes/BlogsView";
 import { BlogView } from "./routes/BlogView";
 import { AdminView } from "./routes/AdminView";
 import { ContactView } from "./routes/ContactView";
-import ChatbotContain from "./components/chatBot/chatBotContain";
 
 function App() {
   return (
@@ -19,7 +18,7 @@ function App() {
         <Route path="/contact" element={<ContactView />} />
       </Routes>
     </BrowserRouter>
-    <ChatbotContain></ChatbotContain>
+    
     </>
   )
 }

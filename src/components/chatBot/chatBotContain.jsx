@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import Chatbot from 'react-chatbot-kit';
 import 'react-chatbot-kit/build/main.css';
+
 import config from './configChat/config';
 import MessageParser from './configChat/MessageParser';
 import ActionProvider from './configChat/ActionProvider';
@@ -48,6 +49,11 @@ function ChatBotContain() {
     };
   }, []);
 
+  useEffect(()=> {
+    const btn = document.querySelector(".react-chatbot-kit-chat-btn-send")
+    btn.title = "boton para enviar el mensaje."
+  }, [])
+
   useEffect(() => {
     const showTimeout = setTimeout(() => {
       generateToken();
@@ -71,6 +77,8 @@ function ChatBotContain() {
             config={config}
             messageParser={MessageParser}
             actionProvider={ActionProvider}
+            submitButtonTitle="Enviar mensaje"
+            ariaLabel="Enviar mensaje al chatbot" 
           />
         </div>
       </div>

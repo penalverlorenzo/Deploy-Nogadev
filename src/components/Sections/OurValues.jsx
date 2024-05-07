@@ -15,7 +15,8 @@ const items = [
       'We uphold the highest standards of integrity in all our business dealings. We are transparent in our communications, we honor our commitments, and we treat everyone with fairness and respect. We believe that ethical practices are essential to our success.',
   },
 ];
-import OurValuesImg from "../../assets/img/OurValues.png";
+import OurValuesImg from "../../assets/img/OurValues.webp";
+import LazyImageLoader from "../LazyLoading/LazyLoadingContainer";
 export const OurValues = () => {
   return (
     <div className="container flex  flex-col md:flex-row mb-24">
@@ -24,7 +25,9 @@ export const OurValues = () => {
         <p className="text-2xl font-medium mx-auto text-center">
         At Nogadev, we believe in creating software solutions that truly make a difference. Here are the values that guide our work:
         </p>
+        <LazyImageLoader>
         <img src={OurValuesImg} className="hidden md:flex w-full object-cover my-auto" alt="Representative image of our values" />
+        </LazyImageLoader>
       </div>
       <ul className="space-y-10 md:ml-7">
         {
