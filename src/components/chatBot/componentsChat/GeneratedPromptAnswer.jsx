@@ -44,7 +44,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
                     data = await response.json(); 
                     result = data;
                         if (response.status === 401) {
-                            refreshToken();
+                            await refreshToken();
                             result = await GeneratedPromptAnswer(prompt);
                         }
                 if (result === '' || result.response === '') {

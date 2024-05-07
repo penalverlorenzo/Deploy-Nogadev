@@ -8,13 +8,13 @@ export const OptionInitial = ({props, lang}) => {
   const PEN = "If you want to see these options again, type 'Options'";
   const PES = "Si quieres ver estas opciones nuevamente, escribe 'Opciones'";
   
-  const contactEN = "Show me the contacts for Fernando Nogara, Juan Pablo Shaw y nogadev?";
-  const contactES = "Muéstrame los contactos de Fernando Nogara, Juan Pablo Shaw y nogadev?";
+  const contactEN = "How can I contact you?";
+  const contactES = "como me puedo contactar?";
 
-  const objectivesEN = "What are Nogadev's goals?";
+  const objectivesEN = "What are the objectives of Nogadev?";
   const objectivesES = "¿Cuáles son los objetivos de Nogadev?";
 
-  const coFoundersEN = "Who are the co-founders?";
+  const coFoundersEN = "Could you tell me the names of the co-founders?";
   const coFoundersES = "¿Quiénes son los cofundadores?";
   
   return (
