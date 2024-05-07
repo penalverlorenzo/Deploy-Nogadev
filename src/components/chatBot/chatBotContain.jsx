@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from 'react';
 import Chatbot from 'react-chatbot-kit';
+import 'react-chatbot-kit/build/main.css';
 
 import config from './configChat/config';
 import MessageParser from './configChat/MessageParser';
@@ -8,7 +9,6 @@ import ActionProvider from './configChat/ActionProvider';
 import './ChatBot.css';
 import { generateToken, refreshToken } from './componentsChat/AccessToken';
 
-import 'react-chatbot-kit/build/main.css';
 function ChatBotContain() {
   const [toggle, setToggle] = useState(true);
   const [animation, setAnimation] = useState(true);

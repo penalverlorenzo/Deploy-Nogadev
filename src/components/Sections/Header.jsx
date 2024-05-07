@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import nogaRocket from "../../assets/img/nogadevRocket.avif"
+import LazyImageLoader from "../LazyLoading/LazyLoadingContainer";
 
 export const Header = () => {
   return (
@@ -16,7 +17,10 @@ export const Header = () => {
       </LeftSide>
       <RightSide className="hidden md:flex">
         <ImageWrapper>
+          <LazyImageLoader>
+
           <Img decoding="async" className="radius8 lg:w-full lg:h-full hidden md:block min-h-[722px] min-w-[722px]" src={nogaRocket} alt="office" />
+          </LazyImageLoader>
         </ImageWrapper>
       </RightSide>
     </Wrapper>
