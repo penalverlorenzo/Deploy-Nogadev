@@ -2,12 +2,6 @@
 import React from 'react';
 
 const MessageParser = ({ children, actions }) => {
-  
-
-  function detectarSaludo(mensaje) {
-    const patronesSaludo = /^(hola|hello|hi|hey|que\s?onda)\b/i;
-    return patronesSaludo.test(mensaje);
-}
 
 function detectOption(mensaje) {
   const patronesOpciones = /^(options|option|opciones|opsiones|opsion|opcion)\b/i;
@@ -15,9 +9,7 @@ function detectOption(mensaje) {
 }
 
   const parse = (message) => {
-    if (detectarSaludo(message)) {
-      actions.handleHello();
-    } else if (detectOption(message)) {
+      if   (detectOption(message)) {
       actions.handleOption(message);
     }else {
       actions.generatedPrompt(message);

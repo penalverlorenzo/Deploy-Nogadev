@@ -1,6 +1,5 @@
 import { createChatBotMessage } from 'react-chatbot-kit';
 import { FlightBotAvatar } from '../componentsChat/FlightBotAvatar';
-import { MyUserAvatar } from '../componentsChat/MyUserAvatar';
 import { OptionInitial } from '../componentsChat/OptionInitial';
 
 
@@ -23,8 +22,6 @@ const config = {
 customComponents: {
  // Replaces the default bot avatar
   botAvatar: (props) => <FlightBotAvatar {...props} />,
- // Replaces the default user icon
-  userAvatar: (props) => <MyUserAvatar {...props} />,
 },
 };
 export default config;
