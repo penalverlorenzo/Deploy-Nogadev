@@ -5,6 +5,7 @@
 
 import { dbURL } from "../../../config";
 import { refreshToken } from "./AccessToken";
+import { createItem, getItem } from "./redisRequests";
 
 const parseMessage = (message) => {
     // Expresiones Regulares para cada posible caso de vocales con caracteres especiales
@@ -28,11 +29,13 @@ const parseMessage = (message) => {
 export const GeneratedPromptAnswer = async (prompt) => {
     let result;
     let data;
+    // const localData = localStorage.getItem(`${parsedData}`) 
     const parsedData = parseMessage(prompt)
     const localStorageToken = localStorage.getItem('token')
-    const localData = localStorage.getItem(`${parsedData}`) 
+    const doesItemExist = await getItem(parsedData,dbURL,localStorageToken)
+    console.log({doesItemExist});
     try {
-        if (!localData) {
+        if (!doesItemExist) {
                     const response = await fetch(dbURL+'/info', {
                         method: 'POST',
                         headers: {
@@ -50,11 +53,13 @@ export const GeneratedPromptAnswer = async (prompt) => {
                 if (result === '' || result.response === '') {
                     result = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: '+ prompt)
                 }
-                localStorage.setItem(`${parsedData}`, JSON.stringify(result.response? result.response : result))
+                await createItem(parsedData,result.response? result.response : result,dbURL, localStorageToken)
+                // localStorage.setItem(`${parsedData}`, JSON.stringify(result.response? result.response : result))
+
             
         }
         else {
-            result = JSON.parse(localData)
+            result = doesItemExist
         }
         let finalRes = result.response ? result.response : result;
 
