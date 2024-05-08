@@ -5,6 +5,7 @@ import { BlogsView } from "./routes/BlogsView";
 import { BlogView } from "./routes/BlogView";
 import { AdminView } from "./routes/AdminView";
 import { ContactView } from "./routes/ContactView";
+import { ThanksView } from "./routes/ThanksView";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Route path="/blogs/:id" element={<BlogView />} />
         <Route path="/admin" element={<AdminView />} />
         <Route path="/contact" element={<ContactView />} />
-
+        <Route path="/thanks" element={<ThanksView />}/>
       </Routes>
     </BrowserRouter>
   )
