@@ -15,7 +15,6 @@ export const BlogList = () => {
     const fetchData = async ()=>{
       try {
         const res =  await fetch(`${baseUrl}/blogs`);
-        console.log({res});
         if (res.ok) {
           const data = await res.json();
           setPosts(data);

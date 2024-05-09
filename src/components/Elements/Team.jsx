@@ -2,7 +2,8 @@ import { LinkedIn } from "../../assets/svg/LinkedIn";
 import ferImage from "../../assets/img/team/ferMini.jpg";
 import jorgeImage from "../../assets/img/team/jorge.jpg";
 import lucasImage from "../../assets/img/team/lucasMini.jpg";
-import yateImage from "../../assets/img/team//Yate mini.jpg";
+import yateImage from "../../assets/img/team/YateMini.jpg";
+import davidImage from "../../assets/img/team/davidMini.avif";
 
 /* eslint-disable react/prop-types */
 const team =[
@@ -27,7 +28,7 @@ const team =[
   {
     name: 'David Nogara',
     description: 'Co-founder - Senior Developer',
-    image: 'https://media.licdn.com/dms/image/C4D03AQG0lw2ajsmIFw/profile-displayphoto-shrink_200_200/0/1628122380566?e=1717027200&v=beta&t=skzb9fZbeMwBvX18cSBZo3dSgU2EusAFc1a_9YrMsE0',
+    image: davidImage,
     url: 'https://www.linkedin.com/in/davidnogara/'
   },
   {
