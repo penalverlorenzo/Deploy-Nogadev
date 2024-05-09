@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 import nogaRocket from "../../assets/img/nogadevRocket.avif"
+import { AnimatedLink } from "../viewTransition/AnimatedLink";
 
 export const Header = () => {
   return (
@@ -8,9 +9,15 @@ export const Header = () => {
       <LeftSide className="flexCenter">
         <div>
           <h1 className="font-bold font-heading leading-tighter tracking-tighter mb-4 md:text-6xl text-5xl">Welcome to <span className="highlight bg-clip-text bg-gradient-to-r dark:bg-clip-text dark:from-blue-500 dark:to-blue-500 dark:via-blue-300 from-blue-500 pr-0.5 text-transparent to-blue-500 via-blue-900"> NOGADEV Software Solutions </span></h1>
-          <HeaderP className="font18 semiBold">
-          where cutting-edge technology meets creative solutions. We are a dynamic software startup committed to revolutionizing your business experience.
+          <HeaderP className="text-xl font-semibold">
+            Where cutting-edge technology meets creative solutions. We are a dynamic software startup committed to revolutionizing your business experience.
           </HeaderP>
+          <AnimatedLink className={"flex w-fit py-2 px-4 md:py-3 md:px-6 mx-auto lg:mx-0 hover:text-white/70 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:outline-none  shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium md:font-semibold rounded-lg text-lg md:text-2xl text-center items-center"} to="/contact">
+            {"Let's connect!"}
+            <svg className="rtl:rotate-180 size-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </AnimatedLink>
         </div>
       </LeftSide>
       <RightSide className="hidden md:flex">
@@ -21,6 +28,8 @@ export const Header = () => {
     </Wrapper>
   );
 }
+
+{/* <button type="button" class="">Blue</button> */}
 
 
 const Wrapper = styled.section`
@@ -61,23 +70,7 @@ const HeaderP = styled.div`
     max-width: 100%;
   }
 `;
-// const BtnWrapper = styled.div`
-//   max-width: 190px;
-//   @media (max-width: 960px) {
-//     margin: 0 auto;
-//   }
-// `;
-// const GreyDiv = styled.div`
-//   width: 30%;
-//   height: 700px;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   z-index: 0;
-//   @media (max-width: 960px) {
-//     display: none;
-//   }
-// `;
+
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: flex-end;

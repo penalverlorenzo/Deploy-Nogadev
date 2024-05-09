@@ -2,12 +2,10 @@ import styled from "styled-components";
 // Components
 // import { ClientSlider } from "../Elements/ClientSlider";
 import { ServiceBox } from "../Elements/ServiceBox";
-import { Team } from "../Elements/Team";
-
 
 export const Services = () => {
   return (
-    <Wrapper id="services" >
+    <Wrapper id="services" className="pb-12" >
       <div className="lightBg pt-5">
         <div className="container">
           <div className="" style={{ paddingTop: "60px" }}>
@@ -15,10 +13,10 @@ export const Services = () => {
               <HeaderInfo className="flex flex-col w-full items-center justify-center">
                 <h1 className="font40 extraBold text-blue-800">Services</h1>
                 <p className="text-xl text-muted mt-4 md:w-2/4 flex md:mx-auto w-full lg:mx-0 text-center text-pretty">
-                  we don’t just create software; we craft tailor-made solutions that resonate with your unique business need
+                  We don’t just create software; we craft tailor-made solutions that resonate with your unique business need
                 </p>
               </HeaderInfo>
-              <div className="mx-auto gap-8 grid md:gap-y-12 sm:grid-cols-2 mt-8">
+              <div className="mx-auto gap-8 grid md:gap-y-12 sm:grid-cols-2 mt-14">
                   <ServiceBox
                     icon={"roller"}
                     title="Creative Solutions"
@@ -45,15 +43,6 @@ export const Services = () => {
               </div>
             </div>
             <div className="">
-              <div className="container">
-                <Advertising className="flex flex-col items-center gap-8">
-                  <h2 className="text-4xl extraBold mx-auto text-center">Meet our Team</h2>
-                  <p className="text-2xl font-medium mx-auto text-center">
-                    Our team is made up of talented and passionate individuals who are dedicated to helping you achieve your goals. We are committed to providing you with the best possible service and support. We are here to help you every step of the way.
-                  </p>
-                  <Team />
-                </Advertising>
-              </div>
             </div>
           </div>
         </div>
@@ -69,17 +58,5 @@ const Wrapper = styled.section`
 const HeaderInfo = styled.div`
   @media (max-width: 860px) {
     text-align: center;
-  }
-`;
-const Advertising = styled.div`
-  margin: 80px 0; 
-  position: relative;
-  @media (max-width: 1160px) {
-    padding: 100px 0 40px 0;
-  }
-  @media (max-width: 860px) {
-    flex-direction: column;
-    padding: 0 0 30px 0;
-    margin: 80px 0 0px 0;
   }
 `;

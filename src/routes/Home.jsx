@@ -13,7 +13,6 @@ export const Home = () => {
     <Layout>
       <Header />
       <Philosophy />
-
       <Services />
       <AboutUs />
       <OurValues />
