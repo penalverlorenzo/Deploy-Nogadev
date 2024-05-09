@@ -5,8 +5,13 @@ import { baseUrl } from "../config/index"
 import { BlogsTable } from "../components/admin/blogs/BlogsTable";
 import { AdminForm } from "../components/admin/blogs/AdminForm";
 import { AdminLayout } from "../layouts/AdminLayout";
+import { UsePageMetadata } from "../hooks/UsePageMetadata";
+
+const titlePage = 'Admin - Nogadev';
+const descriptionPage = 'The administrator can only see this view. It is made to manage all blogs.';
 
 export const AdminView = () => {
+  UsePageMetadata(titlePage, descriptionPage);
   const [blogs, setBlogs] = useState([]);
   const [formData, setFormData] = useState({ title: "", description: "", image: null });
   const [seeForm, setSeeForm] = useState(false);

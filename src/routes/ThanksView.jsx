@@ -4,7 +4,7 @@ import { AnimatedLink } from "../components/viewTransition/AnimatedLink";
 import { ThanksImage } from "../assets/svg/ThanksImage";
 import { UsePageMetadata } from "../hooks/UsePageMetadata";
 
-const titlePage = 'Thanks';
+const titlePage = 'Thanks - Nogadev';
 const descriptionPage = "Hey there! Welcome to our thank you page. We just wanted to take a moment to say a big thank you for getting in touch with us. Your message means a lot to us, and we can't wait to chat with you soon!";
 export const ThanksView = () => {
   UsePageMetadata(titlePage, descriptionPage)

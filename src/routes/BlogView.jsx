@@ -16,7 +16,7 @@ export const BlogView = () => {
 
   const { id } = useParams();
 
-  UsePageMetadata(blog.title, blog.description.slice(0, 40));
+  UsePageMetadata(`${blog.title} - Nogadev`, blog.description.slice(0, 40));
 
   useEffect(() => {
     const fetchData = async () => {
