@@ -64,13 +64,13 @@
   background: #162A5F;
 }
 .react-chatbot-kit-chat-bot-message {
-  background: #000c41;
+  background: #162A5F;
   border-radius: 7px 10px 10px 10px ;
   transition: all 0.2s;
 }
 .react-chatbot-kit-chat-bot-message-arrow {
   top:  4px;
-  border-right: 9px solid #000c41;
+  border-right: 9px solid #162A5F;
 }
 .animationIcon {
   animation: moveUpDown 2s ease-in-out infinite; 

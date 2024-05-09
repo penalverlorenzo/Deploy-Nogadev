@@ -5,9 +5,8 @@ import { OptionInitial } from '../componentsChat/OptionInitial';
 
 const config = {
   initialMessages: [
-    createChatBotMessage(`Hello. How can I help you? `, {
-      widget:  'optionInitialEN',
-    }),
+    createChatBotMessage(`Hola. ¿Cómo puedo ayudarte?`,{ delay: 2000} ),
+    createChatBotMessage(`Si aún no estas seguro de qué preguntar, prueba a escribir "opciones"`,{ delay: 2000} )
 ],
   widgets: [
     {
