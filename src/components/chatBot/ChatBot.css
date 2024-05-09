@@ -2,7 +2,7 @@
   height: 417px;
   background: none;
   backdrop-filter: blur(10px);
-  background: #0c0d0e7c;
+  background: #d0d1d47c;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -20,12 +20,7 @@
   color:  white;
 }
 .react-chatbot-kit-user-chat-message-arrow {
-  border-left:9px solid  #34487d;
   top:  4px;
-}
-.react-chatbot-kit-user-chat-message{
-  background:  #34487d;
-  color: white;
 }
 .react-chatbot-kit-user-chat-message:hover{
   box-shadow: 3px 3px 13px -4px rgb(0 0 0 / 77%);
@@ -46,7 +41,7 @@
   background: none
 }
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar-thumb {
-  background:rgba(255, 255, 255, 0.555);
+  background:rgba(100, 101, 105, 0.555);
   border-radius: 5px;
 }
 .react-chatbot-kit-chat-input {
