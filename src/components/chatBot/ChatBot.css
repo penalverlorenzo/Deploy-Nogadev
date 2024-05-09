@@ -2,7 +2,7 @@
   height: 417px;
   background: none;
   backdrop-filter: blur(10px);
-  background: linear-gradient(to bottom, #000c41c7, #1b8eda96);
+  background: #d0d1d47c;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -14,9 +14,9 @@
 }
 .react-chatbot-kit-chat-header {
   border-radius: 20px 20px 0 0;
-  border-bottom: #0f248bbd solid 1px;
-  box-shadow: 2px 7px 11px 0px #0f248bbd;
-  background: #020c3dbd;
+  /* border-bottom: #0f248bbd solid 1px; */
+  /* box-shadow: 2px 7px 11px 0px #0f248bbd; */
+  background: #3e5287;
   color:  white;
 }
 .react-chatbot-kit-user-chat-message-arrow {
@@ -41,14 +41,14 @@
   background: none
 }
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #000c41, #1b8eda96);
+  background:rgba(100, 101, 105, 0.555);
   border-radius: 5px;
 }
 .react-chatbot-kit-chat-input {
-  background: linear-gradient(to top,  #000c41,#1b8eda);
+  background: #3e5287;
   outline: none;
   color: white;
-  border-top: 1px solid #1B8FDa;
+  border-top: 1px solid #3e5287;
   border-radius: 0 0 0 20px;
 }
 .react-chatbot-kit-chat-input::placeholder{
@@ -56,16 +56,16 @@
 }
 .react-chatbot-kit-chat-btn-send {
   border-radius: 0 0 20px 0px;
-  background: rgb(0, 0, 0);
+  background: #162A5F;
 }
 .react-chatbot-kit-chat-bot-message {
-  background: rgba(0, 0, 0, 0.854);
+  background: #000C41;
   border-radius: 7px 10px 10px 10px ;
   transition: all 0.2s;
 }
 .react-chatbot-kit-chat-bot-message-arrow {
   top:  4px;
-  border-right: 9px solid rgba(0, 0, 0, 0.927);
+  border-right: 9px solid #000C41;
 }
 .animationIcon {
   animation: moveUpDown 2s ease-in-out infinite; 
@@ -116,4 +116,7 @@
     .react-chatbot-kit-chat-bot-message:hover {
         box-shadow: 5px 5px 13px -2px rgb(255 255 255 / 34%);
       } 
+      .react-chatbot-kit-chat-container{
+        height: 487px;
+      }
 }
