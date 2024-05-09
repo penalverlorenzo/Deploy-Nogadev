@@ -15,12 +15,10 @@ function ChatBotContain() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-
     const draggableElement = document.getElementById('draggableElement');
     let offsetX, offsetY, isDragging = false;
     const handleMouseDown = (e) => {
       isDragging = true;
-      
       offsetX = e.clientX - draggableElement.getBoundingClientRect().left;
       offsetY = e.clientY - draggableElement.getBoundingClientRect().top;
     };
@@ -46,7 +44,14 @@ function ChatBotContain() {
       draggableElement.removeEventListener('mousedown', handleMouseDown);
       document.removeEventListener('mousemove', handleMouseMove);
       document.removeEventListener('mouseup', handleMouseUp);
+      document.addEventListener('click', (event) => {
+        if (!draggableElement.contains(event.target)) {
+          setToggle(true);
+          setAnimation(true);
+        }
+      });
     };
+    
   }, []);
 
   useEffect(()=> {
