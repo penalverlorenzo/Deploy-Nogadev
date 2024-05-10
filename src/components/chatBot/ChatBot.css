@@ -23,7 +23,7 @@
   top:  4px;
 }
 .react-chatbot-kit-user-chat-message:hover{
-  box-shadow: 3px 3px 13px -4px rgb(0 0 0 / 77%);
+  box-shadow: 3px 3px 13px -7px rgba(0, 0, 0, 0.301);
 }
 .react-chatbot-kit-chat-input-container {
   background: #020c3dbd;

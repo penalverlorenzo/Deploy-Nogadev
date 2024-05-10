@@ -129,17 +129,6 @@
   .radius8 {
     border-radius: 1rem;
   }
-  /* BACKGROUNDS */
-  /* .darkBg {
-    background-color: #0B093B;
-  } */
-  /* .lightBg {
-    background-color: #F5F5F5;
-  } */
-  /* .whiteBg {
-    background-color: #fff;
-  } */
-
   .linkedinIconColor:hover svg{
     stroke:rgb(64 122 255);
     
