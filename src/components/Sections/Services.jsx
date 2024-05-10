@@ -8,7 +8,7 @@ import { Team } from "../Elements/Team";
 export const Services = () => {
   return (
     <Wrapper id="services" >
-      <div className="lightBg pt-5">
+      <div className="bg-[#F5F5F5] pt-5">
         <div className="container">
           <div className="" style={{ paddingTop: "60px" }}>
             <div className="container">

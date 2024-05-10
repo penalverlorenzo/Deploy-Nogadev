@@ -17,7 +17,7 @@ export const TopNavbar = () => {
     <>
       <Sidebar sidebaropen={sidebaropen} toggleSidebar={toggleSidebar} />
       {sidebaropen ? <Backdrop toggleSidebar={toggleSidebar} /> : ''}
-      <Wrapper className="flexCenter animate whiteBg" style={{ height: "80px" }}>
+      <Wrapper className="flexCenter animate bg-white" style={{ height: "80px" }}>
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="/">
             <LogoIcon />
@@ -30,7 +30,7 @@ export const TopNavbar = () => {
           </BurderWrapper>
           <UlWrapper className="flexNullCenter gap-4">
             <li className="semiBold font15 pointer">
-              <AnimatedLink style={{ padding: "10px 15px" }} to="/" offset={-80}>
+              <AnimatedLink className={"hover:text-[#407aff]"} style={{ padding: "10px 15px"}} to="/" offset={-80}>
                 Home
               </AnimatedLink>
             </li>
@@ -40,13 +40,13 @@ export const TopNavbar = () => {
               </ScrollButton>
             </li>
             <li className="semiBold font15 pointer">
-              <AnimatedLink style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>
+              <AnimatedLink className={"hover:text-[#407aff]"} style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>
                 Blog
               </AnimatedLink>
             </li>
         
             <li className="semiBold font15 pointer ml-2">
-              <AnimatedLink style={{ padding: "10px 15px" }} to="/contact" offset={-80}>
+              <AnimatedLink className={"hover:text-[#407aff]"} style={{ padding: "10px 15px" }} to="/contact" offset={-80}>
                 Contact
               </AnimatedLink>
             </li>

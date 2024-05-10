@@ -35,16 +35,7 @@
     border-collapse: collapse;
     border-spacing: 0;
   }
-  a {
-    text-decoration: none!important;
-    color: #0B093B;
-  }
-  a:hover {
-    color: rgb(64 122 255);
-  }
   body {
-    background: #fff;
-    color: #0B093B;
     font-family: 'Khula', sans-serif;
     overflow-x: hidden;
     font-size: 16px;
@@ -138,19 +129,16 @@
   .radius8 {
     border-radius: 1rem;
   }
-  .whiteColor {
-    color: #fff;
-  }
   /* BACKGROUNDS */
-  .darkBg {
+  /* .darkBg {
     background-color: #0B093B;
-  }
-  .lightBg {
+  } */
+  /* .lightBg {
     background-color: #F5F5F5;
-  }
-  .whiteBg {
+  } */
+  /* .whiteBg {
     background-color: #fff;
-  }
+  } */
 
   .linkedinIconColor:hover svg{
     stroke:rgb(64 122 255);
