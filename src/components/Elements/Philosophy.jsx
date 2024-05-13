@@ -1,6 +1,6 @@
 export const Philosophy = () => {
   return (
-    <div className="mx-auto px-4 sm:px-6 font-medium w-full py-8 text-center text-md bg-blue-50">
+    <div className="mx-auto px-4 sm:px-6 font-medium w-full py-8 text-center text-md bg-blue-50 dark:bg-[#1e293b] dark:text-white">
       <span className="font-bold">
         <svg
           className="align-text-bottom h-5 inline-block w-5"

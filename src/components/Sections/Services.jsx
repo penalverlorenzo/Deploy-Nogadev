@@ -7,14 +7,14 @@ import { Team } from "../Elements/Team";
 
 export const Services = () => {
   return (
-    <Wrapper id="services" >
-      <div className="bg-[#F5F5F5] pt-5">
+    <Wrapper id="services" className="">
+      <div className="bg-white dark:bg-[#030620] pt-5">
         <div className="container">
           <div className="" style={{ paddingTop: "60px" }}>
             <div className="container">
               <HeaderInfo className="flex flex-col w-full items-center justify-center">
-                <h1 className="font40 extraBold text-blue-800">Services</h1>
-                <p className="text-xl text-muted mt-4 md:w-2/4 flex md:mx-auto w-full lg:mx-0 text-center text-pretty">
+                <h1 className="font40 extraBold text-blue-800 dark:text-[#bfdbfe]">Services</h1>
+                <p className="text-xl text-muted mt-4 md:w-2/4 flex md:mx-auto w-full lg:mx-0 text-center text-pretty dark:text-[#969baa]">
                   we don’t just create software; we craft tailor-made solutions that resonate with your unique business need
                 </p>
               </HeaderInfo>
@@ -44,11 +44,11 @@ export const Services = () => {
                   <ServiceBox icon="Shopping" title="Innovative Shopping Platform Creation" subtitle="E-commerce is more than just selling online. It's about providing a seamless shopping experience. We specialize in creating intuitive, secure, and scalable shopping platforms that not only meet the demands of digital consumers but also propel your business towards e-commerce success." />
               </div>
             </div>
-            <div className="">
-              <div className="container">
+            <div className="dark:bg-gray-800">
+              <div className="w-full mx-auto">
                 <Advertising className="flex flex-col items-center gap-8">
-                  <h2 className="text-4xl extraBold mx-auto text-center">Meet our Team</h2>
-                  <p className="text-2xl font-medium mx-auto text-center">
+                  <h2 className="text-4xl extraBold mx-auto text-center dark:text-[#e5ecf6]">Meet our Team</h2>
+                  <p className="text-2xl font-medium mx-auto text-center dark:text-[#8f93a4]">
                     Our team is made up of talented and passionate individuals who are dedicated to helping you achieve your goals. We are committed to providing you with the best possible service and support. We are here to help you every step of the way.
                   </p>
                   <Team />
@@ -76,10 +76,12 @@ const Advertising = styled.div`
   position: relative;
   @media (max-width: 1160px) {
     padding: 100px 0 40px 0;
+    margin-bottom: 0px;
+    padding-bottom: 100px;
   }
   @media (max-width: 860px) {
     flex-direction: column;
     padding: 0 0 30px 0;
-    margin: 80px 0 0px 0;
+    margin: 80px 0px 0px 0px;
   }
 `;

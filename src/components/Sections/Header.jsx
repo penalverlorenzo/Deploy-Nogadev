@@ -6,19 +6,17 @@ import LazyImageLoader from "../LazyLoading/LazyLoadingContainer";
 export const Header = () => {
   return (
     <Wrapper id="home" className="container flexSpaceCenter">
-      
       <LeftSide className="flexCenter">
         <div>
-          <h1 className="font-bold font-heading leading-tighter tracking-tighter mb-4 md:text-6xl text-5xl">Welcome to <span className="highlight bg-clip-text bg-gradient-to-r dark:bg-clip-text dark:from-blue-500 dark:to-blue-500 dark:via-blue-300 from-blue-500 pr-0.5 text-transparent to-blue-500 via-blue-900"> NOGADEV Software Solutions </span></h1>
-          <HeaderP className="font18 semiBold">
+          <h1 className="font-bold dark:text-white font-heading leading-tighter tracking-tighter mb-4 md:text-6xl text-5xl">Welcome to <span className="highlight bg-clip-text bg-gradient-to-r dark:bg-clip-text dark:from-blue-500 dark:to-blue-500 dark:via-blue-300 from-blue-500 pr-0.5 text-transparent to-blue-500 via-blue-900"> NOGADEV Software Solutions </span></h1>
+          <HeaderP className="font18 font-semibold dark:text-white/70 dark:font-medium">
           where cutting-edge technology meets creative solutions. We are a dynamic software startup committed to revolutionizing your business experience.
           </HeaderP>
         </div>
       </LeftSide>
-      <RightSide className="hidden md:flex">
+      <RightSide className="hidden md:ml-3 md:flex">
         <ImageWrapper>
           <LazyImageLoader>
-
           <Img decoding="async" className="radius8 lg:w-full lg:h-full hidden md:block min-h-[722px] min-w-[722px]" src={nogaRocket} alt="office" />
           </LazyImageLoader>
         </ImageWrapper>

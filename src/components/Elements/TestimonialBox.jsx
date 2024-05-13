@@ -13,7 +13,7 @@ export const TestimonialBox=({ text, author }) =>{
       <p className="text-white font13" style={{ paddingBottom: "30px" }}>
         {text}
       </p>
-      <p className="orangeColor font13" style={{alignSelf: 'flex-end'}}>
+      <p className="text-[#F2B300] font13" style={{alignSelf: 'flex-end'}}>
         <em>{author}</em>
       </p>
     </Wrapper>

@@ -8,7 +8,6 @@ import { ContactView } from "./routes/ContactView";
 
 function App() {
   return (
-      <>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,10 +15,9 @@ function App() {
         <Route path="/blogs/:id" element={<BlogView />} />
         <Route path="/admin" element={<AdminView />} />
         <Route path="/contact" element={<ContactView />} />
+
       </Routes>
     </BrowserRouter>
-    
-    </>
   )
 }
 

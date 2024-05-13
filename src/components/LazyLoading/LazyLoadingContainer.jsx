@@ -22,7 +22,7 @@ const LazyImageLoader = ({ children }) => {
   }, []);
 
   return (
-    <div ref={imageRef} style={{ minHeight: '200px' }}>
+    <div ref={imageRef}>
       {isIntersecting && children}
     </div>
   );
