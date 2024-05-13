@@ -1,7 +1,7 @@
 import { DarkModeSVG } from "../../assets/svg/DarkModeSvg"
 
 export const DarkModeBtn = () => {
-    const body = document.querySelector('.dark')
+    const body = document.querySelector('body')
     const toggle = () => {
         body.classList.toggle('dark')
     }
