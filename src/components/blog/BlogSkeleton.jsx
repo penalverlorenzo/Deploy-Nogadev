@@ -5,7 +5,7 @@ export const BlogSkeleton = () => {
       className="max-w-5xl p-4 border border-gray-200 rounded shadow animate-pulse md:p-6 dark:border-gray-700 mx-auto"
     >
       <div className="h-6 bg-gray-200 rounded-full dark:bg-gray-700 w-3/5 mb-4"></div>
-      <div className="flex items-center justify-center w-full h-52 md:w-[722px] md:h-96 lg:w-full mx-auto mb-4 bg-gray-300 rounded dark:bg-gray-700">
+      <div className="flex items-center justify-center w-full h-52 md:w-[722px] md:h-96 lg:w-full mx-auto mb-4 bg-gray-300 rounded ">
         <svg
           className="size-12 text-gray-200 dark:text-gray-600"
           aria-hidden="true"
@@ -17,14 +17,14 @@ export const BlogSkeleton = () => {
           <path d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.98 2.98 0 0 0 .13 5H5Z" />
         </svg>
       </div>
-      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700 mb-2.5"></div>
-      <div className="h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+      <div className="h-2 bg-gray-200 rounded-full  mb-2.5"></div>
+      <div className="h-2 bg-gray-200 rounded-full  mb-2.5"></div>
+      <div className="h-2 bg-gray-200 rounded-full "></div>
       <div className="flex items-center mt-4">
         
         <div>
-          <div className="h-2.5 bg-gray-200 rounded-full dark:bg-gray-700 w-32 mb-2"></div>
-          <div className="w-48 h-2 bg-gray-200 rounded-full dark:bg-gray-700"></div>
+          <div className="h-2.5 bg-gray-200 rounded-full  w-32 mb-2"></div>
+          <div className="w-48 h-2 bg-gray-200 rounded-full "></div>
         </div>
       </div>
       <span className="sr-only">Loading...</span>

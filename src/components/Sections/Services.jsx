@@ -17,29 +17,31 @@ export const Services = () => {
                 </p>
               </HeaderInfo>
               <div className="mx-auto gap-8 grid md:gap-y-12 sm:grid-cols-2 mt-14">
-                  <ServiceBox
-                    icon={"roller"}
-                    title="Creative Solutions"
-                    subtitle="Our team of skilled developers and creative minds work hand-in-hand to bring your ideas to life, ensuring a blend of innovation and functionality."
-                  />
+                <ServiceBox
+                  icon="monitor"
+                  title="Expert Business Consulting"
+                  subtitle="Navigate the complexities of the business world with our professional consulting services. We provide insightful strategies and data-driven advice to help you make informed decisions, optimize operations, and drive sustainable growth."
+                />
 
-                  <ServiceBox
-                    icon="monitor"
-                    title="Expert Business Consulting"
-                    subtitle="Navigate the complexities of the business world with our professional consulting services. We provide insightful strategies and data-driven advice to help you make informed decisions, optimize operations, and drive sustainable growth."
-                  />
 
-                  <ServiceBox
-                    icon="browser"
-                    title="Cutting-Edge Web Development"
-                    subtitle="Your website is your digital storefront. We specialize in developing responsive, user-friendly, and visually appealing websites. Our web development team ensures your online presence stands out, offering an engaging user experience that converts visitors into customers."
-                  />
 
-                  <ServiceBox icon="printer" title="Digital Marketing & SEO Optimization" subtitle="In the digital age, visibility is key. Our digital marketing experts employ the latest SEO strategies to enhance your online presence. We focus on increasing your website's visibility, driving traffic, and boosting search engine rankings, ensuring your brand gets the attention it deserves." />
+                <ServiceBox
+                  icon="browser"
+                  title="Web Development"
+                  subtitle="Your website is your digital storefront. We specialize in developing responsive, user-friendly, and visually appealing websites. Our web development team ensures your online presence stands out, offering an engaging user experience that converts visitors into customers."
+                />
+                <ServiceBox icon="Shopping" title="AI Chatbots" subtitle={"We specialize in developing intuitive, secure, and scalable AI chatbots that not only meet the needs of digital users but also drive your business towards technological success. \n For us AI is more than just automating responses. It's about creating an engaging interaction experience."} />
+                <ServiceBox
+                  icon={"roller"}
+                  title="Custom Software Development"
+                  subtitle="In the world of software development, we focus on more than just basic functionality. Our team specializes in creating sophisticated backend systems and interactive frontends specifically for the tech industry. We are dedicated to developing software solutions that not only meet but also anticipate the changing needs of technology businesses, ensuring scalability and precision in every project."
+                />
 
-                  <ServiceBox icon="Cybersecurity" title="Robust Cybersecurity Measures" subtitle="Safeguard your digital assets with our comprehensive cybersecurity services. We understand the importance of data security in today's digital landscape. Our team employs advanced security protocols to protect your business from cyber threats and ensure your data’s integrity." />
+                <ServiceBox icon="printer" title="Digital Marketing & SEO Optimization" subtitle="In the digital age, visibility is key. Our digital marketing experts employ the latest SEO strategies to enhance your online presence. We focus on increasing your website's visibility, driving traffic, and boosting search engine rankings, ensuring your brand gets the attention it deserves." />
 
-                  <ServiceBox icon="Shopping" title="Innovative Shopping Platform Creation" subtitle="E-commerce is more than just selling online. It's about providing a seamless shopping experience. We specialize in creating intuitive, secure, and scalable shopping platforms that not only meet the demands of digital consumers but also propel your business towards e-commerce success." />
+                <ServiceBox icon="Cybersecurity" title="Robust Cybersecurity Measures" subtitle="Safeguard your digital assets with our comprehensive cybersecurity services. We understand the importance of data security in today's digital landscape. Our team employs advanced security protocols to protect your business from cyber threats and ensure your data’s integrity." />
+
+
               </div>
             </div>
             <div className="">
