@@ -7,11 +7,11 @@ import { AnimatedLink } from "../viewTransition/AnimatedLink";
 
 export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
   return (
-    <Wrapper className="animate darkBg" style={{right: (sidebaropen ?  "0px" : "-400px" )}}>
+    <Wrapper className="animate bg-[#0B093B]" style={{right: (sidebaropen ?  "0px" : "-400px" )}}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <LightLogo />
-          {/* <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
+          {/* <h1 className="text-white font20" style={{ marginLeft: "15px" }}>
             fanatic
           </h1> */}
         </div>
@@ -24,7 +24,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
         <li className="semiBold font15 pointer">
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
-            className="whiteColor"
+            className="text-white"
             style={{ padding: "10px 15px" }}
             to="/"
             offset={-60}
@@ -35,7 +35,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
         <li className="semiBold font15 pointer">
           <Link
             onClick={() => toggleSidebar(!sidebaropen)}
-            className="whiteColor"
+            className="text-white"
             style={{ padding: "10px 15px" }}
             to="/"
             offset={-60}
@@ -47,7 +47,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             activeclass="active"
-            className="whiteColor"
+            className="text-white"
             style={{ padding: "10px 15px" }}
             to="/blogs"
             spy="true"
@@ -59,7 +59,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
         <li className="semiBold font15 pointer">
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
-            className="whiteColor"
+            className="text-white"
             style={{ padding: "10px 15px" }}
             to="/contact"
             offset={-60}

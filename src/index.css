@@ -236,32 +236,7 @@
   .radius6 {
     border-radius: 0.6rem;
   }
-  /* COLORS */
-  .darkColor {
-    color: #0B093B;
-  }
-  .purpleColor {
-    color: #7620FF;
-  }
-  .orangeColor {
-    color: #F2B300;
-  }
-  .lightColor {
-    color: #F5F5F5;
-  }
-  .coralColor {
-    color: #C4FFFF;
-  }
-  .greenColor {
-    color: #49CB86;
-  }
-  .greyColor {
-    color: #707070;
-  }
-  .whiteColor {
-    color: #fff;
-  }
-  /* BACKGROUNDS */
+   /* BACKGROUNDS */
   .darkBg {
     background-color: #0B093B;
   }

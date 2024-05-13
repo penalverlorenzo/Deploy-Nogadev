@@ -20,8 +20,8 @@ export const OurValues = () => {
   return (
     <div className="container flex  flex-col md:flex-row mb-24">
       <div className="flex flex-col items-center mb-6">
-        <h2 className="text-4xl extraBold mx-auto">Our Values</h2>
-        <p className="text-2xl font-medium mx-auto text-center">
+        <h2 className="text-4xl extraBold mx-auto dark:text-[#e5ecf6]">Our Values</h2>
+        <p className="text-2xl font-medium mx-auto text-center dark:text-white/60">
         At Nogadev, we believe in creating software solutions that truly make a difference. Here are the values that guide our work:
         </p>
         <img src={OurValuesImg} className="hidden md:flex w-full object-cover my-auto" alt="Representative image of our values" />
@@ -37,8 +37,8 @@ export const OurValues = () => {
                   </span>
                 </div>
                 <div className="pl-4 rtl:pl-0 rtl:pr-4">
-                  <h3 className="mb-4 text-xl font-bold font-heading">{title2}</h3>
-                  <p className=" " >{description}</p>
+                  <h3 className="mb-4 text-xl font-bold font-heading dark:text-[#e5ecf6]">{title2}</h3>
+                  <p className="dark:text-white/60" >{description}</p>
                 </div>
               </li>
             ))

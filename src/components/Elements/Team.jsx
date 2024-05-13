@@ -40,10 +40,10 @@ export const Team = () => {
         {team?.map((member, i) => (
           <a key={i} className="col-span-1 transition flex flex-col justify-center rounded-md items-center hover:shadow-lg p-2 cursor-pointer " href={member.url} target="__blank">
             <img className="object-cover object-center w-24 h-24 rounded-full"  src={member.imageUrl} alt={member.name} />
-            <h3 className="text-sm font-medium tracking-tighter decoration-black text-center">{member.name}</h3>
-            <p className="text-xs text-center">{member.description}</p>
+            <h3 className="text-sm font-medium tracking-tighter decoration-black text-center dark:font-semibold dark:text-slate-300">{member.name}</h3>
+            <p className="text-xs text-center dark:text-slate-300">{member.description}</p>
             {/* <a className="cursor-pointer" href={member.url} target="__blank"> */}
-              <LinkedIn className={'size-6'} />
+              <LinkedIn className={'size-6 dark:stroke-slate-500'} />
             {/* </a> */}
           </a>
         ))}

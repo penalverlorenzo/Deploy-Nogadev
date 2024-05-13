@@ -9,7 +9,7 @@ export const ScrollButton = ({ targetId, children }) => {
   };
 
   return (
-    <button onClick={scrollToTop} title="button to top page">
+    <button onClick={scrollToTop} className={'dark:text-white dark:hover:text-[#407aff]'} title="button to top page">
       {children}
     </button>
   );
