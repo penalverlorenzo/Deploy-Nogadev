@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -9,9 +9,14 @@ import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
 import { ScrollButton } from "../Elements/ScrollButton";
+import { DataProvider } from "../../context/DataContextProvider";
+import { useLanguageSections } from "../../hooks/useLanguageSections";
 
 export const TopNavbar = () => {
   const [sidebaropen, toggleSidebar] = useState(false);
+  const { handleLanguaje } = useContext(DataProvider);
+  const navbar = useLanguageSections('navbar');
+
 
   return (
     <>
@@ -28,15 +33,16 @@ export const TopNavbar = () => {
           <BurderWrapper className="pointer" title="Burger menu" onClick={() => toggleSidebar(!sidebaropen)}>
             <BurgerIcon />
           </BurderWrapper>
+          <button className="rounded-lg bg-blue-400 py-2 px-4" onClick={handleLanguaje}>Cambiar idioma</button>
           <UlWrapper className="flexNullCenter gap-4">
             <li className="semiBold font15 pointer">
               <AnimatedLink className={"hover:text-[#407aff]"} style={{ padding: "10px 15px"}} to="/" offset={-80}>
-                Home
+                {navbar.home}
               </AnimatedLink>
             </li>
             <li className="semiBold font15 pointer">
               <ScrollButton style={{ padding: "10px 15px" }} targetId="services" offset={-80}>
-                Services
+                {navbar.services}
               </ScrollButton>
             </li>
             <li className="semiBold font15 pointer">
@@ -47,7 +53,7 @@ export const TopNavbar = () => {
         
             <li className="semiBold font15 pointer ml-2">
               <AnimatedLink className={"hover:text-[#407aff]"} style={{ padding: "10px 15px" }} to="/contact" offset={-80}>
-                Contact
+                {navbar.contact}
               </AnimatedLink>
             </li>
           </UlWrapper>

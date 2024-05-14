@@ -39,7 +39,7 @@ export const ServiceBox=({icon, title, subtitle}) =>{
       <div className="flex justify-center">{getIcon}</div>
       <div className="mt-0.5">
         <h2 className="font-bold text-xl md:text-[1.3rem]">{title}</h2>
-        <p className="text-lg  text-muted">{subtitle}</p>
+        {subtitle.includes('\n') ? subtitle.split('\n').map((item, i)=>(<p key={i}>{item}</p>)) : <p className="text-lg  text-muted">{subtitle}</p>}
       </div>
     </div>
   );
