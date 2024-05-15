@@ -22,7 +22,7 @@ const LazyImageLoader = ({ children }) => {
   }, []);
 
   return (
-    <div ref={imageRef}>
+    <div ref={imageRef} >
       {isIntersecting && children}
     </div>
   );

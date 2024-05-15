@@ -32,14 +32,12 @@ export const ServiceBox=({icon, title, subtitle}) =>{
       getIcon = <RollerIcon />;
       break;
   }
-
-
   return (
     <div className="flex flex-row w-full">
       <div className="flex justify-center">{getIcon}</div>
       <div className="mt-0.5">
         <h2 className="font-bold text-xl md:text-[1.3rem] dark:text-[#e5ecf6]">{title}</h2>
-        <p className="text-lg  text-muted dark:text-[#8f93a4]">{subtitle}</p>
+        {subtitle.includes('\n') ? subtitle.split('\n').map((item, i)=>(<p key={i} className="text-lg  text-muted dark:text-[#8f93a4]">{item}</p>)) : <p className="text-lg  text-muted dark:text-[#8f93a4]">{subtitle}</p>}
       </div>
     </div>
   );
