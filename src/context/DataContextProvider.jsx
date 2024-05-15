@@ -5,7 +5,7 @@ import Spanish from "../languages/ES.json";
 export const DataProvider = createContext();
 
 export const DataContextProvider = ({children})=>{
-  const [languajeFile, setLanguajeFile] = useState(Spanish);
+  const [languajeFile, setLanguajeFile] = useState(English);
 
   const handleLanguaje = ()=>{
     if (languajeFile.lang === 'EN') {

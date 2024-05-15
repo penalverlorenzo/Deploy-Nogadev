@@ -10,12 +10,12 @@ import BurgerIcon from "../../assets/svg/BurgerIcon";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
 import { ScrollButton } from "../Elements/ScrollButton";
 import { DataProvider } from "../../context/DataContextProvider";
-import { useLanguageSections } from "../../hooks/useLanguageSections";
+import { UseLanguageSections } from "../../hooks/UseLanguageSections";
 
 export const TopNavbar = () => {
   const [sidebaropen, toggleSidebar] = useState(false);
   const { handleLanguaje } = useContext(DataProvider);
-  const navbar = useLanguageSections('navbar');
+  const navbar = UseLanguageSections('navbar');
 
 
   return (

@@ -83,6 +83,12 @@
       "title": "Soluciones de Software",
       "privacy": "Políticas de Privacidad",
       "contact": "CONTÁCTANOS"
+    },
+    "chatbot": {
+      "presentation": ["Hola", "¿Cómo podemos ayudarte?"],
+      "headerChat": "Conversación con Kike",
+      "inputPlaceholder": "Escribe tu mensaje aquí",
+      "initialMessages": ["Hola. ¿Cómo puedo ayudarte?", "Si aún no estas seguro de qué preguntar, prueba a escribir 'opciones'"]
     }
   }
 }

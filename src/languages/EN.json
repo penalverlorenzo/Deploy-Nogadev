@@ -83,6 +83,15 @@
       "title": "Software Solutions",
       "privacy": "Privacy Policy",
       "contact": "CONTACT US"
+    },
+    "chatbot": {
+      "presentation": ["Hello", "How can we help you?"],
+      "headerChat": "Conversation with Kike",
+      "inputPlaceholder": "Type your message here",
+      "initialMessages": [
+        "Hello. How can I assist you?",
+        "If you're not sure what to ask yet, try typing 'options'"
+      ]
     }
   }
 }

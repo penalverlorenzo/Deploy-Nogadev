@@ -7,11 +7,11 @@ import CloseIcon from "../../assets/svg/CloseIcon";
 import LightLogo from "../../assets/svg/LightLogo";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
 // import { DataProvider } from "../../context/DataContextProvider";
-import { useLanguageSections } from "../../hooks/useLanguageSections";
+import { UseLanguageSections } from "../../hooks/UseLanguageSections";
 
 export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
   // const { handleLanguaje } = useContext(DataProvider);
-  const navbar = useLanguageSections('navbar');
+  const navbar = UseLanguageSections('navbar');
 
   return (
     <Wrapper className="animate bg-[#0B093B]" style={{right: (sidebaropen ?  "0px" : "-400px" )}}>

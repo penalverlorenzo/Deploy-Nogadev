@@ -1,8 +1,8 @@
 import LazyImageLoader from "../LazyLoading/LazyLoadingContainer";
-import { useLanguageSections } from "../../hooks/useLanguageSections";
+import { UseLanguageSections } from "../../hooks/UseLanguageSections";
 
 export const AboutUs = () => {
-  const about = useLanguageSections('about');
+  const about = UseLanguageSections('about');
 
   return (
     <div className="mx-auto px-4 relative max-w-7xl sm:px-6">

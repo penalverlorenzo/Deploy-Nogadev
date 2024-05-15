@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { Team } from '../Elements/Team';
-import { useLanguageSections } from '../../hooks/useLanguageSections';
+import { UseLanguageSections } from '../../hooks/UseLanguageSections';
 
 export const TeamSection = () => {
-  const team = useLanguageSections('team');
+  const team = UseLanguageSections('team');
 
 
   return (

@@ -1,10 +1,10 @@
 import OurValuesImg from "../../assets/img/OurValues.webp";
 import LazyImageLoader from "../LazyLoading/LazyLoadingContainer";
-import { useLanguageSections } from "../../hooks/useLanguageSections";
+import { UseLanguageSections } from "../../hooks/UseLanguageSections";
 
 
 export const OurValues = () => {
-  const values = useLanguageSections('values')
+  const values = UseLanguageSections('values')
   const items = values.valuesList;
   return (
     <div className="container flex  flex-col md:flex-row mb-24">

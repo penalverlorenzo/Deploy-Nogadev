@@ -2,10 +2,10 @@ import styled from "styled-components";
 
 import nogaRocket from "../../assets/img/nogadevRocket.avif"
 import LazyImageLoader from "../LazyLoading/LazyLoadingContainer";
-import { useLanguageSections } from "../../hooks/useLanguageSections";
+import { UseLanguageSections } from "../../hooks/UseLanguageSections";
 
 export const Header = () => {
-  const header = useLanguageSections('header');
+  const header = UseLanguageSections('header');
 
 
   return (

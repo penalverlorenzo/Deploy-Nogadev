@@ -1,11 +1,11 @@
 import styled from "styled-components"; 
 
 import { ServiceBox } from "../Elements/ServiceBox";
-import { useLanguageSections } from "../../hooks/useLanguageSections";
+import { UseLanguageSections } from "../../hooks/UseLanguageSections";
 
 
 export const Services = () => {
-  const services = useLanguageSections('services');
+  const services = UseLanguageSections('services');
 
 
   return (
