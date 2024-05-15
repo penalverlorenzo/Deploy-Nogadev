@@ -47,11 +47,11 @@ export const TopNavbar = () => {
                 Services
               </ScrollButton>
             </li>}
-            <li className="semiBold font15 pointer">
+            {/* <li className="semiBold font15 pointer">
               <AnimatedLink style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>
                 Blog
               </AnimatedLink>
-            </li>
+            </li> */}
 
             <li className="semiBold font15 pointer ml-2">
               <AnimatedLink style={{ padding: "10px 15px" }} to="/contact" offset={-80}>

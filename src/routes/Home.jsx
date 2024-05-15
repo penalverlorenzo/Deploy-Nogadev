@@ -5,6 +5,7 @@ import { OurValues } from "../components/Sections/OurValues";
 import { UsePageMetadata } from "../hooks/UsePageMetadata";
 import { AboutUs } from "../components/Sections/AboutUs";
 import { Philosophy } from "../components/Elements/Philosophy";
+import { ContactForm } from "../components/Elements/ContactForm";
 const titlePage = 'Nogadev';
 const descriptionPage = 'Discover NogaDev, your strategic partner in innovative software solutions.';
 export const Home = () => {
@@ -16,6 +17,7 @@ export const Home = () => {
       <Services />
       <AboutUs />
       <OurValues />
+      <ContactForm />
     </Layout>
   );
 }

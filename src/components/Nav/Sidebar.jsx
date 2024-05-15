@@ -52,7 +52,7 @@ export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
             Services
           </ScrollButton>
         </li>}
-        <li className="semiBold font15 pointer">
+        {/* <li className="semiBold font15 pointer">
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             activeclass="active"
@@ -64,7 +64,7 @@ export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
           >
             Blog
           </AnimatedLink>
-        </li>
+        </li> */}
         <li className="semiBold font15 pointer">
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
