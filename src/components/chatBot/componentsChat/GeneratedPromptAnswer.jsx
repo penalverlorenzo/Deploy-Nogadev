@@ -25,9 +25,6 @@ export const GeneratedPromptAnswer = async (prompt) => {
             await refreshToken();
             result = await GeneratedPromptAnswer(prompt);
         }
-        if (result === '' || result.response === '') {
-            result = await GeneratedPromptAnswer('Toma esta pregunta, reformulala, luego devuelve la respuesta sin devolver la reformulación de la respuesta, solo me interesa la respuesta en sí: ' + prompt);
-        }
         let finalRes = result.response ? result.response : result;
         return finalRes
     } catch (error) {

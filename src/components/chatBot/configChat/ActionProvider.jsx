@@ -38,10 +38,11 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     try {
       const res = await GeneratedPromptAnswer(message)
         let res2 = res
-        if (res2.includes('*') && !res2.response) {
+        console.log({res2});
+        if (!res2.response && res2.includes('*')) {
           res2 = res2.replaceAll('*', ' ')
           res2 = res2.includes('Respuesta: ') ? res2.split('Respuesta: ')[1] : res2;
-          }
+        }
         const botMessage = createChatBotMessage(res2? res2: res2.response);
         setState((prev) => ({
           ...prev,
