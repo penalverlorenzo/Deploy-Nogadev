@@ -1,19 +1,22 @@
 import LazyImageLoader from "../LazyLoading/LazyLoadingContainer";
+import { UseLanguageSections } from "../../hooks/UseLanguageSections";
 
 export const AboutUs = () => {
+  const about = UseLanguageSections('about');
+
   return (
     <div className="mx-auto px-4 relative max-w-7xl sm:px-6">
 
     <div className="flex items-center  mb-20">
       <div className="mx-auto max-w-5xl md:pb-16 pb-10 text-start">
-        <p className="font-bold text-base text-[#1e3a8a] tracking-wide uppercase">About us</p>
+        <p className="font-bold text-base text-[#1e3a8a] tracking-wide uppercase">{about.name}</p>
         <h1 className="font-bold font-heading leading-tighter tracking-tighter mb-4 text-black md:text-6xl text-5xl">
-          Enhance your digital footprint with our<br />
-          <a className="highlight text-[#6d28d9]" href="/#services">Services</a>
+            {about.title[0]}<br />
+          <a className="highlight text-[#6d28d9]" href="/#services">{about.title[1]}</a>
         </h1>
         <div className="mx-auto max-w-3xl">
           <p className="text-xl text-[#101010e6] mb-6">
-            Our company is dedicated to providing top-notch digital solutions that help businesses grow. We offer a wide range of services, from web design and development to digital marketing strategies. Our team of experienced professionals is committed to delivering high-quality results that meet the unique needs of each client. We believe in the power of digital technology to transform businesses, and we strive to create digital experiences that are engaging, user-friendly, and effective.
+            {about.description}
           </p>
         </div>
       </div>

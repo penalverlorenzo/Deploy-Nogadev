@@ -1,29 +1,17 @@
-const items = [
-  {
-    title: 'Customer-Centric Approach',
-    description:
-      'Our clients are our top priority. We strive to understand their unique needs and challenges, and we design custom software solutions that help them achieve their business objectives. We believe in building long-term relationships based on trust and mutual respect.',
-  },
-  {
-    title: 'Continuous Improvement',
-    description:
-      'We are committed to continuous learning and improvement. We stay abreast of the latest technologies and industry trends, and we constantly refine our methodologies to ensure we are delivering the most effective and efficient solutions.',
-  },
-  {
-    title: 'Ethical Practices',
-    description:
-      'We uphold the highest standards of integrity in all our business dealings. We are transparent in our communications, we honor our commitments, and we treat everyone with fairness and respect. We believe that ethical practices are essential to our success.',
-  },
-];
 import OurValuesImg from "../../assets/img/OurValues.webp";
 import LazyImageLoader from "../LazyLoading/LazyLoadingContainer";
+import { UseLanguageSections } from "../../hooks/UseLanguageSections";
+
+
 export const OurValues = () => {
+  const values = UseLanguageSections('values')
+  const items = values.valuesList;
   return (
     <div className="container flex  flex-col md:flex-row mb-24">
       <div className="flex flex-col items-center mb-6">
-        <h2 className="text-4xl extraBold mx-auto">Our Values</h2>
+        <h2 className="text-4xl extraBold mx-auto">{values.title}</h2>
         <p className="text-2xl font-medium mx-auto text-center">
-        At Nogadev, we believe in creating software solutions that truly make a difference. Here are the values that guide our work:
+        {values.description}
         </p>
         <LazyImageLoader>
         <img src={OurValuesImg} className="hidden md:flex w-full object-cover my-auto" alt="Representative image of our values" />

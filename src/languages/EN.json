@@ -1,0 +1,97 @@
+{
+  "lang": "EN",
+  "sections": {
+    "navbar": {
+      "home": "Home",
+      "services": "Services",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "header": {
+      "title": ["Welcome to ", "Nogadev Software Solutions."],
+      "description": "Where cutting-edge technology meets creative solutions. We are a dynamic software startup committed to revolutionizing your business experience.",
+      "button": "Let's connect!"
+    },
+    "philosophy": {
+      "title": "Philosophy.",
+      "description": "We are committed to provide the best possible service to our clients. We believe in the power of technology to transform businesses and lives."
+    },
+    "services": {
+      "title": "Services",
+      "description": "We don’t just create software; we craft tailor-made solutions that resonate with your unique business need.",
+      "serviceList": [
+        {
+          "icon": "monitor",
+          "title": "Expert Business Consulting",
+          "subtitle": "Navigate the complexities of the business world with our professional consulting services. We provide insightful strategies and data-driven advice to help you make informed decisions, optimize operations, and drive sustainable growth."
+        },
+        {
+          "icon": "browser",
+          "title": "Web Development",
+          "subtitle": "Your website is your digital storefront. We specialize in developing responsive, user-friendly, and visually appealing websites. Our web development team ensures your online presence stands out, offering an engaging user experience that converts visitors into customers."
+        },
+        {
+          "icon": "Shopping",
+          "title": "AI Chatbots.",
+          "subtitle": "We specialize in developing intuitive, secure, and scalable AI chatbots that not only meet the needs of digital users but also drive your business towards technological success.\n For us AI is more than just automating responses. It's about creating an engaging interaction experience."
+        },
+        {
+          "icon": "roller",
+          "title": "Custom Software Development",
+          "subtitle": "In the world of software development, we focus on more than just basic functionality. Our team specializes in creating sophisticated backend systems and interactive frontends specifically for the tech industry. We are dedicated to developing software solutions that not only meet but also anticipate the changing needs of technology businesses, ensuring scalability and precision in every project."
+        },
+        {
+          "icon": "printer",
+          "title": "Digital Marketing & SEO Optimization",
+          "subtitle": "In the digital age, visibility is key. Our digital marketing experts employ the latest SEO strategies to enhance your online presence. We focus on increasing your website's visibility, driving traffic, and boosting search engine rankings, ensuring your brand gets the attention it deserves."
+        },
+        {
+          "icon": "Cybersecurity",
+          "title": "Robust Cybersecurity Measures",
+          "subtitle": "Safeguard your digital assets with our comprehensive cybersecurity services. We understand the importance of data security in today's digital landscape. Our team employs advanced security protocols to protect your business from cyber threats and ensure your data’s integrity."
+        }
+      ]
+    },
+    "about": {
+      "name": "ABOUT US",
+      "title": ["Enhance your digital footprint with our ", "Services"],
+      "description": "Our company is dedicated to provide top-notch digital solutions that help businesses grow. We offer a wide range of services, from web design and development to digital marketing strategies. Our team of experienced professionals is committed to delivering high-quality results that meet the unique needs of each client. We believe in the power of digital technology to transform businesses, and we strive to create digital experiences that are engaging, user-friendly, and effective."
+    },
+    "team": {
+      "title": "Meet our Team",
+      "description": "Our team is made up of talented and passionate individuals who are dedicated to helping you achieve your goals. We are committed to provide you with the best possible service and support. We are here to help you every step of the way."
+    },
+    "values": {
+      "title": "Our Values",
+      "description": "At Nogadev, we believe in creating software solutions that truly make a difference. Here are the values that guide our work:",
+      "valuesList": [
+        {
+          "title": "Customer-Centric Approach",
+          "description": "Our clients are our top priority. We strive to understand their unique needs and challenges, and we design custom software solutions that help them achieve their business objectives. We believe in building long-term relationships based on trust and mutual respect."
+        },
+        {
+          "title": "Continuous Improvement",
+          "description": "We are committed to continuous learning and improvement. We stay abreast of the latest technologies and industry trends, and we constantly refine our methodologies to ensure we are delivering the most effective and efficient solutions."
+        },
+        {
+          "title": "Ethical Practices",
+          "description": "We uphold the highest standards of integrity in all our business dealings. We are transparent in our communications, we honor our commitments, and we treat everyone with fairness and respect. We believe that ethical practices are essential to our success."
+        }
+      ]
+    },
+    "footer": {
+      "title": "Software Solutions",
+      "privacy": "Privacy Policy",
+      "contact": "CONTACT US"
+    },
+    "chatbot": {
+      "presentation": ["Hello", "How can we help you?"],
+      "headerChat": "Conversation with Kike",
+      "inputPlaceholder": "Type your message here",
+      "initialMessages": [
+        "Hello. How can I assist you?",
+        "If you're not sure what to ask yet, try typing 'options'"
+      ]
+    }
+  }
+}

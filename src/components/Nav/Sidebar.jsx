@@ -1,19 +1,23 @@
 /* eslint-disable react/prop-types */
+// import { useContext } from "react";
 import styled from "styled-components";
+
 import { Link  } from "react-router-dom";
 import CloseIcon from "../../assets/svg/CloseIcon";
 import LightLogo from "../../assets/svg/LightLogo";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
+// import { DataProvider } from "../../context/DataContextProvider";
+import { UseLanguageSections } from "../../hooks/UseLanguageSections";
 
 export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
+  // const { handleLanguaje } = useContext(DataProvider);
+  const navbar = UseLanguageSections('navbar');
+
   return (
     <Wrapper className="animate bg-[#0B093B]" style={{right: (sidebaropen ?  "0px" : "-400px" )}}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <LightLogo />
-          {/* <h1 className="text-white font20" style={{ marginLeft: "15px" }}>
-            fanatic
-          </h1> */}
         </div>
         <CloseBtn onClick={() => toggleSidebar(!sidebaropen)} title="close sidebar menu" className="animate pointer">
           <CloseIcon />
@@ -29,7 +33,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             to="/"
             offset={-60}
           >
-            Home
+            {navbar.home}
           </AnimatedLink>
         </li>
         <li className="semiBold font15 pointer">
@@ -40,7 +44,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             to="/"
             offset={-60}
           >
-            Services
+            {navbar.services}
           </Link>
         </li>
         <li className="semiBold font15 pointer">
@@ -64,7 +68,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             to="/contact"
             offset={-60}
           >
-            Contact
+            {navbar.contact}
           </AnimatedLink>
         </li>
       </UlStyle>
