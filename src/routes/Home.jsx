@@ -17,7 +17,10 @@ export const Home = () => {
       <Services />
       <AboutUs />
       <OurValues />
+      <div className="container px-6 md:px-0 ">
       <ContactForm />
+
+      </div>
     </Layout>
   );
 }
