@@ -30,7 +30,7 @@ export const Services = () => {
                   title="Web Development"
                   subtitle="Your website is your digital storefront. We specialize in developing responsive, user-friendly, and visually appealing websites. Our web development team ensures your online presence stands out, offering an engaging user experience that converts visitors into customers."
                 />
-                <ServiceBox icon="Shopping" title="AI Chatbots" subtitle={"We specialize in developing intuitive, secure, and scalable AI chatbots that not only meet the needs of digital users but also drive your business towards technological success. \n For us AI is more than just automating responses. It's about creating an engaging interaction experience."} />
+                <ServiceBox icon="AI" title="AI Chatbots" subtitle={"We specialize in developing intuitive, secure, and scalable AI chatbots that not only meet the needs of digital users but also drive your business towards technological success. \n For us AI is more than just automating responses. It's about creating an engaging interaction experience."} />
                 <ServiceBox
                   icon={"roller"}
                   title="Custom Software Development"
