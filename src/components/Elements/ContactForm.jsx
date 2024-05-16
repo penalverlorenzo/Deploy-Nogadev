@@ -37,11 +37,7 @@ export const ContactForm = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          properties: {
-            ...formData,
-          },
-        }),
+        body: JSON.stringify(formData),
       });
       const data = await res.json();
       console.log({ res, data });
