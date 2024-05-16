@@ -1,6 +1,6 @@
 export const Philosophy = () => {
   return (
-    <div className="mx-auto px-4 sm:px-6 font-medium w-full py-8 text-center text-md bg-blue-50">
+    <div className="mx-auto px-4 sm:px-6 font-medium w-full py-12 text-center text-md bg-blue-100">
       <span className="font-bold">
         <svg
           className="align-text-bottom h-5 inline-block w-5"
@@ -25,7 +25,7 @@ export const Philosophy = () => {
         </svg>{" "}
         Philosophy:
       </span>{" "}
-      We are committed to providing the best possible service to our clients. We
+      We are committed to provide the best possible service to our clients. We
       believe in the power of technology to transform businesses and lives.
     </div>
   );

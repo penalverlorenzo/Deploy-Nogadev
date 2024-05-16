@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import { HubSpotForm } from '../components/Elements/HubspotForm';
 import { Layout } from '../layouts/Layout';
 import { UsePageMetadata } from '../hooks/UsePageMetadata';
+import { ContactForm } from '../components/Elements/ContactForm';
 
 const titlePage = 'Contact - Nogadev';
 const descriptionPage = 'We offer cutting-edge web development, expert business consulting, effective digital marketing and SEO, robust cybersecurity, and customized e-commerce platforms. Elevate your business with our technology and creativity';
@@ -18,7 +18,7 @@ export const ContactView = () => {
           >Let's Connect!</h1>
         </div>
         <h2 className="font-bold font-heading leading-tighter tracking-tighter md:text-4xl text-3xl text-heading text-center mb-5">Drop us a message today!</h2>
-        <HubSpotForm />
+        <ContactForm />
 
       </section>
     </Layout>

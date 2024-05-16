@@ -1,13 +1,22 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
-import { Link  } from "react-router-dom";
 import CloseIcon from "../../assets/svg/CloseIcon";
 import LightLogo from "../../assets/svg/LightLogo";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
+import { useEffect, useState } from "react";
+import { ScrollButton } from "../Elements/ScrollButton";
 
-export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
+export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
+  const [seeOption, setSeeOption] = useState(true);
+  useEffect(() => {
+    if (location.pathname.split('/')[1]) {
+      setSeeOption(false);
+    }
+
+  }, [])
+
   return (
-    <Wrapper className="animate darkBg" style={{right: (sidebaropen ?  "0px" : "-400px" )}}>
+    <Wrapper className="animate darkBg" style={{ right: (sidebaropen ? "0px" : "-400px") }}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <LightLogo />
@@ -20,10 +29,10 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
         </CloseBtn>
       </SidebarHeader>
 
-      <UlStyle className="flexNullCenter flexColumn">
+      <UlStyle className="flexNullCenter flexColumn" onClick={() => toggleSidebar(!sidebaropen)}>
         <li className="semiBold font15 pointer">
           <AnimatedLink
-            onClick={() => toggleSidebar(!sidebaropen)}
+            
             className="whiteColor"
             style={{ padding: "10px 15px" }}
             to="/"
@@ -32,18 +41,18 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             Home
           </AnimatedLink>
         </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebaropen)}
+        {seeOption && <li className="semiBold font15 pointer" onClick={() => toggleSidebar(!sidebaropen)}>
+          <ScrollButton
+            targetId={"services"}
             className="whiteColor"
             style={{ padding: "10px 15px" }}
             to="/"
             offset={-60}
           >
             Services
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
+          </ScrollButton>
+        </li>}
+        {/* <li className="semiBold font15 pointer">
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             activeclass="active"
@@ -55,7 +64,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
           >
             Blog
           </AnimatedLink>
-        </li>
+        </li> */}
         <li className="semiBold font15 pointer">
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}

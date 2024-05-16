@@ -18,7 +18,7 @@ const items = [
 import OurValuesImg from "../../assets/img/OurValues.png";
 export const OurValues = () => {
   return (
-    <div className="container flex  flex-col md:flex-row mb-24">
+    <div className="container flex  flex-col md:flex-row py-12">
       <div className="flex flex-col items-center mb-6">
         <h2 className="text-4xl extraBold mx-auto">Our Values</h2>
         <p className="text-2xl font-medium mx-auto text-center">
@@ -37,8 +37,8 @@ export const OurValues = () => {
                   </span>
                 </div>
                 <div className="pl-4 rtl:pl-0 rtl:pr-4">
-                  <h3 className="mb-4 text-xl font-bold font-heading">{title2}</h3>
-                  <p className=" " >{description}</p>
+                  <h3 className="font-bold text-xl md:text-[1.3rem]">{title2}</h3>
+                  <p className="text-lg  text-muted" >{description}</p>
                 </div>
               </li>
             ))

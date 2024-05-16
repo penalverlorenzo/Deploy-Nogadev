@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -11,6 +11,14 @@ import { AnimatedLink } from "../viewTransition/AnimatedLink";
 import { ScrollButton } from "../Elements/ScrollButton";
 
 export const TopNavbar = () => {
+  const [seeOption, setSeeOption] = useState(true);
+  useEffect(()=>{
+    if (location.pathname.split('/')[1]) {
+      setSeeOption(false);
+    }
+
+  },[])
+
   const [sidebaropen, toggleSidebar] = useState(false);
 
   return (
@@ -34,17 +42,17 @@ export const TopNavbar = () => {
                 Home
               </AnimatedLink>
             </li>
-            <li className="semiBold font15 pointer">
+            {seeOption && <li className="semiBold font15 pointer">
               <ScrollButton style={{ padding: "10px 15px" }} targetId="services" offset={-80}>
                 Services
               </ScrollButton>
-            </li>
-            <li className="semiBold font15 pointer">
+            </li>}
+            {/* <li className="semiBold font15 pointer">
               <AnimatedLink style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>
                 Blog
               </AnimatedLink>
-            </li>
-        
+            </li> */}
+
             <li className="semiBold font15 pointer ml-2">
               <AnimatedLink style={{ padding: "10px 15px" }} to="/contact" offset={-80}>
                 Contact
