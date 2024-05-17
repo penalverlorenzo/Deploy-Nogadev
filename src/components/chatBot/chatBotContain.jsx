@@ -114,8 +114,8 @@ function ChatBotContain() {
 
       <div id='draggableElement' className={`fixed bottom-8 left-5 h-8 z-20 `}>
         <div className={`${animation ? "animationIcon" : ""} w-[35px] relative transition-all`} onClick={() => toggle ? (setToggle(false), setAnimation(false)) : (setToggle(true), setAnimation(true))}>
-          <p className={`${animation ? "" : "hidden"} ${show ? "AnimationPInition" : "scale-0"} absolute AnimationP p-2 bg-black text-white cursor-pointer w-20 rounded-xl transition`}>{chatbotText.presentation[0]}👋</p>
-          <p className={`${animation ? "" : "hidden"} ${show ? "AnimationHelpInition" : "scale-0"} absolute AnimationPHelp p-2 bg-black text-white cursor-pointer w-40 rounded-xl rounded-bl-none transition`}>{chatbotText.presentation[1]}</p>
+          <p className={`${animation ? "" : "hidden"} ${show ? "AnimationPInition" : "scale-0"} dark:bg-slate-600 absolute AnimationP p-2 bg-black text-white cursor-pointer w-20 rounded-xl transition`}>{chatbotText.presentation[0]}👋</p>
+          <p className={`${animation ? "" : "hidden"} ${show ? "AnimationHelpInition" : "scale-0"} dark:bg-slate-600 absolute AnimationPHelp p-2 bg-black text-white cursor-pointer w-40 rounded-xl rounded-bl-none transition`}>{chatbotText.presentation[1]}</p>
           <svg xmlns="http://www.w3.org/2000/svg" className="dark:stroke-white icon icon-tabler icon-tabler-rocket cursor-pointer rocket" width="44" height="44" viewBox="0 0 24 24" strokeWidth="2" stroke="#4d566d" fill="none" strokeLinecap="round" strokeLinejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
             <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
