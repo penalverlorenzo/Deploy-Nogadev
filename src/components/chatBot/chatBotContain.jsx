@@ -34,7 +34,7 @@ function ChatBotContain() {
       toggle ? setToggle(true) : setToggle(true);
 
       const x = Math.min(window.innerWidth - draggableElement.offsetWidth, Math.max(0, e.clientX - offsetX));
-      const y = Math.min(window.innerHeight - draggableElement.offsetHeight , Math.max(100, e.clientY - offsetY));
+      const y = Math.min(window.innerHeight - draggableElement.offsetHeight , Math.max(115, e.clientY - offsetY));
 
       draggableElement.style.left = x  + 'px';
       draggableElement.style.top = y + 'px';
@@ -112,7 +112,7 @@ function ChatBotContain() {
           </div>
         </div>
 
-      <div id='draggableElement' className={`fixed bottom-8 left-5 h-8 z-20 `}>
+      <div id='draggableElement' className={`fixed bottom-8 left-5 h-8 z-50 `}>
         <div className={`${animation ? "animationIcon" : ""} w-[35px] relative transition-all`} onClick={() => toggle ? (setToggle(false), setAnimation(false)) : (setToggle(true), setAnimation(true))}>
           <p className={`${animation ? "" : "hidden"} ${show ? "AnimationPInition" : "scale-0"} dark:bg-slate-600 absolute AnimationP p-2 bg-black text-white cursor-pointer w-20 rounded-xl transition`}>{chatbotText.presentation[0]}👋</p>
           <p className={`${animation ? "" : "hidden"} ${show ? "AnimationHelpInition" : "scale-0"} dark:bg-slate-600 absolute AnimationPHelp p-2 bg-black text-white cursor-pointer w-40 rounded-xl rounded-bl-none transition`}>{chatbotText.presentation[1]}</p>
