@@ -1,20 +1,23 @@
 /* eslint-disable react/prop-types */
 // import { useContext } from "react";
 import styled from "styled-components";
-
-import { Link  } from "react-router-dom";
 import CloseIcon from "../../assets/svg/CloseIcon";
 import LightLogo from "../../assets/svg/LightLogo";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
-// import { DataProvider } from "../../context/DataContextProvider";
-import { UseLanguageSections } from "../../hooks/useLanguageSections";
+import { useEffect, useState } from "react";
+import { ScrollButton } from "../Elements/ScrollButton";
 
-export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
-  // const { handleLanguaje } = useContext(DataProvider);
-  const navbar = UseLanguageSections('navbar');
+export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
+  const [seeOption, setSeeOption] = useState(true);
+  useEffect(() => {
+    if (location.pathname.split('/')[1]) {
+      setSeeOption(false);
+    }
+
+  }, [])
 
   return (
-    <Wrapper className="animate bg-[#0B093B]" style={{right: (sidebaropen ?  "0px" : "-400px" )}}>
+    <Wrapper className="animate darkBg" style={{ right: (sidebaropen ? "0px" : "-400px") }}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <LightLogo />
@@ -24,7 +27,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
         </CloseBtn>
       </SidebarHeader>
 
-      <UlStyle className="flexNullCenter flexColumn">
+      <UlStyle className="flexNullCenter flexColumn" onClick={() => toggleSidebar(!sidebaropen)}>
         <li className="semiBold font15 pointer">
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
@@ -33,21 +36,21 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             to="/"
             offset={-60}
           >
-            {navbar.home}
+            {/* {navbar.home} */}
           </AnimatedLink>
         </li>
-        <li className="semiBold font15 pointer">
-          <Link
-            onClick={() => toggleSidebar(!sidebaropen)}
+        {seeOption && <li className="semiBold font15 pointer" onClick={() => toggleSidebar(!sidebaropen)}>
+          <ScrollButton
+            targetId={"services"}
             className="text-white"
             style={{ padding: "10px 15px" }}
             to="/"
             offset={-60}
           >
-            {navbar.services}
-          </Link>
-        </li>
-        <li className="semiBold font15 pointer">
+            Services
+          </ScrollButton>
+        </li>}
+        {/* <li className="semiBold font15 pointer">
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             activeclass="active"
@@ -59,7 +62,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
           >
             Blog
           </AnimatedLink>
-        </li>
+        </li> */}
         <li className="semiBold font15 pointer">
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
@@ -68,7 +71,7 @@ export const Sidebar = ({ sidebaropen , toggleSidebar }) =>{
             to="/contact"
             offset={-60}
           >
-            {navbar.contact}
+            {/* {navbar.contact} */}
           </AnimatedLink>
         </li>
       </UlStyle>

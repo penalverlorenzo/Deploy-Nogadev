@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -14,10 +14,17 @@ import { UseLanguageSections } from "../../hooks/useLanguageSections";
 import { DarkModeBtn } from "../Elements/DarkModeBtn";
 
 export const TopNavbar = () => {
+  const [seeOption, setSeeOption] = useState(true);
+  useEffect(()=>{
+    if (location.pathname.split('/')[1]) {
+      setSeeOption(false);
+    }
+
+  },[])
+
   const [sidebaropen, toggleSidebar] = useState(false);
   const { handleLanguaje } = useContext(DataProvider);
   const navbar = UseLanguageSections('navbar');
-
 
   return (
     <>
@@ -37,23 +44,22 @@ export const TopNavbar = () => {
           <button className="rounded-lg bg-blue-400 py-2 px-4" onClick={handleLanguaje}>Cambiar idioma</button>
           <UlWrapper className="flexNullCenter gap-4">
             <li className="semiBold font15 pointer">
-              <AnimatedLink className={"hover:text-[#407aff] dark:text-white"} style={{ padding: "10px 15px"}} to="/" offset={-80}>
+              <AnimatedLink className={"hover:text-[#407aff] dark:hover:text-[#407aff] dark:text-white"} style={{ padding: "10px 15px"}} to="/" offset={-80}>
                 {navbar.home}
               </AnimatedLink>
             </li>
-            <li className="semiBold font15 pointer">
-              <ScrollButton style={{ padding: "10px 15px" }} targetId="services" offset={-80}>
+            {seeOption && <li className="semiBold font15 pointer">
+              <ScrollButton style={{ padding: "10px 15px" }} className={"hover:text-[#407aff] dark:hover:text-[#407aff] dark:text-white"} targetId="services" offset={-80}>
                 {navbar.services}
               </ScrollButton>
-            </li>
-            <li className="semiBold font15 pointer">
+            </li>}
+            {/* <li className="semiBold font15 pointer">
               <AnimatedLink className={'dark:text-white dark:hover:text-[#407aff]'} style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>
                 Blog
               </AnimatedLink>
-            </li>
-        
+            </li> */}
             <li className="semiBold font15 pointer ml-2">
-              <AnimatedLink className={"dark:text-white hover:text-[#407aff]"} style={{ padding: "10px 15px" }} to="/contact" offset={-80}>
+              <AnimatedLink className={"hover:text-[#407aff] dark:hover:text-[#407aff] dark:text-white"} style={{ padding: "10px 15px" }} to="/contact" offset={-80}>
                 {navbar.contact}
               </AnimatedLink>
             </li>

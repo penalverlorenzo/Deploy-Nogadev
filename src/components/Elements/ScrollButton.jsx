@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
-export const ScrollButton = ({ targetId, children }) => {
-  const scrollToTop = () => {
+export const ScrollButton = ({ targetId, children, className }) => {
+  const scrollTo = () => {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
@@ -9,7 +9,7 @@ export const ScrollButton = ({ targetId, children }) => {
   };
 
   return (
-    <button onClick={scrollToTop} className={'dark:text-white dark:hover:text-[#407aff]'} title="button to top page">
+    <button onClick={scrollTo} title="button to top page" className={className?? className}>
       {children}
     </button>
   );

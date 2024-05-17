@@ -3,13 +3,12 @@ import styled from "styled-components";
 import { ServiceBox } from "../Elements/ServiceBox";
 import { UseLanguageSections } from "../../hooks/useLanguageSections";
 
-
 export const Services = () => {
   const services = UseLanguageSections('services');
 
 
   return (
-    <Wrapper id="services" className="">
+    <Wrapper id="services" className="pb-12">
       <div className="bg-white dark:bg-[#030620] pt-5">
         <div className="container">
           <div className="" style={{ paddingTop: "60px" }}>

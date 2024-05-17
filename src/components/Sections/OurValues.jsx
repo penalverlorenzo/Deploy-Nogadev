@@ -7,7 +7,7 @@ export const OurValues = () => {
   const values = UseLanguageSections('values')
   const items = values.valuesList;
   return (
-    <div className="container flex  flex-col md:flex-row mb-24">
+    <div className="container flex  flex-col md:flex-row py-12">
       <div className="flex flex-col items-center mb-6">
         <h2 className="text-4xl extraBold mx-auto dark:text-[#e5ecf6]">{values.title}</h2>
         <p className="text-2xl font-medium mx-auto text-center dark:text-white/60">

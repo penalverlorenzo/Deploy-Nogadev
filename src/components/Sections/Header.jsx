@@ -3,6 +3,7 @@ import styled from "styled-components";
 import nogaRocket from "../../assets/img/nogadevRocket.avif"
 import LazyImageLoader from "../LazyLoading/LazyLoadingContainer";
 import { UseLanguageSections } from "../../hooks/useLanguageSections";
+import { ScrollButton } from "../Elements/ScrollButton";
 
 export const Header = () => {
   const header = UseLanguageSections('header');
@@ -17,6 +18,12 @@ export const Header = () => {
           <HeaderP className="font18 semiBold dark:text-white/70">
             {header.description}
           </HeaderP>
+          <ScrollButton className={"flex w-fit py-2 px-4 md:py-3 md:px-6 mx-auto lg:mx-0 hover:text-white/70 text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:outline-none  shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium md:font-semibold rounded-lg text-lg md:text-2xl text-center items-center"} targetId="contact">
+            {"Let's connect!"}
+            <svg className="rtl:rotate-180 size-4 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+            </svg>
+          </ScrollButton>
         </div>
       </LeftSide>
       <RightSide className="hidden md:ml-3 md:flex">
@@ -30,6 +37,8 @@ export const Header = () => {
     </Wrapper>
   );
 }
+
+{/* <button type="button" class="">Blue</button> */}
 
 
 const Wrapper = styled.section`
@@ -70,23 +79,7 @@ const HeaderP = styled.div`
     max-width: 100%;
   }
 `;
-// const BtnWrapper = styled.div`
-//   max-width: 190px;
-//   @media (max-width: 960px) {
-//     margin: 0 auto;
-//   }
-// `;
-// const GreyDiv = styled.div`
-//   width: 30%;
-//   height: 700px;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   z-index: 0;
-//   @media (max-width: 960px) {
-//     display: none;
-//   }
-// `;
+
 const ImageWrapper = styled.div`
   display: flex;
   justify-content: flex-end;

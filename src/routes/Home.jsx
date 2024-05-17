@@ -6,6 +6,7 @@ import { UsePageMetadata } from "../hooks/UsePageMetadata";
 import { AboutUs } from "../components/Sections/AboutUs";
 import { Philosophy } from "../components/Elements/Philosophy";
 import { TeamSection } from "../components/Sections/TeamSection";
+import { ContactForm } from "../components/Elements/ContactForm";
 const titlePage = 'Nogadev';
 const descriptionPage = 'Discover NogaDev, your strategic partner in innovative software solutions.';
 export const Home = () => {
@@ -15,9 +16,13 @@ export const Home = () => {
       <Header />
       <Philosophy />
       <Services />
-      <TeamSection />
       <AboutUs />
+      <TeamSection />
       <OurValues />
+      <div className="container px-6 md:px-0 ">
+      <ContactForm />
+
+      </div>
     </Layout>
   );
 }
