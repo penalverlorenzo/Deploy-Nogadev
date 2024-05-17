@@ -20,15 +20,16 @@ export const ContactForm = () => {
     // region: "",
   };
   const onSubmit = async () => {
-    await service.create(formData)
+    return await service.create(formData)
   };
   const {
     formData,
     // loading,
     // setLoading,
     handleChange,
-    handleSubmit
-  } = useForm({initialValues, onSubmit})
+    handleSubmit,
+    enabledSubmit
+  } = useForm({initialValues, onSubmit, redirectOnFinish: '/thanks'})
 
 
   
@@ -95,7 +96,8 @@ export const ContactForm = () => {
 
         <button
           type="submit"
-          className="mx-auto min-w-40 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md my-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+          className="mx-auto min-w-40 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md my-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150 disabled:opacity-40"
+          disabled={!enabledSubmit}
         >
           Submit
         </button>
