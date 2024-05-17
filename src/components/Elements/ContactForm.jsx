@@ -1,15 +1,16 @@
-import { useState } from "react";
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
-import { useNavigate } from "react-router-dom";
-
-import { notify, loadingNotify } from '../../utils/notify';
 
 import { baseUrl } from "../../config";
+import { ApiServices } from '../../services/Api.service';
+
+// import { notify} from '../../utils/notify';
+import { useForm } from "../../hooks/UseForm";
+
+const service = new ApiServices(baseUrl, '/contacts');
 
 export const ContactForm = () => {
-  const navigate = useNavigate()
-  const initialState = {
+  const initialValues = {
     firstname: "",
     lastname: "",
     email: "",
@@ -18,49 +19,19 @@ export const ContactForm = () => {
     message: "",
     // region: "",
   };
-
-  const [formData, setFormData] = useState(initialState);
-  // const [errors, setErrors] = useState({});
-
-  const handleChange = (name, value) => {
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-    console.log({ formData });
+  const onSubmit = async () => {
+    await service.create(formData)
   };
+  const {
+    formData,
+    // loading,
+    // setLoading,
+    handleChange,
+    handleSubmit
+  } = useForm({initialValues, onSubmit})
 
-  const postData = async () => {
-    try {
-      const res = await fetch(`${baseUrl}/contacts`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      const data = await res.json();
-      console.log({ res, data });
-      return data;
-    } catch (error) {
-      notify('Error submitting form, please try again later', 'error');
-    }
-  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    loadingNotify('Sending mail');
-
-    const data = await postData();
-
-    if (data.status === 'error') {
-      notify('Error submitting form, please try again later', 'error');
-    } else {
-      notify('Submitted successfully!', 'success');
-      navigate('/thanks')
-    }
-    setFormData(initialState);
-  };
+  
 
   return (
     <div className="w-full bg-white rounded-lg shadow-md p-6 mt-12" id="contact">
@@ -75,7 +46,7 @@ export const ContactForm = () => {
             placeholder="First name"
             name="firstname"
             value={formData.firstname}
-            onChange={({ target }) => handleChange(target.name, target.value)}
+            onChange={({ target: {name, value} }) => handleChange({name, value})}
             required
           />
           <input
@@ -84,7 +55,7 @@ export const ContactForm = () => {
             placeholder="Last name"
             name="lastname"
             value={formData.lastname}
-            onChange={({ target }) => handleChange(target.name, target.value)}
+            onChange={({ target: {name, value} }) => handleChange({name, value})}
             required
           />
         </div>
@@ -94,7 +65,7 @@ export const ContactForm = () => {
           placeholder="Email"
           name="email"
           value={formData.email}
-          onChange={({ target }) => handleChange(target.name, target.value)}
+          onChange={({ target: {name, value} }) => handleChange({name, value})}
           required
         />
         <input
@@ -103,7 +74,7 @@ export const ContactForm = () => {
           placeholder="Company"
           name="company"
           value={formData.company}
-          onChange={({ target }) => handleChange(target.name, target.value)}
+          onChange={({ target: {name, value} }) => handleChange({name, value})}
         />
         <input
           type="text"
@@ -111,14 +82,14 @@ export const ContactForm = () => {
           placeholder="Country/Region"
           name="country"
           value={formData.country}
-          onChange={({ target }) => handleChange(target.name, target.value)}
+          onChange={({ target: {name, value} }) => handleChange({name, value})}
         />
         <textarea
           name="message"
           className="inputForm"
           placeholder="Message"
           value={formData.message}
-          onChange={({ target }) => handleChange(target.name, target.value)}
+          onChange={({ target: {name, value} }) => handleChange({name, value})}
           required
         ></textarea>
 
