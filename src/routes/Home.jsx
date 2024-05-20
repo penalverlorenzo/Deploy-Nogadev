@@ -10,6 +10,7 @@ const titlePage = 'Nogadev';
 const descriptionPage = 'Discover NogaDev, your strategic partner in innovative software solutions.';
 export const Home = () => {
   UsePageMetadata(titlePage, descriptionPage)
+  
   return (
     <Layout>
       <Header />
