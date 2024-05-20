@@ -29,9 +29,9 @@ export class ApiServices {
       throw error;
     }
   }
-  async update (payload) {
+  async update (id, payload) {
     try {
-      const res = await fetch(`${this.baseUrl}${this.endpoint}`, {
+      const res = await fetch(`${this.baseUrl}${this.endpoint}/${id}`, {
         method: 'PATCH',
         headers: {
           "Content-Type": "application/json",
