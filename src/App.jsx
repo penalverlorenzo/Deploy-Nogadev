@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
 
 import { Home } from './routes/Home'
 // import { BlogsView } from "./routes/BlogsView";
@@ -19,6 +19,7 @@ function App() {
         {/* <Route path="/admin" element={<AdminView />} /> */}
         <Route path="/contact" element={<ContactView />} />
         <Route path="/thanks" element={<ThanksView />} />
+        <Route path="/*" element={<Navigate to="/" replace={true} />} />
       </Routes>
     </BrowserRouter>
   )
