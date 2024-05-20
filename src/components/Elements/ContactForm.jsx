@@ -20,7 +20,18 @@ export const ContactForm = () => {
     // region: "",
   };
   const onSubmit = async () => {
-    return await service.create(formData)
+    try {
+      let response = await service.create(formData);
+      if (response.statusCode === 409) {
+        const id = response.message.split('ID: ')[1]
+        response = await service.update(id, formData);
+      }
+  
+      return response;
+    } catch (error) {
+      console.error("Error al enviar el formulario:", error);
+      throw error;
+    }
   };
   const {
     formData,
