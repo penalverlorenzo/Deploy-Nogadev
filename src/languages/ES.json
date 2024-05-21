@@ -1,6 +1,7 @@
 {
   "lang": "ES",
   "sections": {
+    "lang": "Español",
     "navbar": {
       "home": "Inicio",
       "services": "Servicios",
@@ -89,6 +90,25 @@
       "headerChat": "Conversación con Kike",
       "inputPlaceholder": "Escribe tu mensaje aquí",
       "initialMessages": ["Hola. ¿Cómo puedo ayudarte?", "Si aún no estas seguro de qué preguntar, prueba a escribir 'opciones'"]
+    },
+    "form":{
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Email",
+      "company": "Compañía",
+      "country": "Pais",
+      "message": "Mensaje",
+      "submitBtn": "Enviar"
+    },
+    "contact": {
+      "title": "¡Conectémos!",
+      "subtitle": "CONTACTO",
+      "description": "¡Envíanos un mensaje hoy!"
+    },
+    "thanks": {
+      "title": ["¡Gracias ", "por ponerte en contacto!"],
+      "description": "Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.",
+      "button": "Ir al Inicio"
     }
   }
 }

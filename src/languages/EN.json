@@ -1,6 +1,7 @@
 {
   "lang": "EN",
   "sections": {
+    "lang": "English",
     "navbar": {
       "home": "Home",
       "services": "Services",
@@ -92,6 +93,25 @@
         "Hello. How can I assist you?",
         "If you're not sure what to ask yet, try typing 'options'"
       ]
+    },
+    "form":{
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "company": "Company",
+      "country": "Country",
+      "message": "Message",
+      "submitBtn": "Submit"
+    },
+    "contact": {
+      "title": "Let's Connect!",
+      "subtitle": "CONTACT",
+      "description": "Drop us a message today!"
+    },
+    "thanks": {
+      "title": ["Thank you ", "for reaching out!"],
+      "description": "We have received your message and will get back to you soon.",
+      "button": "Go to Home"
     }
   }
 }
