@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { TopNavbar } from "../components/Nav/TopNavbar";
 import { Footer } from "../components/Sections/Footer";
-import ChatBotContain from "../components/chatBot/chatBotContain";
+// import ChatBotContain from "../components/chatBot/chatBotContain";
 
 export const Layout = ({ children }) => {
   return (
@@ -11,7 +11,7 @@ export const Layout = ({ children }) => {
 
         {children}
       </div>
-      <ChatBotContain></ChatBotContain>
+      {/* <ChatBotContain></ChatBotContain> */}
       <Footer />
     </div>
   );
