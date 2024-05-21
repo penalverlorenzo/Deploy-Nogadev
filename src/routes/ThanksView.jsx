@@ -19,8 +19,8 @@ export const ThanksView = () => {
       <Wrapper id="home" className="container flexSpaceCenter pt-12">
         <LeftSide className="flexCenter">
           <div>
-            <h1 className="font-bold font-heading leading-tighter tracking-tighter mb-4 md:text-6xl text-5xl">Thank you <span className="highlight bg-clip-text bg-gradient-to-r dark:bg-clip-text dark:from-blue-500 dark:to-blue-500 dark:via-blue-300 from-blue-500 pr-0.5 text-transparent to-blue-500 via-blue-900"> for reaching out! </span></h1>
-            <HeaderP className="text-xl font-semibold">
+            <h1 className="font-bold font-heading leading-tighter tracking-tighter mb-4 md:text-6xl text-5xl dark:text-white">Thank you <span className="highlight bg-clip-text bg-gradient-to-r dark:bg-clip-text dark:from-blue-500 dark:to-blue-500 dark:via-blue-300 from-blue-500 pr-0.5 text-transparent to-blue-500 via-blue-900"> for reaching out! </span></h1>
+            <HeaderP className="text-xl font-semibold dark:text-white/70">
               We have received your message and will get back to you soon.
             </HeaderP>
           </div>
