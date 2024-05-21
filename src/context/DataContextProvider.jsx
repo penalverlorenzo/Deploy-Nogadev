@@ -7,10 +7,13 @@ export const DataProvider = createContext();
 export const DataContextProvider = ({children})=>{
   const [languajeFile, setLanguajeFile] = useState(English);
 
-  const handleLanguaje = ()=>{
-    if (languajeFile.lang === 'EN') {
+  const handleLanguaje = (language)=>{
+    if (languajeFile.lang === 'EN' && language === 'Español') {
+      console.log('está en inglés y seseleccionaste español');
       setLanguajeFile(Spanish);
-    }else{
+    }
+    if (languajeFile.lang === 'ES' && language === 'English'){
+      console.log('está en español y seseleccionaste inglés');
       setLanguajeFile(English);
     }
   }
