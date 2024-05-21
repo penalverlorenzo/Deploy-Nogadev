@@ -7,6 +7,7 @@ import { AnimatedLink } from "../viewTransition/AnimatedLink";
 import { useEffect, useState } from "react";
 import { ScrollButton } from "../Elements/ScrollButton";
 import { DarkModeBtn } from "../Elements/DarkModeBtn";
+import { LanguageSelector } from "../Elements/LanguageSelector";
 
 export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
   const [seeOption, setSeeOption] = useState(true);
@@ -29,8 +30,8 @@ export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
         </CloseBtn>
       </SidebarHeader>
 
-      <UlStyle className="flexNullCenter flexColumn" onClick={() => toggleSidebar(!sidebaropen)}>
-        <li className="semiBold font15 pointer">
+      <UlStyle className="flexNullCenter flexColumn" >
+        <li className="semiBold font15 pointer" onClick={() => toggleSidebar(!sidebaropen)}>
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             className="text-black dark:text-white"
@@ -76,6 +77,9 @@ export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
             Contact
           </AnimatedLink>
         </li>
+        <li className="semiBold font15 pointer">
+            <LanguageSelector toggleSidebar={toggleSidebar}/>
+          </li>
       </UlStyle>
     </Wrapper>
   );

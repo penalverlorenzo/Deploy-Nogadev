@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
@@ -9,9 +9,9 @@ import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
 import { ScrollButton } from "../Elements/ScrollButton";
-import { DataProvider } from "../../context/DataContextProvider";
 import { UseLanguageSections } from "../../hooks/useLanguageSections";
 import { DarkModeBtn } from "../Elements/DarkModeBtn";
+import { LanguageSelector } from "../Elements/LanguageSelector";
 
 export const TopNavbar = () => {
   const [seeOption, setSeeOption] = useState(true);
@@ -23,7 +23,6 @@ export const TopNavbar = () => {
   },[])
 
   const [sidebaropen, toggleSidebar] = useState(false);
-  const { handleLanguaje } = useContext(DataProvider);
   const navbar = UseLanguageSections('navbar');
 
   return (
@@ -41,8 +40,10 @@ export const TopNavbar = () => {
           <BurderWrapper className="pointer" title="Burger menu" onClick={() => toggleSidebar(!sidebaropen)}>
             <BurgerIcon />
           </BurderWrapper>
-          <button className="rounded-lg bg-blue-400 py-2 px-4" onClick={handleLanguaje}>Cambiar idioma</button>
           <UlWrapper className="flexNullCenter gap-4">
+          <li className="semiBold font15 pointer">
+            <LanguageSelector />
+          </li>
             <li className="semiBold font15 pointer">
               <AnimatedLink className={"hover:text-[#407aff] dark:hover:text-[#407aff] dark:text-white"} style={{ padding: "10px 15px"}} to="/" offset={-80}>
                 {navbar.home}
