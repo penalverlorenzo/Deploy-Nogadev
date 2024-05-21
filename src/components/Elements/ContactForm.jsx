@@ -6,10 +6,12 @@ import { ApiServices } from '../../services/Api.service';
 
 // import { notify} from '../../utils/notify';
 import { useForm } from "../../hooks/UseForm";
+import { UseLanguageSections } from '../../hooks/useLanguageSections';
 
 const service = new ApiServices(baseUrl, '/contacts');
 
 export const ContactForm = () => {
+  const form = UseLanguageSections('form');
   const initialValues = {
     firstname: "",
     lastname: "",
@@ -55,7 +57,7 @@ export const ContactForm = () => {
           <input
             type="text"
             className="w-full inputForm dark:bg-gray-800 dark:placeholder-gray-400"
-            placeholder="First name"
+            placeholder={form.firstName}
             name="firstname"
             value={formData.firstname}
             onChange={({ target: {name, value} }) => handleChange({name, value})}
@@ -64,9 +66,9 @@ export const ContactForm = () => {
           <input
             type="text"
             className="w-full inputForm dark:bg-gray-800 dark:placeholder-gray-400"
-            placeholder="Last name"
+            placeholder={form.lastName}
             name="lastname"
-            value={formData.lastname}
+            value={formData.lastName}
             onChange={({ target: {name, value} }) => handleChange({name, value})}
             required
           />
@@ -74,7 +76,7 @@ export const ContactForm = () => {
         <input
           type="email"
           className="inputForm dark:bg-gray-800 dark:placeholder-gray-400"
-          placeholder="Email"
+          placeholder={form.email}
           name="email"
           value={formData.email}
           onChange={({ target: {name, value} }) => handleChange({name, value})}
@@ -83,7 +85,7 @@ export const ContactForm = () => {
         <input
           type="text"
           className="inputForm dark:bg-gray-800 dark:placeholder-gray-400"
-          placeholder="Company"
+          placeholder={form.company}
           name="company"
           value={formData.company}
           onChange={({ target: {name, value} }) => handleChange({name, value})}
@@ -91,7 +93,7 @@ export const ContactForm = () => {
         <input
           type="text"
           className="inputForm dark:bg-gray-800 dark:placeholder-gray-400"
-          placeholder="Country/Region"
+          placeholder={form.country}
           name="country"
           value={formData.country}
           onChange={({ target: {name, value} }) => handleChange({name, value})}
@@ -99,7 +101,7 @@ export const ContactForm = () => {
         <textarea
           name="message"
           className="inputForm resize-none dark:bg-gray-800 dark:placeholder-gray-400"
-          placeholder="Message"
+          placeholder={form.message}
           value={formData.message}
           onChange={({ target: {name, value} }) => handleChange({name, value})}
           required
@@ -110,7 +112,7 @@ export const ContactForm = () => {
           className="mx-auto min-w-40 bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md my-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150 disabled:opacity-40"
           disabled={!enabledSubmit}
         >
-          Submit
+          {form.submitBtn}
         </button>
       </form>
     </div>

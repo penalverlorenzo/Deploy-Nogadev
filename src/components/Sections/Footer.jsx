@@ -1,3 +1,4 @@
+import { UseLanguageSections } from "../../hooks/useLanguageSections";
 import LightLogo from "../../assets/svg/LightLogo";
 import { InstagramLogo } from "../../assets/svg/logos/InstagramLogo";
 import LinkedInLogo from "../../assets/svg/logos/LinkedInLogo";
@@ -6,6 +7,7 @@ import { ScrollButton } from "../Elements/ScrollButton";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
 
 export const Footer = () => {
+  const footerLang = UseLanguageSections('footer');
   return (
     <footer className="bg-[#0B093B]">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -21,14 +23,14 @@ export const Footer = () => {
               <AnimatedLink className="text-sm font-semibold text-white" to={""}>Blog</AnimatedLink>
             </div> */}
             <div>
-              <AnimatedLink to={"/contact"} className="text-sm font-semibold text-gray-900 uppercase bg-white py-2.5 px-5 rounded-full shadow-sm hover:shadow-slate-50">Contact us</AnimatedLink>
+              <AnimatedLink to={"/contact"} className="text-sm font-semibold text-gray-900 uppercase bg-white py-2.5 px-5 rounded-full shadow-sm hover:shadow-slate-50">{footerLang.contact}</AnimatedLink>
             </div>
           </div>
         </div>
         <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="hidden md:inline"></span>
-          <span className="text-sm sm:text-center text-gray-400 hover:underline"> Privacy Policy </span>
+          <span className="text-sm sm:text-center text-gray-400 hover:underline"> {footerLang.privacy} </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a href="https://www.instagram.com/nogadev7/" className="text-gray-500 hover:text-white" target="_blank"
 						rel="noonpener">
