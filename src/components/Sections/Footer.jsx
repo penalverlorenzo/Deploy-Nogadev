@@ -17,9 +17,9 @@ export const Footer = () => {
             </ScrollButton>
           </div>
           <div className="flex justify-end md:justify-normal gap-8 sm:gap-12 items-center">
-            <div>
-              <AnimatedLink className="text-sm font-semibold text-white" to={"/blogs"}>Blog</AnimatedLink>
-            </div>
+            {/* <div>
+              <AnimatedLink className="text-sm font-semibold text-white" to={""}>Blog</AnimatedLink>
+            </div> */}
             <div>
               <AnimatedLink to={"/contact"} className="text-sm font-semibold text-gray-900 uppercase bg-white py-2.5 px-5 rounded-full shadow-sm hover:shadow-slate-50">Contact us</AnimatedLink>
             </div>

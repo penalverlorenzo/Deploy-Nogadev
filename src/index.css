@@ -10,7 +10,11 @@
   }
 
   .inputForm{
-    @apply bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150;
+    @apply bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 dark:text-white;
+  }
+
+  input.inputForm:-webkit-autofill{
+    -webkit-text-fill-color: rgba(31, 41, 55, .8 );
   }
   
   .highlight {

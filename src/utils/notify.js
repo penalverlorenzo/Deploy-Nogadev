@@ -17,15 +17,16 @@ export const notify = (message, typeOperation, time) => {
 export const loadingNotify = (message) => {
   const idToast = toast.loading(message, {
     position: toastPosition,
-    autoClose: 1500,
+    // autoClose: 1500,
     hideProgressBar: false,
-    closeOnClick: true,
+    // closeOnClick: true,
     pauseOnHover: true,
     draggable: true,
     progress: undefined,
     theme: "light",
   });
-  setTimeout(() => {
-    toast.dismiss(idToast);
-  }, 750);
+  return idToast;
+};
+export const stopNotify = (id) => {
+  toast.dismiss(id);
 };
