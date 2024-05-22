@@ -1,10 +1,13 @@
 /* eslint-disable react/prop-types */
+// import { useContext } from "react";
 import styled from "styled-components";
 import CloseIcon from "../../assets/svg/CloseIcon";
-import LightLogo from "../../assets/svg/LightLogo";
+import LightLogo from "../../assets/svg/Logo";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
 import { useEffect, useState } from "react";
 import { ScrollButton } from "../Elements/ScrollButton";
+import { DarkModeBtn } from "../Elements/DarkModeBtn";
+import { LanguageSelector } from "../Elements/LanguageSelector";
 
 export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
   const [seeOption, setSeeOption] = useState(true);
@@ -16,24 +19,22 @@ export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
   }, [])
 
   return (
-    <Wrapper className="animate darkBg" style={{ right: (sidebaropen ? "0px" : "-400px") }}>
+    <Wrapper className="animate bg-white dark:bg-[#030620fb]" style={{ right: (sidebaropen ? "0px" : "-400px") }}>
       <SidebarHeader className="flexSpaceCenter">
         <div className="flexNullCenter">
           <LightLogo />
-          {/* <h1 className="whiteColor font20" style={{ marginLeft: "15px" }}>
-            fanatic
-          </h1> */}
         </div>
+      <DarkModeBtn></DarkModeBtn>
         <CloseBtn onClick={() => toggleSidebar(!sidebaropen)} title="close sidebar menu" className="animate pointer">
           <CloseIcon />
         </CloseBtn>
       </SidebarHeader>
 
-      <UlStyle className="flexNullCenter flexColumn" onClick={() => toggleSidebar(!sidebaropen)}>
-        <li className="semiBold font15 pointer">
+      <UlStyle className="flexNullCenter flexColumn" >
+        <li className="semiBold font15 pointer" onClick={() => toggleSidebar(!sidebaropen)}>
           <AnimatedLink
-            
-            className="whiteColor"
+            onClick={() => toggleSidebar(!sidebaropen)}
+            className="text-black dark:text-white"
             style={{ padding: "10px 15px" }}
             to="/"
             offset={-60}
@@ -44,7 +45,7 @@ export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
         {seeOption && <li className="semiBold font15 pointer" onClick={() => toggleSidebar(!sidebaropen)}>
           <ScrollButton
             targetId={"services"}
-            className="whiteColor"
+            className="text-black dark:text-white"
             style={{ padding: "10px 15px" }}
             to="/"
             offset={-60}
@@ -56,7 +57,7 @@ export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
             activeclass="active"
-            className="whiteColor"
+            className="text-black dark:text-white"
             style={{ padding: "10px 15px" }}
             to="/blogs"
             spy="true"
@@ -68,7 +69,7 @@ export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
         <li className="semiBold font15 pointer">
           <AnimatedLink
             onClick={() => toggleSidebar(!sidebaropen)}
-            className="whiteColor"
+            className="text-black dark:text-white"
             style={{ padding: "10px 15px" }}
             to="/contact"
             offset={-60}
@@ -76,6 +77,9 @@ export const Sidebar = ({ sidebaropen, toggleSidebar }) => {
             Contact
           </AnimatedLink>
         </li>
+        <li className="semiBold font15 pointer">
+            <LanguageSelector toggleSidebar={toggleSidebar}/>
+          </li>
       </UlStyle>
     </Wrapper>
   );

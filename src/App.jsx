@@ -5,11 +5,13 @@ import { Home } from './routes/Home'
 // import { BlogView } from "./routes/BlogView";
 // import { AdminView } from "./routes/AdminView";
 import { ContactView } from "./routes/ContactView";
+import { DataContextProvider } from "./context/DataContextProvider";
 import { ThanksView } from "./routes/ThanksView";
 import GoogleScripts from "./components/analytics/GoogleScripts";
 
 function App() {
   return (
+    <DataContextProvider>
     <BrowserRouter>
       <GoogleScripts />
       <Routes>
@@ -22,7 +24,8 @@ function App() {
         <Route path="/*" element={<Navigate to="/" replace={true} />} />
       </Routes>
     </BrowserRouter>
+    </DataContextProvider>
   )
 }
 
-export default App
+export default App;

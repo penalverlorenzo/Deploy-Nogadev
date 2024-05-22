@@ -9,6 +9,9 @@ import LogoIcon from "../../assets/svg/Logo";
 import BurgerIcon from "../../assets/svg/BurgerIcon";
 import { AnimatedLink } from "../viewTransition/AnimatedLink";
 import { ScrollButton } from "../Elements/ScrollButton";
+import { UseLanguageSections } from "../../hooks/useLanguageSections";
+import { DarkModeBtn } from "../Elements/DarkModeBtn";
+import { LanguageSelector } from "../Elements/LanguageSelector";
 
 export const TopNavbar = () => {
   const [seeOption, setSeeOption] = useState(true);
@@ -20,16 +23,17 @@ export const TopNavbar = () => {
   },[])
 
   const [sidebaropen, toggleSidebar] = useState(false);
+  const navbar = UseLanguageSections('navbar');
 
   return (
     <>
       <Sidebar sidebaropen={sidebaropen} toggleSidebar={toggleSidebar} />
       {sidebaropen ? <Backdrop toggleSidebar={toggleSidebar} /> : ''}
-      <Wrapper className="flexCenter animate whiteBg" style={{ height: "80px" }}>
+      <Wrapper className="flexCenter animate bg-white dark:bg-[#030620fb]" style={{ height: "80px" }}>
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="/">
             <LogoIcon />
-            <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
+            <h1 style={{ marginLeft: "15px" }} className="font20 extraBold dark:text-white dark:hover:text-[#407aff]">
               Software Solutions
             </h1>
           </Link>
@@ -37,27 +41,30 @@ export const TopNavbar = () => {
             <BurgerIcon />
           </BurderWrapper>
           <UlWrapper className="flexNullCenter gap-4">
+          <li className="semiBold font15 pointer">
+            <LanguageSelector />
+          </li>
             <li className="semiBold font15 pointer">
-              <AnimatedLink style={{ padding: "10px 15px" }} to="/" offset={-80}>
-                Home
+              <AnimatedLink className={"hover:text-[#407aff] dark:hover:text-[#407aff] dark:text-white"} style={{ padding: "10px 15px"}} to="/" offset={-80}>
+                {navbar.home}
               </AnimatedLink>
             </li>
             {seeOption && <li className="semiBold font15 pointer">
-              <ScrollButton style={{ padding: "10px 15px" }} targetId="services" offset={-80}>
-                Services
+              <ScrollButton style={{ padding: "10px 15px" }} className={"hover:text-[#407aff] dark:hover:text-[#407aff] dark:text-white"} targetId="services" offset={-80}>
+                {navbar.services}
               </ScrollButton>
             </li>}
             {/* <li className="semiBold font15 pointer">
-              <AnimatedLink style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>
+              <AnimatedLink className={'dark:text-white dark:hover:text-[#407aff]'} style={{ padding: "10px 15px" }} to="/blogs" offset={-80}>
                 Blog
               </AnimatedLink>
             </li> */}
-
             <li className="semiBold font15 pointer ml-2">
-              <AnimatedLink style={{ padding: "10px 15px" }} to="/contact" offset={-80}>
-                Contact
+              <AnimatedLink className={"hover:text-[#407aff] dark:hover:text-[#407aff] dark:text-white"} style={{ padding: "10px 15px" }} to="/contact" offset={-80}>
+                {navbar.contact}
               </AnimatedLink>
             </li>
+            <DarkModeBtn></DarkModeBtn>
           </UlWrapper>
         </NavInner>
       </Wrapper>
@@ -70,7 +77,7 @@ const Wrapper = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 10;
 `;
 const NavInner = styled.div`
   position: relative;

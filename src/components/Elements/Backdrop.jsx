@@ -3,7 +3,7 @@
 import styled from "styled-components";
 
 export const Backdrop = ({ toggleSidebar }) =>{
-  return <Wrapper className="darkBg" onClick={() => toggleSidebar(false)}></Wrapper>;
+  return <Wrapper className="bg-[#0B093B]" onClick={() => toggleSidebar(false)}></Wrapper>;
 }
 
 const Wrapper = styled.div`

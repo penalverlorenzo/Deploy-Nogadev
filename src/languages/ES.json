@@ -1,0 +1,114 @@
+{
+  "lang": "ES",
+  "sections": {
+    "lang": "Español",
+    "navbar": {
+      "home": "Inicio",
+      "services": "Servicios",
+      "blog": "Blog",
+      "contact": "Contacto"
+    },
+    "header": {
+      "title": ["Bienvenidos a ", "Nogadev Soluciones de software."],
+      "description": "Donde la tecnología de vanguardia se encuentra con soluciones creativas. Somos una startup de software dinámica comprometida en revolucionar tu experiencia empresarial.",
+      "button": "¡Conectemos!"
+    },
+    "philosophy": {
+      "title": "Filosofía",
+      "description": "Estamos comprometidos a proporcionar el mejor servicio posible a nuestros clientes. Creemos en el poder de la tecnología para transformar empresas y vidas."
+    },
+    "services": {
+      "title": "Servicios",
+      "description": "No solo creamos software; diseñamos soluciones a medida que resuenan con las necesidades únicas de tu negocio.",
+      "serviceList": [
+        {
+          "icon": "monitor",
+          "title": "Consultoría Empresarial Especializada",
+          "subtitle": "Navega por las complejidades del mundo empresarial con nuestros servicios de consultoría profesional. Ofrecemos estrategias perspicaces y consejos basados en datos para ayudarte a tomar decisiones informadas, optimizar operaciones y promover un crecimiento sostenible."
+        },
+        {
+          "icon": "browser",
+          "title": "Desarrollo Web.",
+          "subtitle": "Tu sitio web es tu escaparate digital. Nos especializamos en desarrollar sitios web receptivos, fáciles de usar y visualmente atractivos. Nuestro equipo de desarrollo web garantiza que tu presencia en línea destaque, ofreciendo una experiencia de usuario atractiva que convierte visitantes en clientes."
+        },
+        {
+          "icon": "AI",
+          "title": "Chatbots de IA.",
+          "subtitle": "Nos especializamos en desarrollar chatbots de IA intuitivos, seguros y escalables que no solo satisfacen las necesidades de los usuarios digitales, sino que también impulsan tu negocio hacia el éxito tecnológico.\n Para nosotros, la IA va más allá de automatizar respuestas. Se trata de crear una experiencia de interacción atractiva."
+        },
+        {
+          "icon": "roller",
+          "title": "Desarrollo de Software Personalizado.",
+          "subtitle": "En el mundo del desarrollo de software, nos enfocamos en más que simplemente funcionalidades básicas. Nuestro equipo se especializa en crear sistemas backend sofisticados y frontends interactivos específicamente para la industria tecnológica. Estamos dedicados a desarrollar soluciones de software que no solo satisfagan, sino que también anticipen las cambiantes necesidades de las empresas tecnológicas, garantizando escalabilidad y precisión en cada proyecto."
+        },
+        {
+          "icon": "printer",
+          "title": "Marketing Digital y Optimización SEO.",
+          "subtitle": "En la era digital, la visibilidad es clave. Nuestros expertos en marketing digital emplean las últimas estrategias de SEO para mejorar tu presencia en línea. Nos enfocamos en aumentar la visibilidad de tu sitio web, impulsar el tráfico y mejorar el ranking en los motores de búsqueda, asegurando que tu marca reciba la atención que merece."
+        },
+        {
+          "icon": "Cybersecurity",
+          "title": "Medidas de Ciberseguridad Robustas.",
+          "subtitle": "Protege tus activos digitales con nuestros servicios integrales de ciberseguridad. Entendemos la importancia de la seguridad de datos en el panorama digital actual. Nuestro equipo emplea protocolos de seguridad avanzados para proteger tu negocio de amenazas cibernéticas y garantizar la integridad de tus datos."
+        }
+      ]
+    },
+    "about": {
+      "name": "SOBRE NOSOTROS",
+      "title": ["Mejora tu presencia digital con nuestros ", "Servicios"],
+      "description": "Nuestra empresa está dedicada a proporcionar soluciones digitales de primera categoría que ayuden a las empresas a crecer. Ofrecemos una amplia gama de servicios, desde diseño y desarrollo web hasta estrategias de marketing digital. Nuestro equipo de profesionales experimentados se compromete a ofrecer resultados de alta calidad que satisfagan las necesidades únicas de cada cliente. Creemos en el poder de la tecnología digital para transformar empresas, y nos esforzamos por crear experiencias digitales que sean atractivas, fáciles de usar y efectivas."
+    },
+    "team": {
+      "title": "Conoce a nuestro Equipo.",
+      "description": "Nuestro equipo está compuesto por individuos talentosos y apasionados que están dedicados a ayudarte a alcanzar tus objetivos. Estamos comprometidos a brindarte el mejor servicio y apoyo posible. Estamos aquí para ayudarte en cada paso del camino."
+    },
+    "values": {
+      "title": "Nuestros Valores",
+      "description": "En Nogadev, creemos en crear soluciones de software que realmente marquen la diferencia. Estos son los valores que guían nuestro trabajo:",
+      "valuesList": [
+        {
+          "title": "Enfoque Centrado en el Cliente",
+          "description": "Nuestros clientes son nuestra máxima prioridad. Nos esforzamos por comprender sus necesidades y desafíos únicos, y diseñamos soluciones de software personalizadas que les ayuden a alcanzar sus objetivos comerciales. Creemos en construir relaciones a largo plazo basadas en la confianza y el respeto mutuo."
+        },
+        {
+          "title": "Mejora Continua",
+          "description": "Estamos comprometidos con el aprendizaje y la mejora continua. Nos mantenemos al tanto de las últimas tecnologías y tendencias de la industria, y constantemente refinamos nuestras metodologías para garantizar que estemos entregando las soluciones más efectivas y eficientes."
+        },
+        {
+          "title": "Prácticas Éticas",
+          "description": "Mantenemos los más altos estándares de integridad en todas nuestras transacciones comerciales. Somos transparentes en nuestras comunicaciones, cumplimos con nuestros compromisos y tratamos a todos con equidad y respeto. Creemos que las prácticas éticas son esenciales para nuestro éxito."
+        }
+      ]
+    },
+    "footer": {
+      "title": "Soluciones de Software",
+      "privacy": "Políticas de Privacidad",
+      "contact": "CONTÁCTANOS"
+    },
+    "chatbot": {
+      "presentation": ["Hola", "¿Cómo podemos ayudarte?"],
+      "headerChat": "Conversación con Kike",
+      "inputPlaceholder": "Escribe tu mensaje aquí",
+      "initialMessages": ["Hola. ¿Cómo puedo ayudarte?", "Si aún no estas seguro de qué preguntar, prueba a escribir 'opciones'"]
+    },
+    "form":{
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Email",
+      "company": "Compañía",
+      "country": "Pais",
+      "message": "Mensaje",
+      "submitBtn": "Enviar"
+    },
+    "contact": {
+      "title": "¡Conectémos!",
+      "subtitle": "CONTACTO",
+      "description": "¡Envíanos un mensaje hoy!"
+    },
+    "thanks": {
+      "title": ["¡Gracias ", "por ponerte en contacto!"],
+      "description": "Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.",
+      "button": "Ir al Inicio"
+    }
+  }
+}

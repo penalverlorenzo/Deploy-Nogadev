@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import { DataProvider } from "../../context/DataContextProvider";
+
 export const Philosophy = () => {
+  const { languajeFile: { sections: { philosophy } } } = useContext(DataProvider);
+
   return (
-    <div className="mx-auto px-4 sm:px-6 font-medium w-full py-12 text-center text-md bg-blue-100">
+    <div className="mx-auto px-4 sm:px-6 font-medium w-full py-8 text-center text-md bg-blue-50 dark:bg-[#1e293b] dark:text-white">
       <span className="font-bold">
         <svg
           className="align-text-bottom h-5 inline-block w-5"
@@ -23,10 +28,9 @@ export const Philosophy = () => {
           </symbol>
           <use xlinkHref="#ai:tabler:info-square"></use>
         </svg>{" "}
-        Philosophy:
+        {philosophy.title}:
       </span>{" "}
-      We are committed to provide the best possible service to our clients. We
-      believe in the power of technology to transform businesses and lives.
+      {philosophy.description}
     </div>
   );
 };
