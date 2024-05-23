@@ -27,6 +27,7 @@ export const GoogleScripts = () => {
     return () => {
       document.body.removeChild(script1);
       document.body.removeChild(script2);
+      document.body.removeChild(script3);
     };
   }, []);
 
