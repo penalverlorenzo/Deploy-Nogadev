@@ -24,7 +24,6 @@ export const GoogleScripts = () => {
     gtag('config', 'AW-16535222825');
     gtag('config', 'G-YJD660BYT5');
     gtag('config', 'G-16VSH8QX0Z');
-    console.log(window.dataLayer);
     return () => {
       document.body.removeChild(script1);
       document.body.removeChild(script2);
