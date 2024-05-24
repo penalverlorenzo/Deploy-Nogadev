@@ -7,13 +7,11 @@ import { Home } from './routes/Home'
 import { ContactView } from "./routes/ContactView";
 import { DataContextProvider } from "./context/DataContextProvider";
 import { ThanksView } from "./routes/ThanksView";
-import GoogleScripts from "./components/analytics/GoogleScripts";
 
 function App() {
   return (
     <DataContextProvider>
     <BrowserRouter>
-      <GoogleScripts />
       <Routes>
         <Route path="/" element={<Home />} />
         {/* <Route path="/blogs" element={<BlogsView />} /> */}
