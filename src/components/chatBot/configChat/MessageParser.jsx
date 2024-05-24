@@ -9,7 +9,11 @@ function detectOption(mensaje) {
 }
 
   const parse = (message) => {
-      if   (detectOption(message)) {
+    const whatsapp = /^(whatsapp)\b/i;
+    
+    if (whatsapp.test(message)) {
+      actions.redirectToWhatsappLink()
+    }else if   (detectOption(message)) {
       actions.handleOption(message);
     }else {
       actions.generatedPrompt(message);

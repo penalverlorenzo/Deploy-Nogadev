@@ -2,7 +2,8 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import { GeneratedPromptAnswer } from "../componentsChat/GeneratedPromptAnswer";
-const ActionProvider = ({ createChatBotMessage, setState, children }) => {
+import { createCustomMessage } from "react-chatbot-kit";
+const ActionProvider = ({ createChatBotMessage , setState, children }) => {
   const handleHello = () => {
     const botMessage = createChatBotMessage(`Hello. I'm kike Nice to Meet you`)
     setState((prev) => ({
@@ -11,9 +12,16 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
     }));
   }
 
+  const redirectToWhatsappLink = () =>{
+      const botMessage = createCustomMessage(``, 'whatsapp')
+      setState((prev) => ({
+        ...prev,
+        messages: [...prev.messages, botMessage],
+      }));
+    
+  }
   const handleOption = (message) => {
     const langOptionsES = /^(opciones|opsiones|opsion|opcion)\b/i;
-
     if (langOptionsES.test(message)) {
       const botMessage = createChatBotMessage("Aqui estan las Opciones:", {
         widget: 'optionInitialES',
@@ -59,6 +67,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }) => {
           actions: {
             handleHello,
             handleOption,
+            redirectToWhatsappLink,
             generatedPrompt
           },
         });

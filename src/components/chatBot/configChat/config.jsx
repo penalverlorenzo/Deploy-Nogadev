@@ -2,6 +2,7 @@ import { createChatBotMessage } from 'react-chatbot-kit';
 import { FlightBotAvatar } from '../componentsChat/FlightBotAvatar';
 import { OptionInitial } from '../componentsChat/OptionInitial';
 import { UseLanguageSections } from '../../../hooks/useLanguageSections';
+import { WhatsappWidget } from '../componentsChat/WhatsappWidget';
 
 
 const ConfigBot = () => {
@@ -19,13 +20,20 @@ const ConfigBot = () => {
       {
         widgetName: 'optionInitialES',
         widgetFunc: (props) => <OptionInitial lang={"ES"} props={props} {...props} />
-      }
+      },
+      {
+        widgetName: 'whatsappWidget',
+        widgetFunc: (props) => <WhatsappWidget lang={"ES"} props={props} {...props} />
+      },
     ],
     customComponents: {
       // Replaces the default bot avatar
       header: (props) => <div className='react-chatbot-kit-chat-header' {...props}>{chatbotText.chatbotText}</div>,
       botAvatar: (props) => <FlightBotAvatar {...props} />,
     },
+    customMessages: {
+      whatsapp: (props) => <WhatsappWidget lang={"ES"} props={props} {...props} />
+    }
   };
 
   return config;
