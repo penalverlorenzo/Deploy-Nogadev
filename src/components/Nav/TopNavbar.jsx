@@ -42,7 +42,7 @@ export const TopNavbar = () => {
           </BurderWrapper>
           <UlWrapper className="flexNullCenter gap-4">
           <li className="semiBold font15 pointer">
-            <LanguageSelector />
+            <LanguageSelector toggleSidebar={toggleSidebar} />
           </li>
             <li className="semiBold font15 pointer">
               <AnimatedLink className={"hover:text-[#407aff] dark:hover:text-[#407aff] dark:text-white"} style={{ padding: "10px 15px"}} to="/" offset={-80}>

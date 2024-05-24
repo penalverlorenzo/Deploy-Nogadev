@@ -11,15 +11,15 @@ const ActionProvider = ({ createChatBotMessage , setState, children }) => {
       messages: [...prev.messages, botMessage],
     }));
   }
-
   const redirectToWhatsappLink = () =>{
-      const botMessage = createCustomMessage(``, 'whatsapp')
-      setState((prev) => ({
-        ...prev,
-        messages: [...prev.messages, botMessage],
-      }));
-    
-  }
+    const botMessage = createCustomMessage(``, 'whatsapp')
+    setState((prev) => ({
+      ...prev,
+      messages: [...prev.messages, botMessage],
+    }));
+  
+}
+  
   const handleOption = (message) => {
     const langOptionsES = /^(opciones|opsiones|opsion|opcion)\b/i;
     if (langOptionsES.test(message)) {

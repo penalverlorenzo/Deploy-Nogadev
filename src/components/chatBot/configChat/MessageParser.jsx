@@ -8,12 +8,8 @@ function detectOption(mensaje) {
   return patronesOpciones.test(mensaje);
 }
 
-  const parse = (message) => {
-    const whatsapp = /^(whatsapp)\b/i;
-    
-    if (whatsapp.test(message)) {
-      actions.redirectToWhatsappLink()
-    }else if   (detectOption(message)) {
+  const parse = (message) => {  
+    if   (detectOption(message)) {
       actions.handleOption(message);
     }else {
       actions.generatedPrompt(message);

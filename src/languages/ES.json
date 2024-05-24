@@ -109,6 +109,9 @@
       "title": ["¡Gracias ", "por ponerte en contacto!"],
       "description": "Hemos recibido tu mensaje y nos pondremos en contacto contigo pronto.",
       "button": "Ir al Inicio"
+    },
+    "whatsappLinkText": {
+      "text": "Haz click aqui para contactarnos en whatsapp"
     }
   }
 }

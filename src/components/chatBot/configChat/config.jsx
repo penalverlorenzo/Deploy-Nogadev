@@ -32,7 +32,7 @@ const ConfigBot = () => {
       botAvatar: (props) => <FlightBotAvatar {...props} />,
     },
     customMessages: {
-      whatsapp: (props) => <WhatsappWidget lang={"ES"} props={props} {...props} />
+      whatsapp: (props) => <WhatsappWidget props={props} {...props} />
     }
   };
 
