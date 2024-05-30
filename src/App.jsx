@@ -17,9 +17,9 @@ function App() {
         {/* <Route path="/blogs" element={<BlogsView />} /> */}
         {/* <Route path="/blogs/:id" element={<BlogView />} /> */}
         {/* <Route path="/admin" element={<AdminView />} /> */}
-        <Route path="/contact" element={<ContactView />} />
+        {/* <Route path="/contact" element={<ContactView />} />
         <Route path="/thanks" element={<ThanksView />} />
-        <Route path="/*" element={<Navigate to="/" replace={true} />} />
+        <Route path="/*" element={<Navigate to="/" replace={true} />} /> */}
       </Routes>
     </BrowserRouter>
     </DataContextProvider>

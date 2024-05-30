@@ -49,6 +49,11 @@
     overflow-x: hidden;
     font-size: 16px;
     font-weight: 400;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/020/716/513/original/futuristic-neon-technology-artificial-intelligence-chat-gpt-background-free-vector.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
   }
   .container {
     width: 100%;
@@ -59,6 +64,7 @@
     .container {
       padding: 0 15px;
     }
+    
   }
   .semiBold {
     font-weight: 600!important;
@@ -132,6 +138,9 @@
     }
     .font40 {
       font-size: 1.875rem;
+    }
+    body {
+      height: 85vh;
     }
   }
   /* BORDER RADIUS */
