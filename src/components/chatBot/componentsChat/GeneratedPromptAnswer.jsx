@@ -6,8 +6,9 @@
 import { dbURL } from "../../../config";
 import { refreshToken } from "./AccessToken";
 
-export const GeneratedPromptAnswer = async (prompt) => {
+export const GeneratedPromptAnswer = async (prompt, lang="Español") => {
     let result;
+    // console.log({prompt, dbURL, lang});
     let data;
     const localStorageToken = localStorage.getItem('token')
     try {
@@ -17,7 +18,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${localStorageToken}`
             },
-            body: JSON.stringify({ message: prompt })
+            body: JSON.stringify({ message: prompt, language: lang})
         });
         data = await response.json();
         result = data;
@@ -25,6 +26,7 @@ export const GeneratedPromptAnswer = async (prompt) => {
             await refreshToken();
             result = await GeneratedPromptAnswer(prompt);
         }
+        console.log({result});
         let finalRes = result.response ? result.response : result;
         return finalRes
     } catch (error) {

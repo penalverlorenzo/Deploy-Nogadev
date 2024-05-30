@@ -14,7 +14,7 @@ export const WhatsappWidget = () => {
                     </div>
                 </div>
                 <div className="react-chatbot-kit-chat-bot-message">
-                    <a className="hover:text-cyan-100 hover:underline" href="https://wa.me/5492612079772">{whatsappLink?.text}</a>
+                    <a className="hover:text-cyan-100 hover:underline" target="_blank" rel="noopener noreferrer" href="https://wa.me/">{whatsappLink?.text}</a>
                     <div className="react-chatbot-kit-chat-bot-message-arrow">
                     </div>
                 </div>
