@@ -11,8 +11,8 @@ export const LanguageSelector = ({toggleSidebar}) => {
   const { handleLanguaje } = useContext(DataProvider);
 
   return (
-    <div className="relative inline-block">
-      <button className="w-full dark:text-white border border-gray-300 rounded-md  py-2 pr-2 text-left cursor-default focus:outline-none sm:text-sm"
+    <div className="relative inline-block cursor-pointer ">
+      <button className="w-full dark:text-white border border-gray-300 rounded-md  py-2 pr-2 text-left  focus:outline-none sm:text-sm"
       onClick={()=>setSeeOptions(!seeOptions)}
       >
         <span className="flex items-center">
