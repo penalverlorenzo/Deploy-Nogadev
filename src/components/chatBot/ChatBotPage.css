@@ -115,7 +115,7 @@
     transform: translateY(-15px); 
   }
 }
-@media (min-width: 859px) {
+@media (min-width: 768px) {
     .react-chatbot-kit-chat-bot-message:hover {
         box-shadow: 5px 5px 13px -2px rgb(255 255 255 / 34%);
       } 

@@ -11,6 +11,7 @@ import ChatBotContain from "../components/chatBot/chatBotContain";
 import ChatBotPage from "../components/chatBot/chatBotPage";
 import { LanguageSelector } from "../components/Elements/LanguageSelector";
 import { useState } from "react";
+import { IASelect } from "../components/Elements/AISelection.jsx";
 const titlePage = 'Nogadev';
 const descriptionPage = 'Discover NogaDev, your strategic partner in innovative software solutions.';
 export const Home = () => {
@@ -19,15 +20,15 @@ export const Home = () => {
   
   return (
     <>
-    {/* <div>
-      <ChatBotContain></ChatBotContain>
-    </div> */}
-    <div className="absolute right-40 z-20">
+    
+    <div className="ml-4 mt-2 absolute flex top-0 md:top-11 md:right-40  z-20">
+    <IASelect></IASelect>
         <LanguageSelector toggleSidebar={toggleSidebar} />
     </div>
     <div>
       <ChatBotPage/>
     </div>
+    
     </>
   );
 }

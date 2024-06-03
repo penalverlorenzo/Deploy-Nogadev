@@ -6,6 +6,7 @@ export const DataProvider = createContext();
 
 export const DataContextProvider = ({children})=>{
   const [languajeFile, setLanguajeFile] = useState(Spanish);
+  // const [iaModelFile, setIaModelFile] = useState(Spanish);
 
   const handleLanguaje = (language)=>{
     if (languajeFile.lang === 'EN' && language === 'Español') {

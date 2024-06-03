@@ -7,10 +7,11 @@ import { dbURL } from "../../../config";
 import { refreshToken } from "./AccessToken";
 
 export const GeneratedPromptAnswer = async (prompt, lang="Español") => {
+    const IAmodel = document.getElementById('IA').textContent
     let result;
-    // console.log({prompt, dbURL, lang});
     let data;
     const localStorageToken = localStorage.getItem('token')
+    
     try {
         const response = await fetch(dbURL + '/info', {
             method: 'POST',
@@ -18,7 +19,7 @@ export const GeneratedPromptAnswer = async (prompt, lang="Español") => {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${localStorageToken}`
             },
-            body: JSON.stringify({ message: prompt, language: lang})
+            body: JSON.stringify({ message: prompt, language: lang, model: IAmodel})
         });
         data = await response.json();
         result = data;
@@ -26,7 +27,8 @@ export const GeneratedPromptAnswer = async (prompt, lang="Español") => {
             await refreshToken();
             result = await GeneratedPromptAnswer(prompt);
         }
-        console.log({result});
+        // console.log({});
+        console.log({result, IAmodel});
         let finalRes = result.response ? result.response : result;
         return finalRes
     } catch (error) {
