@@ -8,6 +8,11 @@
     vertical-align: baseline;
     box-sizing: border-box;
   }
+  
+  #md-container a {
+    text-decoration: underline;
+    color: lightblue;
+  }
 
   .inputForm{
     @apply bg-gray-100 text-gray-800 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150 dark:text-white;

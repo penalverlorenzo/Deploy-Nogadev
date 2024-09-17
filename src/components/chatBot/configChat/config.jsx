@@ -3,6 +3,7 @@ import { FlightBotAvatar } from '../componentsChat/FlightBotAvatar';
 import { OptionInitial } from '../componentsChat/OptionInitial';
 import { UseLanguageSections } from '../../../hooks/useLanguageSections';
 import { WhatsappWidget } from '../componentsChat/WhatsappWidget';
+import { CustomMessage } from '../componentsChat/CustomMessage';
 
 
 const ConfigBot = () => {
@@ -32,7 +33,11 @@ const ConfigBot = () => {
       botAvatar: (props) => <FlightBotAvatar {...props} />,
     },
     customMessages: {
-      whatsapp: (props) => <WhatsappWidget props={props} {...props} />
+      whatsapp: (props) => <WhatsappWidget props={props} {...props} />,
+      customMessage: (props) => {
+        const message = props.payload.message
+        return <CustomMessage {...props} message={message} />
+      }
     }
   };
 

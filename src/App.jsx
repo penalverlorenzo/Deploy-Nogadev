@@ -1,12 +1,12 @@
-import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 
 import { Home } from './routes/Home'
 // import { BlogsView } from "./routes/BlogsView";
 // import { BlogView } from "./routes/BlogView";
 // import { AdminView } from "./routes/AdminView";
-import { ContactView } from "./routes/ContactView";
+// import { ContactView } from "./routes/ContactView";
 import { DataContextProvider } from "./context/DataContextProvider";
-import { ThanksView } from "./routes/ThanksView";
+// import { ThanksView } from "./routes/ThanksView";
 
 function App() {
   return (

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import { Layout } from "../layouts/Layout";
 // import { Header } from "../components/Sections/Header";
 // import { Services } from "../components/Sections/Services";
@@ -20,7 +21,6 @@ export const Home = () => {
   
   return (
     <>
-    
     <div className="ml-4 mt-2 absolute flex top-0 md:top-11 md:right-40  z-20">
     <IASelect></IASelect>
         <LanguageSelector toggleSidebar={toggleSidebar} />
